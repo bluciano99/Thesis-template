@@ -3,18 +3,458 @@
 % !TEX root = ../tesi.tex
 
 %**************************************************************
-\chapter{Descrizione dello stage}
-\label{cap:descrizione-stage}
+\chapter{Analisi dei requisiti}
+\label{cap:analisi dei requisiti}
 %**************************************************************
 
-\intro{Breve introduzione al capitolo}\\
+\intro{In questo capitolo vengono trattati le analisi dei requisiti del modulo di front-end della web-app, con i vari casi d'uso ed elenco dei requisiti.}\\
 
 %**************************************************************
-\section{Introduzione al progetto}
-
+\section{Descrizione generale}
+\subsection{interfacce della web-app}
+\subsubsection{Interfaccia menù}
+L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sul tavolo. Il menù è composto da un insieme di categorie, in cui ci sono tutti i piatti appartenenti a quella categoria. I piatti sono ordinati in base al suo id che è un numero univoco dentro ogni menù.
+\subsubsection{Interfaccia lista ordini}
+L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone del tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
+\subsubsection{Interfaccia gestione tavolo}
+In questa maschera utente può creare una sessione di tavolo se non appartiene ad nessuna sessione, altrimenti può visuale il suo QR-code in modo da fare entrare gli altri nella sua sessione di tavolo.
+\subsubsection{Interfaccia area personale}
+Qui l'utente può effetture la login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist\gl{} in modo tale di non visualizzare i piatti contenenti quegli ingredienti nella sezione menù.
+\subsection{Caratteristiche degli Utenti}
+In questa sezione vengono descritti tutte le Caratteristiche degli utenti che possono utilizzare la web-app.
+\subsubsection{Utente non autenticato}
+Con il termine utente non autenticato ci si riferisce ad una qualsiasi persona non autenticata nel sistema, che può sfruttare le funzionalità di base offerte dalla piattaforma, ossia:
+\begin{itemize}
+    \item Visualizzare il menù del ristorante;
+    \item Visualizzare i singoli piatti in modalità dettaglio;
+    \item Creare una sessione di tavolo;
+    \item Unire ad una sessione di tavolo già esistente;
+    \item Uscire dalla sessione di tavolo;
+    \item Aggiungere piatti negli ordini;
+    \item Aggiungere note ai piatti ordinati;
+    \item Spostare ordini in arrivo;
+    \item Marcare i piatti in arrivo come arrivato;
+    \item Registrare nella piattaforma;
+    \item Effettuare la login.
+\end{itemize}
+\subsubsection{Utente autenticato}
+Invece, con il termine “utente autenticato” ci si riferisce ad una persona registrata nel database e che ha effettuato l'accesso nella piattaforma, la quale, oltre a sfruttare le funzionalità dell'utente non autenticato, può anche:
+\begin{itemize}
+    \item Aggiungere piatti nei preferiti;
+    \item Rimuovere piatti dai preferiti;
+    \item Dare un recensione ad un piatto;
+    \item Aggiungere ingredienti non voluti;
+    \item Rimuovere gli ingredienti non voluti;
+    \item Effettuare logout.
+\end{itemize}
 %**************************************************************
-\section{Analisi preventiva dei rischi}
+\subsection{Tecnologie utilizzate}
+Per sviluppare la piattaforma verranno utilizzare le seguenti tecnologie:
+\begin{itemize}
+    \item HTML5\gl{}: per creare la struttura dell'interfaccia untente;
+    \item CSS3\gl{}: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
+    \item StopLight\gl{}: per simulare le chiamate Rest API;
+    \item Angular\gl{}: per la creazione dell'interfaccia utente.
+\end{itemize}
 
+\section{Casi D'uso}
+\subsection{Introduzione }
+In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa.
+\subsection{Attori primari}
+\begin{itemize}
+    \item Utente non Autenticato: utente che non ha ancora effettuato la fase di autenticazione sulla piattaforma. Può essere in possesso o meno delle credenziali per l'autenticazione. Avrà funzionalità limitate rispetto ad un utente autenticato;
+    \item Utente Autenticato: utente che ha effettuato l'autenticazione alla piattaforma tramite le proprie credenziali. Ha accesso ad ogni funzionalità messa a disposizione dalla piattaforma;
+    \item  Utente Generico: può essere sia un utente autenticato che un utente non autenticato.
+\end{itemize}
+\subsection{Utente generico}
+\subsection{UC1 - Visualizza menù}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza il menù del ristorante.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+    \item \textbf{Postcondizione:} Viene visualizzato il menù del ristorante.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro il sistema;
+        \item L'utente clicca sul bottone menù.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.1 - Visualizza categorie}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza le categorie del menù.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Postcondizione:} Viene visualizzato i nomi delle categorie.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item Viene mostrato le categorie del menù.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.2 - Visualizza piatto}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza i piatti del menù mostrando il numero, nome, prezzo, ingredienti\gl{}, allergeni, limatazioni\gl{} e la quantità. La quantità di default\gl{} è 0 che vuole dire non è stato ordinato.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Postcondizione:} Viene visualizzato i piatti del menù.
+    \item \textbf{Scenrio principale:}  
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item Viene mostrato i piatti del menù.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.3 - Aumenta quantità}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente aumenta la quantità di un piatto nel menù.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Postcondizione:} Viene aggiunto il piatto specifico con la quantità aggiornata negli ordini.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item L'utente clicca sul bottone + di un piatto;
+        \item Viene aggiunto il piatto negli ordini.
+    \end{itemize}
+    \item \textbf{Scenrio alternativo:}
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item L'utente clicca sul bottone + di un piatto che è già presente negli ordini;
+        \item Viene aumentato la quantità del piatto negli ordini.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.4 - Diminuisci quantità}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente dimiuisce la quantità di un piatto nel menù.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Postcondizione:} Viene dimiuito la quantità del piatto specifico negli ordini.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item L'utente clicca sul bottone - di un piatto con quantità maggiore di 1;
+        \item Viene diminuito la quantità del piatto negli ordini.
+    \end{itemize}
+    \item \textbf{Scenrio alternativo:}
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item L'utente clicca sul bottone - di un piatto con quantità uguale a 1;
+        \item Viene rimosso il piatto dagli ordini.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.5 - Visualizza dettaglio piatto}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza i dettagli di un piatto nel menù, mostrando la recensione del piatto e il text-box\gl{} per inserire una nota.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Postcondizione:} Viene visualizzato i dettagli di un piatto specifico.
+    \item \textbf{Scenrio principale:}  
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item L'utente clicca sul bottom mostra dettagli;
+        \item Viene mostrato i dettagli di un piatto del menù.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.6 - Nascondi dettaglio piatto}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente nasconde i dettagli di un piatto specifico.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù con un piatto in modalità dettaglio.
+    \item \textbf{Postcondizione:} Viene nascosto i dettagli del piatto specifico.
+    \item \textbf{Scenrio principale:}  
+    \begin{itemize}
+        \item L'utente si trova sezione menù;
+        \item L'utente clicca sul bottom nascondi dettagli;
+        \item Viene mostrato i dettagli di un piatto del menù.
+    \end{itemize}
+\end{itemize}
+\subsection{UC2 - gestione tavolo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la maschera di gestione tavolo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+    \item \textbf{Postcondizione:} Viene visualizzato la maschera di gestione tavolo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro il sistema;
+        \item Viene mostrato la maschera di gestione tavolo.
+    \end{itemize}
+\end{itemize}
+\subsection{UC2.1 - Generazione sessione tavolo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente genera la sessione del tavolo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione tavolo.
+    \item \textbf{Postcondizione:} L'utente entra nella sessione generata del tavolo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione tavolo;
+        \item L'utente clicca sul bottone crea sessione;
+        \item L'utente viene inserito nella sessione creata.
+    \end{itemize}
+\end{itemize}
+\subsection{UC2.2 - Unione sessione tavolo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente si unisce alla sessione del tavolo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione tavolo.
+    \item \textbf{Postcondizione:} L'utente entra nella sessione che è stata inserita.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione tavolo;
+        \item L'utente clicca sul bottone unisciti a una sessione;
+        \item L'utente inserisce il numero della sessione;
+        \item L'utente clicca sul bottone unisciti;
+        \item L'utente viene inserito nella sessione.
+    \end{itemize}
+    \item \textbf{Scenrio alternativo:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione tavolo;
+        \item L'utente clicca sul bottone unisciti a una sessione;
+        \item L'utente inserisce il numero della sessione inesistente;
+        \item L'utente clicca sul bottone unisciti;
+        \item L'utente non viene inserito nella sessione.
+    \end{itemize}
+\end{itemize}
+\subsection{UC2.3 - Uscita sessione tavolo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente esce dalla sessione del tavolo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione tavolo ed è dentro ad una sessione.
+    \item \textbf{Postcondizione:} L'utente esce dalla sessione generata del tavolo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione tavolo;
+        \item L'utente clicca sul bottone esci dalla sessione;
+        \item L'utente viene rimosso dalla sessione.
+    \end{itemize}
+\end{itemize}
+\subsection{UC2.4 - Generazione QR-code sessione tavolo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente genera il QR-code dalla sessione del tavolo per mostrarlo agli altri, che li permetterà di unire alla sessione direttamente scansionando il QR-code.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione tavolo ed è dentro ad una sessione.
+    \item \textbf{Postcondizione:} L'utente genera il QR-code dalla sessione del tavolo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione tavolo;
+        \item L'utente genera il QR-code dalla sessione.
+    \end{itemize}
+\end{itemize}
+
+
+
+\subsection{UC3 - lista ordini}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la maschera di gestione ordini.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro ad una sessione di tavolo.
+    \item \textbf{Postcondizione:} Viene visualizzato la maschera di gestione ordini.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro il sistema con una sessione di tavolo attiva;
+        \item Viene mostrato la maschera di gestione ordini.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.1 - Visualizza lista ordini del tavolo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini della sessione di tavolo in cui si trova. 
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini.
+    \item \textbf{Postcondizione:} Viene visualizzato la lista degli ordini del tavolo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini;
+        \item L'utente clicca sul bottone "tavolo";
+        \item Viene mostrato la lista dei piatti ordinati del tavolo.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.2 - Visualizza lista ordini personali}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizzato la lista degli ordini personali.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini.
+    \item \textbf{Postcondizione:} Viene visualizzato la lista degli ordini personali.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini;
+        \item L'utente clicca sul bottone "personali";
+        \item Viene mostrato la lista dei piatti ordinati dall'utente stesso.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.3 - Visualizza lista ordini in arrivo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini in arrivo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente 
+    \item \textbf{Postcondizione:} Viene visualizzato la lista lista degli ordini in arrivo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini;
+        \item L'utente clicca sul bottone "in arrivo";
+        \item Viene mostrato la lista dei piatti in arrivo.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.4 - Visualizza in dettaglio lista ordini personali}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini personali in modalità dettaglio.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini personali.
+    \item \textbf{Postcondizione:} Viene visualizzato la lista degli ordini personali con i piatti in modalità dettaglio.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini personali;
+        \item L'utente clicca sul bottone "lente" con il +;
+        \item Viene mostrato la lista dei piatti ordinati personali in modalità dettaglio.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.5 - Ricezione piatto}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente marca un piatto in arrivo come ricevuto.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione ordini in arrivo e ha almeno un piatto nella lista in arrivo.
+    \item \textbf{Postcondizione:} L'utente marca il piatto come arrivato diminuendo di 1 la sua quantità.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione lista ordini in arrivo;
+        \item L'utente clicca sul bottone "v" di un piatto;
+        \item Viene diminuito di 1 la sua quantità.
+    \end{itemize}
+    \item \textbf{Scenrio alternativo:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione lista ordini in arrivo;
+        \item L'utente clicca sul bottone "v" di un piatto con quantità uguale a 1;
+        \item Viene diminuito di 1 la quantità del piatto e viene disabilitato il bottone.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.6 - Sposta la lista in arrivo}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente sposta la lista degli ordini in arrivo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini del tavolo.
+    \item \textbf{Postcondizione:} Viene spostato la lista degli ordini del tavolo in arrivo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini del tavolo;
+        \item L'utente clicca sul bottone sposta la lista in arrivo;
+        \item Viene spostato la lista degli piatti ordinati personali in modalità dettaglio;
+        \item Viene mostrato all'utente il messaggio "ordini spostati correttamente".
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.7 - Mostra QR-code ordini}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente genera il QR-code della lista ordini per dopo mostrarlo al cameriere.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini del tavolo.
+    \item \textbf{Postcondizione:} Viene mostrato il QR-code della lista degli ordini.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini del tavolo;
+        \item L'utente clicca sul bottone QR-code;
+        \item Viene generato il QR-code degli ordini.
+    \end{itemize}
+\end{itemize}
+\section{Utente Non Autenticato}
+\subsection{UC4 - Area personale}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la maschera dell'area personale.
+    \item \textbf{Attore Primario:} Untente non autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+    \item \textbf{Postcondizione:} Viene visualizzato la maschera dell'area personale.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro il sistema;
+        \item Viene mostrato la mascheradell'area personale.
+    \end{itemize}
+\end{itemize}
+\subsection{UC4.1 - Registrazione}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente viene registrato nella piattaforma.
+    \item \textbf{Attore Primario:} Untente non autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+    \item \textbf{Postcondizione:} Viene salvato i dati dell'utente inseriti durante la fase di registrazione nel data-base.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro l'area personale;
+        \item L'utente clicca sul bottone registrati;
+        \item Vine mostrato il form di registrazione;
+        \item L'utente inserisce l'email;
+        \item L'utente inserisce la password;
+        \item L'utente ripete la password;
+        \item L'utente clicca sul bottone registrati;
+        \item Viene registrato correttamente l'account.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item L'utente inserisce l'email già esistente nel data-base;
+        \item Non viene registrato l'acocunt.
+    \end{itemize}
+\end{itemize}
+\subsection{UC4.2 - Login}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente effettua login nella piattaforma.
+    \item \textbf{Attore Primario:} Untente non autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+    \item \textbf{Postcondizione:} Viene effettuato il login.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro l'area personale;
+        \item L'utente inserisce l'email;
+        \item L'utente inserisce la password;
+        \item L'utente clicca sul bottone login;
+        \item Viene effettuato il login correttamente.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item L'utente inserisce l'email non esistente nel data-base o una password errata;
+        \item Non viene effettuato il login.
+    \end{itemize}
+\end{itemize}
+\subsection{UC4.2 - Password dimenticata}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente reimposta la password del proprio account.
+    \item \textbf{Attore Primario:} Untente non autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+    \item \textbf{Postcondizione:} Viene aggiornato la nuova password nel data-base.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro l'area personale;
+        \item L'utente clicca sul bottone password dimenticata;
+        \item Vine mostrato il form di recupero password;
+        \item L'utente inserisce l'email;
+        \item L'utente clicca sul bottone ottieni codice;
+        \item L'utente arriva nel secondo form tramite il link mandato tramite email;
+        \item L'utente inserisce la password;
+        \item L'utente ripete la password;
+        \item L'utente clicca sul bottone cambia password;
+        \item Viene cambiato correttamente la password.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item L'utente inserisce l'email non esistente nel data-base;
+        \item Non viene effettuato il cambio password.
+    \end{itemize}
+\end{itemize}
+\section{Utente Autenticato}
+\subsection{UC4.3 - Logout}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente effettua logout.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab ed ha effettuato la login.
+    \item \textbf{Postcondizione:} Viene effettuato il logout.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro l'area personale;
+        \item L'utente inserisce l'email;
+        \item L'utente inserisce la password;
+        \item L'utente clicca sul bottone login;
+        \item Viene effettuato il login correttamente.
+    \end{itemize}
+    \item \textbf{Estensioni:}
+    \begin{itemize}
+        \item L'utente inserisce l'email non esistente nel data-base o una password errata;
+        \item Non viene effettuato il login.
+    \end{itemize}
+\end{itemize}
 Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
 Si è quindi proceduto a elaborare delle possibili soluzioni per far fronte a tali rischi.\\
 
