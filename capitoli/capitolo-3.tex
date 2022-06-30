@@ -53,10 +53,20 @@ Per sviluppare la piattaforma verranno utilizzare le seguenti tecnologie:
 \begin{itemize}
     \item HTML5\gl{}: per creare la struttura dell'interfaccia untente;
     \item CSS3\gl{}: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
-    \item StopLight\gl{}: per simulare le chiamate Rest API;
+    \item Stoplight\gl{}: per simulare le chiamate Rest API;
     \item Angular\gl{}: per la creazione dell'interfaccia utente.
 \end{itemize}
-
+\subsection{Descrizione delle tecnologie}
+\subsubsection{HTML5}
+L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più popolare, utilizzato per progettare le strutture dei siti web. Viene utilizzato da Angular per creare la struttura iniziale per le varie interfacce, poi queste strutture vengono modificate da Angular per generare la pagina dinamicamente. 
+\subsubsection{CSS3}
+Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nel ordine in cui vengono scritte. Per il progetto è stato utilizzato una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite la SCSS è possibile dichiarare le regole CSS in blocchi quindi ci aiuta a scrivere regole CSS in più velocemente e comprensibile.
+\subsubsection{TypeScript}
+TypeScript è un linguaggio di programmazione open source sviluppato da Microsoft, che estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile e flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, grazie a queste caratteristiche utilizzando TypeScript ci ganrantisce controlli automatici, rilevando in automatico i bug prima della compilazione.
+\subsubsection{Angular}
+Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app, oltre a questo garantisce una maggiore manutenibilità e espandibilità.
+\subsubsection{Stoplight}
+Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua interfaccia user friendly\gl{}. Offre un buon spazio per collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
 \section{Casi D'uso}
 \subsection{Introduzione }
 In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa.
@@ -591,7 +601,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \end{itemize}
 \subsection{UC1.9 - Aggiungi recensione}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente Aggiungi una recensione per un piatto ordinato.
+    \item \textbf{Descrizione:} L'utente Aggiungi una recensione per un piatto.
     \item \textbf{Attore Primario:} Untente autenticato.
     \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
     \item \textbf{Postcondizione:} Viene inserito la recensione del piatto.
@@ -627,14 +637,15 @@ Il codice dei requisiti è così strutturato R(F/Q/V)(N/D/O) dove:
 \end{enumerate}
 \subsection{Lista dei requisiti}
 \begin{center}
-    \rowcolors{2}{Cyan!25}{GreenYellow!25}
-    \renewcommand{\arraystretch}{2}
+    \rowcolors{2}{Cyan!10}{GreenYellow!10}
+    \renewcommand{\arraystretch}{1.5}
     \begin{longtable}{ |p{1.5cm}|p{9cm}|p{1.5cm}|  }
         \hline
         \multicolumn{3}{|c|}{Tabella dei requisiti} \\
         \hline
         Codice&Requisito &Fonte \\
         \hline
+        \endhead
         ROF1&L'utente può accedere al menù del ristorante&UC1 \\
         ROF2&All'utetne viene mostrato il menù del ristorante con tutte le categorie&UC1.1 \\
         ROF3&All'utetne viene mostrato il menù del ristorante con tutti piatti delle rispettive categorie di appartenenza&UC1.2 \\
@@ -665,11 +676,18 @@ Il codice dei requisiti è così strutturato R(F/Q/V)(N/D/O) dove:
         ROF&L'utente autenticato può aggiungere un piatto nella lista dei preferiti&UC4.4\\
         ROF&L'utente autenticato può rimuovere un piatto dalla lista dei preferiti&UC4.4\\
         ROF&L'utente autenticato può aggiungere una recensione per un piatto&UC1.7\\
+        ROV&L'interfaccia utente del sistema dovrà essere sviluppato sfruttando il framework Angular&SyncLab\\
+        ROV&Lo stile dell'interfaccia utente del sistema dovrà essere sviluppato sfruttando CSS-3&SyncLab\\
+        ROV&Le chiamate API devono essere implementate tramite Stoplight&SyncLab\\
+        ROV&È necessario dividire le varie maschere in componenti diversi di Angular&SyncLab\\
+        ROV&La web-app dovrà funzionare sul browser Microsoft Edge dalla versione più recente&SyncLab\\
+        ROV&La web-app dovrà funzionare sul browser Google Chrome dalla versione più recente&SyncLab\\
+        ROV&La web-app dovrà funzionare sul browser Firefox dalla versione più recente&SyncLab\\
+        ROV&La web-app dovrà funzionare sul browser Safari dalla versione più recente&SyncLab\\
+        RDV&Il codice sorgente dovrà essere commentata&SyncLab\\
+        ROQ&Il codice sorgente della piattaforma sarà reperibile su GitHub&SyncLab\\
+        ROQ&Fornire una sezione tutorial che spieghi come si utilizza la web-app&SyncLab\\
        
 \hline
 \end{longtable}
 \end{center}
-
-
-%**************************************************************
-\section{Pianificazione}
