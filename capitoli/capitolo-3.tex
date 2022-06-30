@@ -68,6 +68,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \end{itemize}
 \subsection{Utente generico}
 \subsection{UC1 - Visualizza menù}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc1.drawio.png}
+    \caption{Use Case - UC 1}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza il menù del ristorante.
     \item \textbf{Attore Primario:} Untente generico.
@@ -80,6 +85,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \end{itemize}
 \end{itemize}
 \subsection{UC1.1 - Visualizza categorie}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc11.drawio.png}
+    \caption{Use Case - UC 1.1, UC 1.2, UC 1.3, UC 1.4, UC 1.5, UC 1.6}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza le categorie del menù.
     \item \textbf{Attore Primario:} Untente generico.
@@ -167,7 +177,12 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item Viene mostrato i dettagli di un piatto del menù.
     \end{itemize}
 \end{itemize}
-\subsection{UC2 - gestione tavolo}
+\subsection{UC2 - Gestione tavolo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc2.drawio.png}
+    \caption{Use Case - UC 2}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la maschera di gestione tavolo.
     \item \textbf{Attore Primario:} Untente generico.
@@ -180,6 +195,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \end{itemize}
 \end{itemize}
 \subsection{UC2.1 - Generazione sessione tavolo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc21.drawio.png}
+    \caption{Use Case - UC 2.1, UC 2.2, UC 2.3, UC 2.4}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente genera la sessione del tavolo.
     \item \textbf{Attore Primario:} Untente generico.
@@ -243,7 +263,12 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 
 
 
-\subsection{UC3 - lista ordini}
+\subsection{UC3 - Lista ordini}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc3.drawio.png}
+    \caption{Use Case - UC 3}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la maschera di gestione ordini.
     \item \textbf{Attore Primario:} Untente generico.
@@ -256,6 +281,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \end{itemize}
 \end{itemize}
 \subsection{UC3.1 - Visualizza lista ordini del tavolo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc311.drawio.png}
+    \caption{Use Case - UC 3.1, UC 3.2, UC 3.3}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini della sessione di tavolo in cui si trova. 
     \item \textbf{Attore Primario:} Untente generico.
@@ -294,7 +324,44 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item Viene mostrato la lista dei piatti in arrivo.
     \end{itemize}
 \end{itemize}
-\subsection{UC3.4 - Visualizza in dettaglio lista ordini personali}
+\subsection{UC3.1.1 - Sposta la lista in arrivo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc311.drawio.png}
+    \caption{Use Case - UC 3.1.1, UC 3.1.2}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente sposta la lista degli ordini in arrivo.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini del tavolo.
+    \item \textbf{Postcondizione:} Viene spostato la lista degli ordini del tavolo in arrivo.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini del tavolo;
+        \item L'utente clicca sul bottone sposta la lista in arrivo;
+        \item Viene spostato la lista degli piatti ordinati personali in modalità dettaglio;
+        \item Viene mostrato all'utente il messaggio "ordini spostati correttamente".
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.1.2 - Mostra QR-code ordini}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente genera il QR-code della lista ordini per dopo mostrarlo al cameriere.
+    \item \textbf{Attore Primario:} Untente generico.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini del tavolo.
+    \item \textbf{Postcondizione:} Viene mostrato il QR-code della lista degli ordini.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la sezione gestione ordini del tavolo;
+        \item L'utente clicca sul bottone QR-code;
+        \item Viene generato il QR-code degli ordini.
+    \end{itemize}
+\end{itemize}
+\subsection{UC3.2.1 - Visualizza in dettaglio lista ordini personali}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc322.drawio.png}
+    \caption{Use Case - UC 3.2.1}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini personali in modalità dettaglio.
     \item \textbf{Attore Primario:} Untente generico.
@@ -307,7 +374,12 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item Viene mostrato la lista dei piatti ordinati personali in modalità dettaglio.
     \end{itemize}
 \end{itemize}
-\subsection{UC3.5 - Ricezione piatto}
+\subsection{UC3.3.1 - Ricezione piatto}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc333.drawio.png}
+    \caption{Use Case - UC 3.3.1}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente marca un piatto in arrivo come ricevuto.
     \item \textbf{Attore Primario:} Untente generico.
@@ -326,35 +398,14 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item Viene diminuito di 1 la quantità del piatto e viene disabilitato il bottone.
     \end{itemize}
 \end{itemize}
-\subsection{UC3.6 - Sposta la lista in arrivo}
-\begin{itemize}
-    \item \textbf{Descrizione:} L'utente sposta la lista degli ordini in arrivo.
-    \item \textbf{Attore Primario:} Untente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini del tavolo.
-    \item \textbf{Postcondizione:} Viene spostato la lista degli ordini del tavolo in arrivo.
-    \item \textbf{Scenrio principale:}
-    \begin{itemize}
-        \item L'utente si trova dentro la sezione gestione ordini del tavolo;
-        \item L'utente clicca sul bottone sposta la lista in arrivo;
-        \item Viene spostato la lista degli piatti ordinati personali in modalità dettaglio;
-        \item Viene mostrato all'utente il messaggio "ordini spostati correttamente".
-    \end{itemize}
-\end{itemize}
-\subsection{UC3.7 - Mostra QR-code ordini}
-\begin{itemize}
-    \item \textbf{Descrizione:} L'utente genera il QR-code della lista ordini per dopo mostrarlo al cameriere.
-    \item \textbf{Attore Primario:} Untente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista ordini del tavolo.
-    \item \textbf{Postcondizione:} Viene mostrato il QR-code della lista degli ordini.
-    \item \textbf{Scenrio principale:}
-    \begin{itemize}
-        \item L'utente si trova dentro la sezione gestione ordini del tavolo;
-        \item L'utente clicca sul bottone QR-code;
-        \item Viene generato il QR-code degli ordini.
-    \end{itemize}
-\end{itemize}
+
 \section{Utente Non Autenticato}
 \subsection{UC4 - Area personale}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc4.drawio.png}
+    \caption{Use Case - UC 4}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la maschera dell'area personale.
     \item \textbf{Attore Primario:} Untente non autenticato.
@@ -367,6 +418,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \end{itemize}
 \end{itemize}
 \subsection{UC4.1 - Registrazione}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc41.drawio.png}
+    \caption{Use Case - UC 4.1, UC 4.2, UC 4.3}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente viene registrato nella piattaforma.
     \item \textbf{Attore Primario:} Untente non autenticato.
@@ -383,11 +439,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item L'utente clicca sul bottone registrati;
         \item Viene registrato correttamente l'account.
     \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item L'utente inserisce l'email già esistente nel data-base;
-        \item Non viene registrato l'acocunt.
-    \end{itemize}
+    % \item \textbf{Estensioni:}
+    % \begin{itemize}
+    %     \item L'utente inserisce l'email già esistente nel data-base;
+    %     \item Non viene registrato l'acocunt.
+    % \end{itemize}
 \end{itemize}
 \subsection{UC4.2 - Login}
 \begin{itemize}
@@ -403,13 +459,13 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item L'utente clicca sul bottone login;
         \item Viene effettuato il login correttamente.
     \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item L'utente inserisce l'email non esistente nel data-base o una password errata;
-        \item Non viene effettuato il login.
-    \end{itemize}
+    % \item \textbf{Estensioni:}
+    % \begin{itemize}
+    %     \item L'utente inserisce l'email non esistente nel data-base o una password errata;
+    %     \item Non viene effettuato il login.
+    % \end{itemize}
 \end{itemize}
-\subsection{UC4.2 - Password dimenticata}
+\subsection{UC4.3 - Password dimenticata}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente reimposta la password del proprio account.
     \item \textbf{Attore Primario:} Untente non autenticato.
@@ -428,14 +484,39 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item L'utente clicca sul bottone cambia password;
         \item Viene cambiato correttamente la password.
     \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item L'utente inserisce l'email non esistente nel data-base;
-        \item Non viene effettuato il cambio password.
-    \end{itemize}
+    % \item \textbf{Estensioni:}
+    % \begin{itemize}
+    %     \item L'utente inserisce l'email non esistente nel data-base;
+    %     \item Non viene effettuato il cambio password.
+    % \end{itemize}
 \end{itemize}
+% \subsection{UCE1 - Email}
+% \begin{itemize}
+%     \item \textbf{Descrizione:} L'utente reimposta la password del proprio account.
+%     \item \textbf{Attore Primario:} Untente non autenticato.
+%     \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab.
+%     \item \textbf{Postcondizione:} Viene aggiornato la nuova password nel data-base.
+%     \item \textbf{Scenrio principale:}
+%     \begin{itemize}
+%         \item L'utente si trova dentro l'area personale;
+%         \item L'utente clicca sul bottone password dimenticata;
+%         \item Vine mostrato il form di recupero password;
+%         \item L'utente inserisce l'email;
+%         \item L'utente clicca sul bottone ottieni codice;
+%         \item L'utente arriva nel secondo form tramite il link mandato tramite email;
+%         \item L'utente inserisce la password;
+%         \item L'utente ripete la password;
+%         \item L'utente clicca sul bottone cambia password;
+%         \item Viene cambiato correttamente la password.
+%     \end{itemize}
+% \end{itemize}
 \section{Utente Autenticato}
-\subsection{UC4.3 - Logout}
+\subsection{UC4.4 - Logout}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc42.drawio.png}
+    \caption{Use Case - UC 4.4, UC4.5, UC4.6}
+\end{figure}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente effettua logout.
     \item \textbf{Attore Primario:} Untente autenticato.
@@ -444,28 +525,150 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item \textbf{Scenrio principale:}
     \begin{itemize}
         \item L'utente si trova dentro l'area personale;
-        \item L'utente inserisce l'email;
-        \item L'utente inserisce la password;
-        \item L'utente clicca sul bottone login;
-        \item Viene effettuato il login correttamente.
-    \end{itemize}
-    \item \textbf{Estensioni:}
-    \begin{itemize}
-        \item L'utente inserisce l'email non esistente nel data-base o una password errata;
-        \item Non viene effettuato il login.
+        \item L'utente clicca sul bottone logout;
+        \item Viene effettuato il logout dell'utente.
     \end{itemize}
 \end{itemize}
-Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
-Si è quindi proceduto a elaborare delle possibili soluzioni per far fronte a tali rischi.\\
+\subsection{UC4.5 - Aggiungi ingredienti non voluti}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente inserisce un ingrediente nella blacklist.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab  ha effettuato la login.
+    \item \textbf{Postcondizione:} Viene inserito l'ingrediente nella blacklist.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro l'area personale;
+        \item L'utente clicca sul bottone blacklist ingredienti;
+        \item L'utente inserisce il nome del ingrediente;
+        \item L'utente clicca sul bottone +;
+        \item Viene inserito ingrediente nella blacklist.
+    \end{itemize}
+\end{itemize}
+\subsection{UC4.6 - Rimuovi ingredienti non voluti}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente rimuove un ingrediente dalla blacklist.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab  ha effettuato la login.
+    \item \textbf{Postcondizione:} Viene rimosso l'ingrediente dalla blacklist.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro l'area personale;
+        \item L'utente clicca sul bottone blacklist ingredienti;
+        \item L'utente clicca sul bottone - di un ingrediente già esistente;
+        \item Viene rimosso ingrediente dalla blacklist.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.7 - Aggiungi preferiti}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc111.drawio.png}
+    \caption{Use Case - UC 1.7, UC1.8, UC1.9}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente aggiunge un piatto nella lista dei preferiti.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
+    \item \textbf{Postcondizione:} Viene inserito il piatto nei preferiti.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova nella sezione menù;
+        \item L'utente clicca sul bottone "cuoricino grigio";
+        \item Viene inserito il piatto nella lista dei preferiti.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.8 - Rimuovi preferiti}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente rimuove un piatto nella lista dei preferiti.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
+    \item \textbf{Postcondizione:} Viene rimosso il piatto dalla lista dei preferiti.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova nella sezione menù;
+        \item L'utente clicca sul bottone "cuoricino rosa";
+        \item Viene rimosso il piatto nella lista dei preferiti.
+    \end{itemize}
+\end{itemize}
+\subsection{UC1.9 - Aggiungi recensione}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente Aggiungi una recensione per un piatto ordinato.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
+    \item \textbf{Postcondizione:} Viene inserito la recensione del piatto.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova nella sezione menù;
+        \item L'utente clicca su una delle 5 stelle;
+        \item Viene inserito la recensione del piatto.
+    \end{itemize}
+\end{itemize}
+% Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
+% Si è quindi proceduto a elaborare delle possibili soluzioni per far fronte a tali rischi.\\
 
-\begin{risk}{Performance del simulatore hardware}
-    \riskdescription{le performance del simulatore hardware e la comunicazione con questo potrebbero risultare lenti o non abbastanza buoni da causare il fallimento dei test}
-    \risksolution{coinvolgimento del responsabile a capo del progetto relativo il simulatore hardware}
-    \label{risk:hardware-simulator} 
-\end{risk}
+% \begin{risk}{Performance del simulatore hardware}
+%     \riskdescription{le performance del simulatore hardware e la comunicazione con questo potrebbero risultare lenti o non abbastanza buoni da causare il fallimento dei test}
+%     \risksolution{coinvolgimento del responsabile a capo del progetto relativo il simulatore hardware}
+%     \label{risk:hardware-simulator} 
+% \end{risk}
 
 %**************************************************************
-\section{Requisiti e obiettivi}
+\section{Requisiti}
+\subsection{Introduzione}
+In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti. Nella tabella si trovano tutti requisiti del progetto.
+Il codice dei requisiti è così strutturato R(F/Q/V)(N/D/O) dove:
+\begin{enumerate}
+	\item[R =] requisito
+    \item[F =] funzionale
+    \item[Q =] qualitativo
+    \item[V =] di vincolo
+    \item[N =] obbligatorio (necessario)
+    \item[D =] desiderabile
+    \item[Z =] opzionale
+\end{enumerate}
+\subsection{Lista dei requisiti}
+\begin{center}
+    \rowcolors{2}{Cyan!25}{GreenYellow!25}
+    \renewcommand{\arraystretch}{2}
+    \begin{longtable}{ |p{1.5cm}|p{9cm}|p{1.5cm}|  }
+        \hline
+        \multicolumn{3}{|c|}{Tabella dei requisiti} \\
+        \hline
+        Codice&Requisito &Fonte \\
+        \hline
+        ROF1&L'utente può accedere al menù del ristorante&UC1 \\
+        ROF2&All'utetne viene mostrato il menù del ristorante con tutte le categorie&UC1.1 \\
+        ROF3&All'utetne viene mostrato il menù del ristorante con tutti piatti delle rispettive categorie di appartenenza&UC1.2 \\
+        ROF4&L'utente può aumentare la quantità di un piatto nel menù&UC1.3 \\
+        ROF5&L'utente può diminuire la quantità di un piatto nel menù&UC1.4 \\
+        ROF&L'utente può impostare la visualizzazione dei piatti del menù nella modalità dettaglio&UC1.5 \\
+        ROF&L'utente può impostare la visualizzazione dei piatti del menù nella modalità normale&UC1.6 \\
+        ROF&L'utente può accedere alla maschera per la gestione tavolo &UC2 \\
+        ROF&L'utente può generare la sessione del tavolo in cui si trova&UC2.1\\
+        ROF&L'utente può unirsi alla sessione di un tavolo&UC2.2 \\
+        ROF&L'utente può uscire dalla sessione di un tavolo&UC2.3\\
+        ROF&L'utente può generare il QR-code della sessione del tavolo in cui si trova&UC2.4\\
+        ROF&L'utente può accedere alla maschera per la gestione della lista ordini&UC3 \\
+        ROF&All'utetne viene mostrato la lista ordini del tavolo&UC3.1 \\
+        ROF&All'utetne viene mostrato la lista ordini personali &UC3.2 \\
+        ROF&All'utetne viene mostrato la lista ordini in arrivo&UC3.3 \\
+        ROF&L'utente può spostare la lista ordini del tavolo in arrivo &UC3.3.1 \\
+        ROF&L'utente può generare il QR-code della lista ordini del tavolo in cui si trova &UC3.1.2 \\
+        ROF&L'utente può impostare la visualizzazione dei piatti della lista ordini personali in modalità dettaglio&UC3.2.1 \\
+        ROF&L'utente può marcare un piatto della lista ordini in arrivo come ricevuto&UC3.3.1 \\
+        ROF&L'utente non autenticato può accedere all'area personale&UC4\\
+        ROF&L'utente non autenticato deve riuscire ad inserire email, password e conferma password nel form di registrazione per effettuare la registrazione &UC4.1\\
+        ROF&L'utente non autenticato deve riuscire ad inserire email e password nel form di login per effettuare la login &UC4.2\\
+        ROF&L'utente non autenticato deve riuscire ad inserire la email e la nuova password nel form del password dimenticata&UC4.3\\
+        ROF&L'utente autenticato deve riuscire ad effettuare la logout nell'area personale&UC4.4\\
+        ROF&L'utente autenticato può aggiungere ingredienti non voluti nell'area personale&UC4.4\\
+        ROF&L'utente autenticato può rimuovere ingredienti non voluti nell'area personale&UC4.4\\
+        ROF&L'utente autenticato può aggiungere un piatto nella lista dei preferiti&UC4.4\\
+        ROF&L'utente autenticato può rimuovere un piatto dalla lista dei preferiti&UC4.4\\
+        ROF&L'utente autenticato può aggiungere una recensione per un piatto&UC1.7\\
+       
+\hline
+\end{longtable}
+\end{center}
 
 
 %**************************************************************
