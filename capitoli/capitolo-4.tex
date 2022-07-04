@@ -7,13 +7,14 @@
 \label{cap:progettazione e codifica}
 %**************************************************************
 
-\intro{In questo capitolo vengono trattati la progettazione e codifica della parte front-end della web-app. Vie }\\
+\intro{In questo capitolo vengono trattati la progettazione e codifica della parte front-end della web-app. Vengono elencati tutti i componenti della web-app e vengono descritti la loro funzionalità. }\\
 
 \section{Progettazione}
 \subsection{Architettura Angular}
-Un'applicazione Angular è formato da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che devinisce la vista dell'utente.
-La vista viene modificata da Angular in base alla logica del codice. Ogni componente possiede un template di HTML, dove viene definita il modello di vista, combinata con le direttive di Angular consente di motificare il codice HTML, una volta cambiata la struttura della pagina viene fatto il rendering\gl{} e infine viene cambiata la vista.\\ 
-I componenti utilizzano dei servizi che forniscono funzionalità specififche come la login, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze e grazie a questo rende il codice riutilizzabile ed efficiente. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, quindi un componente può contenere più componenti così rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
+Un'applicazione Angular è formato da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che devinisce la vista dell'utente.\\
+% La vista viene modificata da Angular in base alla logica del codice.
+Ogni componente possiede un template di HTML, dove viene definita il modello di vista, combinata con le direttive di Angular consente di motificare il codice HTML, una volta cambiata la struttura della pagina viene fatto il rendering e infine viene cambiata la vista.\\ 
+I componenti utilizzano dei servizi che forniscono funzionalità specifiche come la login, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze e grazie a questo rende il codice efficiente. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, quindi un componente può contenere più componenti così rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{angularArc.png}
@@ -21,8 +22,10 @@ I componenti utilizzano dei servizi che forniscono funzionalità specififche com
 \end{figure}
 \subsection{Architettura SushiLab}
 La web-app segue l'architettura spiegata precedentemente che è anche quello consigliato dal sito ufficiale di Angular.\\
+La cartella principale della web-app è app che contiene tutti i componenti, i servizi e il root.\\ 
 Per ogni componente si è creato una cartella per essa, in cui contiene il suoi file .ts per la logica, .html per la struttura, .scss per il layout di grafica e infine i suoi componenti figli. Per i componenti condivisi si è creato una cartella shared dove vengono salvati i componenti che sono utilizzati in più parti dell'applicazione\\
 Nella cartella rest vengono salvati tutti i file service, in cui ci sono dei metodi che sono chiamati in più parti dell'applicazione al fine di massimizzare il riuso del codice.\\
+Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo da fare utilizzare da tutti i componenti.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.55]{struttura.png}
@@ -32,7 +35,7 @@ Nella cartella rest vengono salvati tutti i file service, in cui ci sono dei met
 \end{figure}
 \subsection{Progettazione API}
 La API sono implementate tramite la piattaforma Stoplight che è uno dei requisiti obbligatori richiesti dall'azienda.\\
-La progettazione delle API sono molto semplici grazie all'interfaccia semplice di Stoplight, che permette di definire i path\gl{} e i rispettivi metodi facilmente.\\
+La progettazione delle API sono molto semplici grazie all'interfaccia semplice di Stoplight, che permette di definire i path e i rispettivi metodi facilmente.\\
 Per ogni chiamata bisogna avere:
 \begin{itemize}
     \item \textbf{Nome:} individua le API;
@@ -41,8 +44,8 @@ Per ogni chiamata bisogna avere:
     \begin{itemize}
         \item  \textbf{get:} per richiedere dei dati al server come la chiamata per ottenere il menù;
         \item  \textbf{post:} per inviare dei dati sintetici al server come i dati per login;
-        \item  \textbf{delete:} per eliminare dei dati dal server come eliminazione della sessione di tavolo;        
-    \end{itemize};
+        \item  \textbf{delete:} per eliminare dei dati dal server come eliminazione della sessione di tavolo.       
+    \end{itemize}
     \item \textbf{Path:} definisce il percorso finale della API;
     \item \textbf{Risposta:} configura la risposta che ritorna la API, è stato usato:
     \begin{itemize}
@@ -61,13 +64,13 @@ Per ogni chiamata bisogna avere:
     \caption{Stoplight SushiLab}
 \end{figure}
 \subsection{Progettazione delle viste}
-All'inizio si è fatto un meeting\gl{} con il tutur aziendale per chiarire le funzionalità che deve avere la web-app, dopo di che si è iniziato la progettazione delle viste tramite la editor di grafica online\gl{} Figma\gl{}.\\
+All'inizio si è fatto un meeting con il tutur aziendale per chiarire le funzionalità che deve avere la web-app, dopo di che si è iniziato la progettazione delle viste tramite la editor di grafica online Figma.\\
 Tramite il sistema di progettazione di Figma sono stati creati le bozze delle viste per chiarire i collegamenti tra di loro e i posizionamenti dei compoenti. 
 Il posizionamento dei componenti sono scelti in base al loro numero di volte che viene premuto e si è anche basato alle web-app più popolari.
 È stato deciso i seguenti aspetti:
 \begin{itemize}
     \item I colori principali e lo sfondo della applicazione;
-    \item Il bottone per la navbar\gl{} è in alto a destra;
+    \item Il bottone per la navbar è in alto a destra;
     \item Il logo della piattaforma in alto a sinistra;
     \item I bottoni, testi e form devono avere lo stesso stile e colore in base alla loro funzionalità;
     \item Lo stile del piatto in modalità dettaglio in menù e nella lista degli ordini personali è la stessa;
@@ -78,8 +81,7 @@ Il posizionamento dei componenti sono scelti in base al loro numero di volte che
     \includegraphics[scale=1]{figma.png}
     \caption{Figma SushiLab}
 \end{figure}
-
-
+\pagebreak
 % {\hyperref[cap:menu.component]{Il secondo capitolo}}
 \section{Codifica}
 \subsection{Interfaccie}
@@ -98,6 +100,8 @@ Viene mostrata il menù del ristorante che comprende tutte le categorie e le lor
     \includegraphics[scale=.6]{menu2.png}
     \caption{Menù e Menù con piatto in dettaglio di SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Gestione tavolo}
 Viene mostrata la maschera di gestione tavolo.\\
 \textbf{Funzionalità:}
@@ -108,8 +112,10 @@ Viene mostrata la maschera di gestione tavolo.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.6]{gestione tavolo.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera gestione tavolo SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Unisci sessione}
 Interfaccia tramite la quale è possibile unire ad una sessione di tavolo.\\
 \textbf{Funzionalità:}
@@ -120,8 +126,10 @@ Interfaccia tramite la quale è possibile unire ad una sessione di tavolo.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.6]{unisci.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera unisci sessione SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{QR-code tavolo}
 Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trovano sullo stesso tavolo dell'untente di unirsi.\\
 \textbf{Funzionalità:}
@@ -131,8 +139,10 @@ Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trova
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.6]{gestionetavolo2.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera QR-code tavolo SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Lista ordini del tavolo}
 Viene mostrato la lista degli ordini della sessione del tavolo in cui si trova l'utente.\\
 \textbf{Funzionalità:}
@@ -145,8 +155,10 @@ Viene mostrato la lista degli ordini della sessione del tavolo in cui si trova l
     \centering
     \includegraphics[scale=.6]{ordinitavolo.png}
     \includegraphics[scale=.6]{ordinitavolo2.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera lista ordini del tavolo e QR-code ordini SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Lista ordini personali}
 Viene mostrata la lista degli ordini personali.\\
 \textbf{Funzionalità:}
@@ -160,8 +172,10 @@ Viene mostrata la lista degli ordini personali.\\
     \centering
     \includegraphics[scale=.6]{ordinipersonali.png}
     \includegraphics[scale=.6]{ordinipersonali2.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera ordini personali e ordini personali con piatti in dettaglio SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Lista ordini in arrivo}
 Viene mostrata la lista degli ordini in arrivo.\\
 \textbf{Funzionalità:}
@@ -175,8 +189,10 @@ Viene mostrata la lista degli ordini in arrivo.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.6]{ordiniinarrivo.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera ordini in arrivo SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Login}
 Viene mostrato il form per effetture il login dove è possibile effettuare la login nella piattaforma.\\
 \textbf{Funzionalità:}
@@ -189,8 +205,10 @@ Viene mostrato il form per effetture il login dove è possibile effettuare la lo
     \centering
     \includegraphics[scale=.6]{login.png}
     \includegraphics[scale=.6]{login2.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera login e login con campi errati SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Registrazione}
 Viene mostrato il form di registrazione dove è possibile registrare nella piattaforma.\\
 \textbf{Funzionalità:}
@@ -202,24 +220,29 @@ Viene mostrato il form di registrazione dove è possibile registrare nella piatt
     \centering
     \includegraphics[scale=.6]{registrati.png}
     \includegraphics[scale=.6]{registrati2.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera registrazione e registrazione con campi errati SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Password Dimenticata}
 Viene mostrato il form di cambia password dove è possibile reimpostare la password.\\
 \textbf{Funzionalità:}
 \begin{itemize}
+    \setlength\itemsep{.1em}
     \item L'utente può reimpostare la password inserendo i campi correttamente altrimenti viene evidenziato in rosso i campi sbagliati;
     \item L'utente può andare al form di registrazione;
     \item L'utente può andare al form di Login.
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=.6]{cambiapass.png}
-    \includegraphics[scale=.6]{cambiapass2.png}
-    \includegraphics[scale=.6]{cambiapass3.png}
-    \includegraphics[scale=.6]{cambiapass4.png}
-    \caption{Menù SushiLab}
+    \includegraphics[scale=.5]{cambiapass.png}
+    \includegraphics[scale=.5]{cambiapass2.png}
+    \includegraphics[scale=.5]{cambiapass3.png}
+    \includegraphics[scale=.5]{cambiapass4.png}
+    \caption{Maschere cambia password e cambia password con i campi errati  SushiLab}
 \end{figure}
+\pagebreak
+
 \subsubsection{Area Personale}
 Viene mostrata l'area personale dell'utente dove si può vedere i dati dell'utente.
 \textbf{Funzionalità:}
@@ -231,6 +254,278 @@ Viene mostrata l'area personale dell'utente dove si può vedere i dati dell'uten
     \centering
     \includegraphics[scale=.6]{personale.png}
     \includegraphics[scale=.6]{blacklist.png}
-    \caption{Menù SushiLab}
+    \caption{Maschera area personae e blacklist SushiLab}
 \end{figure}
 \label{cap:menu.component}
+
+\subsubsection{Menu component}
+Componente usato per creare la maschera del menù. Composto da un insieme di piatti creati aumaticamenti in base al array menù di ritorno.\\
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item piatto.component;
+    \item menu.service;
+    \item ordini.service.
+\end{itemize}
+
+\subsubsection{Nav component}
+Componente usato per creare la maschera della navbar. Composto da un insieme di link che porta l'utente in vari sezioni della web-app.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item isLoggedIn(): ritorna true se l'utente è loggato, false altrimenti;
+    \item haveMenu(): ritorna true se è presente il menù nel local storage, false altrimenti;
+    \item haveTable(): ritorna true se è presente la sessione di tavole nel local storage, false altrimenti;
+    \item close(): chiude il menu a tendina.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}    
+    \item auth.service;
+    \item menu.service;
+    \item table.service.
+\end{itemize}
+
+\subsubsection{Ordini component}
+Componente usato per creare la maschera della lista degli ordini. Composto da tre sezioni che sono ordini del tavolo, ordini personali e ordini in arrivo.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item moveOrders(): sposta la lista degli ordini del tavolo in arrivo;
+    \item changeZoom(): cambia la modalità di presentazione dei piatti, cambiando da modificata normale in modificata dettaglio o viceversa;
+    \item showQrCode(): mostra il QR-code della lista degli ordini;
+    \item closeQrCode(): chiude la maschera di QR-code;
+    \item getAllOrders(): inizializza tutti gli ordini predendo i piatti dal server.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item piatto-arrivo.component;
+    \item piatto.component;
+    \item piatto-ordine.component;
+    \item auth.service;
+    \item menu.service;
+    \item table.service.
+\end{itemize}
+
+\subsubsection{Piatto-arrivo component}
+Componente usato per creare il piatto della sezione lista degli ordini in arrivo.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item toogleFav(): cambia lo stato di preferito di un determinato piatto;
+    \item updateStar(): aggiorna la recensione di un determinato piatto;
+    \item decreaseCount(): chiamato quando utente marca un piatto come arrivato, diminuisce la quantità di un piatto in arrivo.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item auth.service;
+    \item menu.service.
+\end{itemize}
+
+% \subsubsection{Piatto-dettaglio component}
+% Componente usato per creare il piatto in modalità dettaglio.\\
+% \textbf{Metodi:}
+% \begin{itemize}
+%     \item toogleFav(): cambia lo stato di preferito di un determinato piatto;
+%     \item updateStar(): aggiorna la recensione di un determinato piatto;
+%     \item increseCount(): aumenta la quantità di un determinato piatto presente negli ordini personali;
+%     \item decreaseCount(): diminuisce la quantità di un determinato piatto presente negli ordini personali
+%     \item noteChanged(): cambia la nota di un piatto presente negli ordini personali.
+% \end{itemize}
+% \textbf{Componenti e servizi usati:}
+% \begin{itemize}
+%     \item auth.service;
+%     \item ordini.service;
+%     \item menu.service.
+% \end{itemize}
+
+\subsubsection{Piatto-ordine component}
+Componente usato per creare il piatto in modalità normale per la sezione ordini dove viene mostrato solamente il nome, numero, quantità e la nota.\\
+
+\subsubsection{Personale component}
+Componente usato per creare la maschera dell'area personale, dove si può vedere email dell'utente e andare nella sezione blacklist.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item isLoggedOut(): ritorna true se l'utente non è loggato, false altrimenti.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item blacklist.component;
+    \item forgot.component;
+    \item login.component;
+    \item logout.component;
+    \item register.component;
+    \item auth.service;
+    \item user.service.
+\end{itemize}
+
+\subsubsection{blacklist component}
+Componente usato per creare gestire la sezione blacklist degli ingredienti, viene mostrato la blacklist ed è possibile rimuovere o aggiungere un ingrediente.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item onAdd(): metodo chiamato quando si aggiunge un ingrediente nella blacklist;
+    \item onRemove(): metodo chiamato quando si rimuove un ingrediente dalla blacklist;
+    \item isValid(): ritorna true se ingrediente inserito è valido, false altrimenti.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item user.service.
+\end{itemize}
+
+\subsubsection{Forgot component}
+Componente usato per creare la maschera per reimpostare la password.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item sendCode(): chiama il server per mandare il link dove porta l'utente alla pagina per reimpostare la password;
+    \item cambia(): metodo chiamato quando l'utente conferma il form, viene controllato i dati inseriti e in fine viene chiamato API per cambiare la password.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item user.service.
+\end{itemize}
+
+\subsubsection{Login component}
+Componente usato per creare la il form per effetture la login.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item login(): metodo chiamato quando l'utente conferma il form, viene controllato vari campi e infine viene chiamato API per effetture la login.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item auth.service.
+\end{itemize}
+
+\subsubsection{Logout component}
+Componente usato per creare il bottone di logout e serve per effettuare il logout.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item logout(): effettua il logout dell'utente.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item auth.service.
+\end{itemize}
+
+\subsubsection{Register component}
+Componente usato per creare il form per la registrazione.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item register(): metodo chiamato quando l'utente conferma il form, viene controllato vari campi e infine viene chiamato API per la registrazione.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item user.service.
+\end{itemize}
+
+\subsubsection{Preferiti component}
+Componente usato per creare la maschera dei preferiti dove si può visualizzare la lista dei preferiti e rimuovere un piatto non più interessante.\\
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item piatto.component;
+    \item menu.service.
+\end{itemize}
+
+\subsubsection{Piatto component}
+Componente usato per creare il piatto, viene utilizzato per la visualizzazione del menù e della lista dei preferiti.\\
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item menu.service.
+\end{itemize}
+
+\subsubsection{Preferiti component}
+Componente usato per creare la maschera dei preferiti dove si può visualizzare la lista dei preferiti e rimuovere un piatto non più interessante.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item toggleExpand(): espande la visuale del piatto mostrando tutti i dettagli del piatto o nasconde i suoi dettagli;
+    \item toogleFav(): cambia lo stato di preferito di un determinato piatto;
+    \item updateStar(): aggiorna la recensione di un determinato piatto;
+    \item increseCount(): aumenta la quantità di un determinato piatto presente negli ordini personali;
+    \item decreaseCount(): diminuisce la quantità di un determinato piatto presente negli ordini personali
+    \item noteChanged(): cambia la nota di un piatto presente negli ordini personali.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item star.component;
+    \item ordini.service;
+    \item auth.service;
+    \item menu.service.
+\end{itemize}
+
+\subsubsection{Tavolo component}
+Componente usato per creare la maschera gestione tavolo, dove si può creare una sessione di tavolo, unire ad una sessione o uscire da una sessione.\\
+\textbf{Metodi:}
+\begin{itemize}
+    \item changeState(): cambia lo stato di visualizzazione della sezione gestione tavolo in base al table.service se è presente o no una sessione;
+    \item removeSession(): rimuove la sessione del tavolo;
+    \item setSession(): imposta la sessione del tavolo chiamando il server e infine imposta il numero di tavolo;
+    \item updateURL(): aggiorna il percorso del link per generare il QR-code del tavolo;
+    \item createSession(): crea la sessione di tavolo.
+\end{itemize}
+\textbf{Componenti e servizi usati:}
+\begin{itemize}
+    \item table.service;
+    \item menu.service.
+\end{itemize}
+
+\subsubsection{auth.service}
+Servizio utilizzato per gestire le autenticazioni.
+\textbf{Metodi:}
+\begin{itemize}
+    \item login(email: string, password: string): metodo chiamato per effettuare la login dell'utente;
+    \item setSession(): salva i dati dell'utente dopo la login nel local storage per mantenere la sessione di login;
+    \item logout(): metodo chiamato per effetture il logout dell'utente;
+    \item isLoggedIn(): ritorna true se è presente nel local storage la sessione dell'utente, false altrimenti;
+    \item getExpirations(): ritorna true se la sessione dell'utente non è ancora scaduto, false altrimenti.
+\end{itemize}
+
+\subsubsection{menu.service}
+Servizio utilizzato per gestire tutte le funzionalità del menù.
+\textbf{Metodi:}
+\begin{itemize}
+    \item title(): ritorna il nome del menù;
+    \item haveMenu(): ritorna true se è presente un menù nel local storage, false altrimenti;
+    \item get menuId(): ritorna l'id del menù;
+    \item set menuId(id: number): salva l'id del menù nel local storage;
+    \item applyBlacklist(menu: Menu): rimuove i piatti che contengono gli ingredienti presenti nella blacklist dell'utente;
+    \item setFavorite(idPiatto:number, favorite:boolean): aggiunge un piatto del menù nella lista dei preferiti o lo toglie dalla lista dei preferiti;
+    \item  setRating(idPiatto: number, rate: number): salva la recensione del piatto;
+    \item getPreferiti(): richiede al server la lista dei preferiti dell'utente.
+\end{itemize}
+
+\subsubsection{ordini.service}
+Servizio utilizzato per gestire le ordinazioni.
+\textbf{Metodi:}
+\begin{itemize}
+    \item updateRemoteOrder(): aggiorna gli ordini del server mandandogli la lista degli ordini ogni lasso di tempo;
+    \item getOrded(idPiatto:number): ritorna indice nel array di ordini del piatto passato;
+    \item clearOrder(): svuota array di ordini presente nel local storage;
+    \item setOrder(idPiatto: number, count: number, note: string): imposta la quantità del piatto  con id idPiatto passato presente nalla lista degli ordini con count;
+    \item mergeOrder(newOrders: any[]): unisce gli ordini locali con quelli del server quando l'utente si unisce ad una sessione passando da una sessione a una sessione diversa;
+    \item getSessionCode(): ritorna il codice sessione del tavolo;
+    \item getOrdersTable(): ritorna l'ordine del tavolo;
+    \item getOrdersUser(): ritorna l'ordine dell'utente;
+    \item getOrdersArriving(): ritorna l'ordine in arrivo;
+    \item moveOrders(): sposta l'ordine del tavolo in arrivo;
+    \item toQrCode(): ritorna la stringa per generare il qrcode per la lista dell'ordine.
+\end{itemize}
+
+\subsubsection{tavolo.service}
+Servizio utilizzato per gestire le sessioni di tavolo.
+\textbf{Metodi:}
+\begin{itemize}
+    \item createSession(): chiama il server per creare una sessione di tavolo;
+    \item getSession(): ritorna il numero del tavolo;
+    \item getCode(): ritorna il codice di sessione;
+    \item haveSession(): ritorna true se esiste un codice di sessione false altrimenti;
+    \item setSession(code: string): imposta il codice di sessione con il code passato come parametro per unirsi alla sessione del tavolo;l
+    \item menuChanged(): controlla se il menu della sessione corrente è uguale a quello della sessione a cui si vuole unirsi se è false non è possibile fare il merge dei piatti;
+    \item removeSession(): rimuove i dati della sessione di tavolo.
+\end{itemize}
+
+
+\subsubsection{user.service}
+Servizio utilizzato per gestire le funzionalità dell'area personale.
+\textbf{Metodi:}
+\begin{itemize}
+    \item pushBlacklist(): chiama il server aggiornare la blacklist degli ingredienti;
+    \item getUtente(): richiede al server per ottenere le informazione dell'utente attualmente collegato;
+    \item setUtente(user: User): manda al server i dati dell'utente per completare la registrazione;
+    \item verifyCode(code: string): verifica se il link con cui è passato al form per reimpostare la password è corretto o no;
+    \item getChangeCod(email: string): chiede al server per mandare un'email per al email passato per reimpostare la password;
+    \item changePassword(password: string): manda al server la password nuova per aggiornare quella vecchia.
+\end{itemize}

@@ -7,7 +7,7 @@
 \label{cap:analisi dei requisiti}
 %**************************************************************
 
-\intro{In questo capitolo vengono trattati le analisi dei requisiti del modulo di front-end della web-app, con i vari casi d'uso ed elenco dei requisiti.}\\
+\intro{In questo capitolo vengono trattati le analisi dei requisiti del modulo di front-end della web-app, con i vari casi d'uso ed elenco dei requisiti. Infine vengono elencati i requisiti richiesti dall'azienda.}\\
 
 %**************************************************************
 \section{Descrizione generale}
@@ -17,9 +17,9 @@ L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR
 \subsubsection{Interfaccia lista ordini}
 L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone del tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
 \subsubsection{Interfaccia gestione tavolo}
-In questa maschera utente può creare una sessione di tavolo se non appartiene ad nessuna sessione, altrimenti può visuale il suo QR-code in modo da fare entrare gli altri nella sua sessione di tavolo.
+In questa maschera utente può creare una sessione di tavolo se non appartiene ad nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione in modo da fare entrare gli altri nella sua sessione di tavolo.
 \subsubsection{Interfaccia area personale}
-Qui l'utente può effetture la login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist\gl{} in modo tale di non visualizzare i piatti contenenti quegli ingredienti nella sezione menù.
+Qui l'utente può effetture la login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist in modo tale di non visualizzare i piatti contenenti quegli ingredienti nella sezione menù.
 \subsection{Caratteristiche degli Utenti}
 In questa sezione vengono descritti tutte le Caratteristiche degli utenti che possono utilizzare la web-app.
 \subsubsection{Utente non autenticato}
@@ -42,31 +42,55 @@ Invece, con il termine “utente autenticato” ci si riferisce ad una persona r
 \begin{itemize}
     \item Aggiungere piatti nei preferiti;
     \item Rimuovere piatti dai preferiti;
-    \item Dare un recensione ad un piatto;
+    \item Dare una recensione ad un piatto;
     \item Aggiungere ingredienti non voluti;
     \item Rimuovere gli ingredienti non voluti;
+    \item Visualizzare la lista dei preferiti;
     \item Effettuare logout.
 \end{itemize}
 %**************************************************************
 \subsection{Tecnologie utilizzate}
 Per sviluppare la piattaforma verranno utilizzare le seguenti tecnologie:
 \begin{itemize}
-    \item HTML5\gl{}: per creare la struttura dell'interfaccia untente;
-    \item CSS3\gl{}: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
-    \item Stoplight\gl{}: per simulare le chiamate Rest API;
-    \item Angular\gl{}: per la creazione dell'interfaccia utente.
+    \item Angular: per la creazione dell'interfaccia utente;
+    \item HTML5: per creare la struttura dell'interfaccia untente;
+    \item CSS3: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
+    \item Stoplight: per simulare le chiamate Rest API;
+    \item Angular Material: per la creazione dei componenti.
 \end{itemize}
 \subsection{Descrizione delle tecnologie}
+\subsubsection{Angular}
+Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app, oltre a questo garantisce una maggiore manutenibilità e espandibilità.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.1]{angular.png}
+    \caption{Logo di Angular}
+\end{figure}
 \subsubsection{HTML5}
 L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più popolare, utilizzato per progettare le strutture dei siti web. Viene utilizzato da Angular per creare la struttura iniziale per le varie interfacce, poi queste strutture vengono modificate da Angular per generare la pagina dinamicamente. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{html css.png}
+    \caption{Logo di HTML e CSS}
+\end{figure}
 \subsubsection{CSS3}
 Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nel ordine in cui vengono scritte. Per il progetto è stato utilizzato una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite la SCSS è possibile dichiarare le regole CSS in blocchi quindi ci aiuta a scrivere regole CSS in più velocemente e comprensibile.
 \subsubsection{TypeScript}
 TypeScript è un linguaggio di programmazione open source sviluppato da Microsoft, che estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile e flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, grazie a queste caratteristiche utilizzando TypeScript ci ganrantisce controlli automatici, rilevando in automatico i bug prima della compilazione.
-\subsubsection{Angular}
-Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app, oltre a questo garantisce una maggiore manutenibilità e espandibilità.
 \subsubsection{Stoplight}
-Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua interfaccia user friendly\gl{}. Offre un buon spazio per collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
+Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua interfaccia user friendly. Offre un buon spazio per collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{stoplight logo.png}
+    \caption{Logo di Stoplight}
+\end{figure}
+\subsubsection{Angular Material}
+Angular Material è un insieme di componenti UI già implementati, questi componenti possono essere direttamente utilizzati in Angular. Tutti i componenti offerti sono già responsive e sono facili da customizzare con le proprie preferenze, come il colore dei bottoni.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{angular material.png}
+    \caption{Logo di Angular Material}
+\end{figure}
 \section{Casi D'uso}
 \subsection{Introduzione }
 In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa.
@@ -91,7 +115,8 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item \textbf{Scenrio principale:}
     \begin{itemize}
         \item L'utente si trova dentro il sistema;
-        \item L'utente clicca sul bottone menù.
+        \item L'utente clicca sul bottone menù;
+        \item Viene mostra il menù del ristorante.
     \end{itemize}
 \end{itemize}
 \subsection{UC1.1 - Visualizza categorie}
@@ -113,7 +138,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \end{itemize}
 \subsection{UC1.2 - Visualizza piatto}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente visualizza i piatti del menù mostrando il numero, nome, prezzo, ingredienti\gl{}, allergeni, limatazioni\gl{} e la quantità. La quantità di default\gl{} è 0 che vuole dire non è stato ordinato.
+    \item \textbf{Descrizione:} L'utente visualizza i piatti del menù mostrando il numero, nome, prezzo, ingredienti, allergeni, limatazioni e la quantità. La quantità di default è 0 che indica che non è ancora stato ordinato.
     \item \textbf{Attore Primario:} Untente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
     \item \textbf{Postcondizione:} Viene visualizzato i piatti del menù.
@@ -125,9 +150,9 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \end{itemize}
 \subsection{UC1.3 - Aumenta quantità}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente aumenta la quantità di un piatto nel menù.
+    \item \textbf{Descrizione:} L'utente aumenta la quantità di un piatto.
     \item \textbf{Attore Primario:} Untente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù o lista degli ordini personali.
     \item \textbf{Postcondizione:} Viene aggiunto il piatto specifico con la quantità aggiornata negli ordini.
     \item \textbf{Scenrio principale:}
     \begin{itemize}
@@ -137,33 +162,33 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \end{itemize}
     \item \textbf{Scenrio alternativo:}
     \begin{itemize}
-        \item L'utente si trova sezione menù;
+        \item L'utente si trova sezione menù o lista degli ordini personali;
         \item L'utente clicca sul bottone + di un piatto che è già presente negli ordini;
         \item Viene aumentato la quantità del piatto negli ordini.
     \end{itemize}
 \end{itemize}
 \subsection{UC1.4 - Diminuisci quantità}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente dimiuisce la quantità di un piatto nel menù.
+    \item \textbf{Descrizione:} L'utente dimiuisce la quantità di un piatto.
     \item \textbf{Attore Primario:} Untente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù o lista degli ordini personali.
     \item \textbf{Postcondizione:} Viene dimiuito la quantità del piatto specifico negli ordini.
     \item \textbf{Scenrio principale:}
     \begin{itemize}
-        \item L'utente si trova sezione menù;
+        \item L'utente si trova sezione menù o lista degli ordini personali;
         \item L'utente clicca sul bottone - di un piatto con quantità maggiore di 1;
         \item Viene diminuito la quantità del piatto negli ordini.
     \end{itemize}
     \item \textbf{Scenrio alternativo:}
     \begin{itemize}
-        \item L'utente si trova sezione menù;
+        \item L'utente si trova sezione menù o lista degli ordini personali;
         \item L'utente clicca sul bottone - di un piatto con quantità uguale a 1;
         \item Viene rimosso il piatto dagli ordini.
     \end{itemize}
 \end{itemize}
 \subsection{UC1.5 - Visualizza dettaglio piatto}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente visualizza i dettagli di un piatto nel menù, mostrando la recensione del piatto e il text-box\gl{} per inserire una nota.
+    \item \textbf{Descrizione:} L'utente visualizza i dettagli di un piatto nel menù, mostrando la recensione del piatto e il text-box per inserire una nota.
     \item \textbf{Attore Primario:} Untente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
     \item \textbf{Postcondizione:} Viene visualizzato i dettagli di un piatto specifico.
@@ -171,7 +196,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \begin{itemize}
         \item L'utente si trova sezione menù;
         \item L'utente clicca sul bottom mostra dettagli;
-        \item Viene mostrato i dettagli di un piatto del menù.
+        \item Viene mostrato i dettagli di un piatto.
     \end{itemize}
 \end{itemize}
 \subsection{UC1.6 - Nascondi dettaglio piatto}
@@ -184,7 +209,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \begin{itemize}
         \item L'utente si trova sezione menù;
         \item L'utente clicca sul bottom nascondi dettagli;
-        \item Viene mostrato i dettagli di un piatto del menù.
+        \item Viene nascosto i dettagli del piatto.
     \end{itemize}
 \end{itemize}
 \subsection{UC2 - Gestione tavolo}
@@ -201,6 +226,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item \textbf{Scenrio principale:}
     \begin{itemize}
         \item L'utente si trova dentro il sistema;
+        \item L'utente clicca sul bottone gestione tavolo nella navbar;
         \item Viene mostrato la maschera di gestione tavolo.
     \end{itemize}
 \end{itemize}
@@ -219,6 +245,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione tavolo;
         \item L'utente clicca sul bottone crea sessione;
+        \item Viene creata la sessione;
         \item L'utente viene inserito nella sessione creata.
     \end{itemize}
 \end{itemize}
@@ -236,14 +263,14 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
         \item L'utente clicca sul bottone unisciti;
         \item L'utente viene inserito nella sessione.
     \end{itemize}
-    \item \textbf{Scenrio alternativo:}
-    \begin{itemize}
-        \item L'utente si trova dentro la sezione gestione tavolo;
-        \item L'utente clicca sul bottone unisciti a una sessione;
-        \item L'utente inserisce il numero della sessione inesistente;
-        \item L'utente clicca sul bottone unisciti;
-        \item L'utente non viene inserito nella sessione.
-    \end{itemize}
+    % \item \textbf{Scenrio alternativo:}
+    % \begin{itemize}
+    %     \item L'utente si trova dentro la sezione gestione tavolo;
+    %     \item L'utente clicca sul bottone unisciti a una sessione;
+    %     \item L'utente inserisce il numero della sessione inesistente;
+    %     \item L'utente clicca sul bottone unisciti;
+    %     \item L'utente non viene inserito nella sessione.
+    % \end{itemize}
 \end{itemize}
 \subsection{UC2.3 - Uscita sessione tavolo}
 \begin{itemize}
@@ -267,7 +294,8 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item \textbf{Scenrio principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione tavolo;
-        \item L'utente genera il QR-code dalla sessione.
+        \item L'utente genera il QR-code della sessione;
+        \item Vine mostrato il QR-code;
     \end{itemize}
 \end{itemize}
 
@@ -287,6 +315,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item \textbf{Scenrio principale:}
     \begin{itemize}
         \item L'utente si trova dentro il sistema con una sessione di tavolo attiva;
+        \item L'utente clicca sul bottone lista ordini nella navbar;
         \item Viene mostrato la maschera di gestione ordini.
     \end{itemize}
 \end{itemize}
@@ -363,7 +392,8 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione ordini del tavolo;
         \item L'utente clicca sul bottone QR-code;
-        \item Viene generato il QR-code degli ordini.
+        \item Viene generato il QR-code degli ordini;
+        \item Viene mostrato il QR-code.
     \end{itemize}
 \end{itemize}
 \subsection{UC3.2.1 - Visualizza in dettaglio lista ordini personali}
@@ -577,11 +607,11 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente aggiunge un piatto nella lista dei preferiti.
     \item \textbf{Attore Primario:} Untente autenticato.
-    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
+    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù, lista ordini personali o lista ordini in arrivo.
     \item \textbf{Postcondizione:} Viene inserito il piatto nei preferiti.
     \item \textbf{Scenrio principale:}
     \begin{itemize}
-        \item L'utente si trova nella sezione menù;
+        \item L'utente si trova nella sezione menù, lista ordini personali o lista ordini in arrivo;
         \item L'utente clicca sul bottone "cuoricino grigio";
         \item Viene inserito il piatto nella lista dei preferiti.
     \end{itemize}
@@ -590,7 +620,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente rimuove un piatto nella lista dei preferiti.
     \item \textbf{Attore Primario:} Untente autenticato.
-    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
+    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù, lista ordini personali, lista ordini in arrivo o lista preferiti.
     \item \textbf{Postcondizione:} Viene rimosso il piatto dalla lista dei preferiti.
     \item \textbf{Scenrio principale:}
     \begin{itemize}
@@ -603,13 +633,31 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente Aggiungi una recensione per un piatto.
     \item \textbf{Attore Primario:} Untente autenticato.
-    \item \textbf{Precondizione:} L'utente si trova dentro nella sezione menù.
-    \item \textbf{Postcondizione:} Viene inserito la recensione del piatto.
+    \item \textbf{Precondizione:} L'utente ha selezionato un piatto e il piatto è in modalità dettaglio.
+    \item \textbf{Postcondizione:} Viene aggiornato la recensione del piatto.
     \item \textbf{Scenrio principale:}
     \begin{itemize}
-        \item L'utente si trova nella sezione menù;
+        \item L'utente ha selezionato un piatto e il piatto è in modificata dettaglio;
         \item L'utente clicca su una delle 5 stelle;
         \item Viene inserito la recensione del piatto.
+    \end{itemize}
+\end{itemize}
+\subsection{UC5 - Visualizza lista preferiti}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc5.drawio.png}
+    \caption{Use Case - UC 5}
+\end{figure}
+\begin{itemize}
+    \item \textbf{Descrizione:} L'utente visualizza la lista dei preferiti.
+    \item \textbf{Attore Primario:} Untente autenticato.
+    \item \textbf{Precondizione:} L'utente si trova dentro la web-app sushiLab ed ha effettuato la login.
+    \item \textbf{Postcondizione:} Viene mostrato la lista dei preferiti.
+    \item \textbf{Scenrio principale:}
+    \begin{itemize}
+        \item L'utente si trova dentro la web-app;
+        \item L'utente entra nalla sezione lista preferiti;
+        \item Viene mostrato la lista dei preferiti.
     \end{itemize}
 \end{itemize}
 % Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
@@ -651,43 +699,43 @@ Il codice dei requisiti è così strutturato R(F/Q/V)(N/D/O) dove:
         ROF3&All'utetne viene mostrato il menù del ristorante con tutti piatti delle rispettive categorie di appartenenza&UC1.2 \\
         ROF4&L'utente può aumentare la quantità di un piatto nel menù&UC1.3 \\
         ROF5&L'utente può diminuire la quantità di un piatto nel menù&UC1.4 \\
-        ROF&L'utente può impostare la visualizzazione dei piatti del menù nella modalità dettaglio&UC1.5 \\
-        ROF&L'utente può impostare la visualizzazione dei piatti del menù nella modalità normale&UC1.6 \\
-        ROF&L'utente può accedere alla maschera per la gestione tavolo &UC2 \\
-        ROF&L'utente può generare la sessione del tavolo in cui si trova&UC2.1\\
-        ROF&L'utente può unirsi alla sessione di un tavolo&UC2.2 \\
-        ROF&L'utente può uscire dalla sessione di un tavolo&UC2.3\\
-        ROF&L'utente può generare il QR-code della sessione del tavolo in cui si trova&UC2.4\\
-        ROF&L'utente può accedere alla maschera per la gestione della lista ordini&UC3 \\
-        ROF&All'utetne viene mostrato la lista ordini del tavolo&UC3.1 \\
-        ROF&All'utetne viene mostrato la lista ordini personali &UC3.2 \\
-        ROF&All'utetne viene mostrato la lista ordini in arrivo&UC3.3 \\
-        ROF&L'utente può spostare la lista ordini del tavolo in arrivo &UC3.3.1 \\
-        ROF&L'utente può generare il QR-code della lista ordini del tavolo in cui si trova &UC3.1.2 \\
-        ROF&L'utente può impostare la visualizzazione dei piatti della lista ordini personali in modalità dettaglio&UC3.2.1 \\
-        ROF&L'utente può marcare un piatto della lista ordini in arrivo come ricevuto&UC3.3.1 \\
-        ROF&L'utente non autenticato può accedere all'area personale&UC4\\
-        ROF&L'utente non autenticato deve riuscire ad inserire email, password e conferma password nel form di registrazione per effettuare la registrazione &UC4.1\\
-        ROF&L'utente non autenticato deve riuscire ad inserire email e password nel form di login per effettuare la login &UC4.2\\
-        ROF&L'utente non autenticato deve riuscire ad inserire la email e la nuova password nel form del password dimenticata&UC4.3\\
-        ROF&L'utente autenticato deve riuscire ad effettuare la logout nell'area personale&UC4.4\\
-        ROF&L'utente autenticato può aggiungere ingredienti non voluti nell'area personale&UC4.4\\
-        ROF&L'utente autenticato può rimuovere ingredienti non voluti nell'area personale&UC4.4\\
-        ROF&L'utente autenticato può aggiungere un piatto nella lista dei preferiti&UC4.4\\
-        ROF&L'utente autenticato può rimuovere un piatto dalla lista dei preferiti&UC4.4\\
-        ROF&L'utente autenticato può aggiungere una recensione per un piatto&UC1.7\\
-        ROV&L'interfaccia utente del sistema dovrà essere sviluppato sfruttando il framework Angular&SyncLab\\
-        ROV&Lo stile dell'interfaccia utente del sistema dovrà essere sviluppato sfruttando CSS-3&SyncLab\\
-        ROV&Le chiamate API devono essere implementate tramite Stoplight&SyncLab\\
-        ROV&È necessario dividire le varie maschere in componenti diversi di Angular&SyncLab\\
-        ROV&La web-app dovrà funzionare sul browser Microsoft Edge dalla versione più recente&SyncLab\\
-        ROV&La web-app dovrà funzionare sul browser Google Chrome dalla versione più recente&SyncLab\\
-        ROV&La web-app dovrà funzionare sul browser Firefox dalla versione più recente&SyncLab\\
-        ROV&La web-app dovrà funzionare sul browser Safari dalla versione più recente&SyncLab\\
-        RDV&Il codice sorgente dovrà essere commentata&SyncLab\\
-        ROQ&Il codice sorgente della piattaforma sarà reperibile su GitHub&SyncLab\\
-        ROQ&Fornire una sezione tutorial che spieghi come si utilizza la web-app&SyncLab\\
-       
+        ROF6&L'utente può impostare la visualizzazione dei piatti del menù nella modalità dettaglio&UC1.5 \\
+        ROF7&L'utente può impostare la visualizzazione dei piatti del menù nella modalità normale&UC1.6 \\
+        ROF8&L'utente può accedere alla maschera per la gestione tavolo &UC2 \\
+        ROF9&L'utente può generare la sessione del tavolo in cui si trova&UC2.1\\
+        ROF10&L'utente può unirsi alla sessione di un tavolo&UC2.2 \\
+        ROF11&L'utente può uscire dalla sessione di un tavolo&UC2.3\\
+        ROF12&L'utente può generare il QR-code della sessione del tavolo in cui si trova&UC2.4\\
+        ROF13&L'utente può accedere alla maschera per la gestione della lista ordini&UC3 \\
+        ROF14&All'utetne viene mostrato la lista ordini del tavolo&UC3.1 \\
+        ROF15&All'utetne viene mostrato la lista ordini personali &UC3.2 \\
+        ROF16&All'utetne viene mostrato la lista ordini in arrivo&UC3.3 \\
+        ROF17&L'utente può spostare la lista ordini del tavolo in arrivo &UC3.3.1 \\
+        ROF18&L'utente può generare il QR-code della lista ordini del tavolo in cui si trova &UC3.1.2 \\
+        ROF19&L'utente può impostare la visualizzazione dei piatti della lista ordini personali in modalità dettaglio&UC3.2.1 \\
+        ROF20&L'utente può marcare un piatto della lista ordini in arrivo come ricevuto&UC3.3.1 \\
+        ROF21&L'utente non autenticato può accedere all'area personale&UC4\\
+        ROF22&L'utente non autenticato deve riuscire ad inserire email, password e conferma password nel form di registrazione per effettuare la registrazione &UC4.1\\
+        ROF23&L'utente non autenticato deve riuscire ad inserire email e password nel form di login per effettuare la login &UC4.2\\
+        ROF24&L'utente non autenticato deve riuscire ad inserire la email e la nuova password nel form del password dimenticata&UC4.3\\
+        ROF25&L'utente autenticato deve riuscire ad effettuare la logout nell'area personale&UC4.4\\
+        ROF26&L'utente autenticato può aggiungere ingredienti non voluti nell'area personale&UC4.4\\
+        ROF27&L'utente autenticato può rimuovere ingredienti non voluti nell'area personale&UC4.4\\
+        ROF28&L'utente autenticato può aggiungere un piatto nella lista dei preferiti&UC4.4\\
+        ROF29&L'utente autenticato può rimuovere un piatto dalla lista dei preferiti&UC4.4\\
+        ROF30&L'utente autenticato può aggiungere una recensione per un piatto&UC1.7\\
+        ROF31&L'utente autenticato può visualizzare la propria lista dei preferiti&UC5\\
+        ROV1&L'interfaccia utente del sistema dovrà essere sviluppato sfruttando il framework Angular&SyncLab\\
+        ROV2&Lo stile dell'interfaccia utente del sistema dovrà essere sviluppato sfruttando CSS-3&SyncLab\\
+        ROV3&Le chiamate API devono essere implementate tramite Stoplight&SyncLab\\
+        ROV4&È necessario dividire le varie maschere in componenti diversi di Angular&SyncLab\\
+        ROV5&La web-app dovrà funzionare sul browser Microsoft Edge dalla versione più recente&SyncLab\\
+        ROV6&La web-app dovrà funzionare sul browser Google Chrome dalla versione più recente&SyncLab\\
+        ROV7&La web-app dovrà funzionare sul browser Firefox dalla versione più recente&SyncLab\\
+        ROV8&La web-app dovrà funzionare sul browser Safari dalla versione più recente&SyncLab\\
+        RDV9&Il codice sorgente dovrà essere commentata&SyncLab\\
+        ROQ1&Il codice sorgente della piattaforma sarà reperibile su GitHub&SyncLab\\
+        ROQ2&Fornire una sezione tutorial che spieghi come si utilizza la web-app&SyncLab\\
 \hline
 \end{longtable}
 \end{center}

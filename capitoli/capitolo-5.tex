@@ -3,43 +3,66 @@
 % !TEX root = ../tesi.tex
 
 %**************************************************************
-\chapter{Progettazione e codifica}
-\label{cap:progettazione-codifica}
+\chapter{Verifica e validazione}
+\label{cap:verifica}
 %**************************************************************
 
-\intro{Breve introduzione al capitolo}\\
+\intro{In questo }\\
 
 %**************************************************************
-\section{Tecnologie e strumenti}
-\label{sec:tecnologie-strumenti}
-
-Di seguito viene data una panoramica delle tecnologie e strumenti utilizzati.
-
-\subsection*{Tecnologia 1}
-Descrizione Tecnologia 1.
-
-\subsection*{Tecnologia 2}
-Descrizione Tecnologia 2
-
-%**************************************************************
-\section{Ciclo di vita del software}
-\label{sec:ciclo-vita-software}
-
-%**************************************************************
-\section{Progettazione}
-\label{sec:progettazione}
-
-\subsubsection{Namespace 1} %**************************
-Descrizione namespace 1.
-
-\begin{namespacedesc}
-    \classdesc{Classe 1}{Descrizione classe 1}
-    \classdesc{Classe 2}{Descrizione classe 2}
-\end{namespacedesc}
-
-
-%**************************************************************
-\section{Design Pattern utilizzati}
-
-%**************************************************************
-\section{Codifica}
+\section{Verifica}
+Viene riportato una tabella dei test di unità sui vari componenti e sulle loro funzionalità, per ogni test viene identificato il codice del test, il requisito, una descrizione e lo stato.
+\begin{center}
+    \rowcolors{2}{Cyan!10}{GreenYellow!10}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{longtable}{ |p{1cm}|p{1.5cm}|p{9cm}|p{1.5cm}|  }
+        \hline
+        \multicolumn{4}{|c|}{Tabella dei requisiti} \\
+        \hline
+        Test&Requisito&Descrizione &Stato \\
+        \hline
+        \endhead
+        T1&ROF1&Il componente menù viene creato&Passato \\
+        T2&ROF3&Il componente piatto viene creato&Passato \\
+        T3&ROF4&La quantità viene aumentata&Passato \\
+        T4&ROF5&La quantità viene diminuita&Passato \\
+        T5&ROF6&Il componente piatto viene visualizzato in modalità dettaglio&Passato \\
+        % T1&ROF7&L'utente può impostare la visualizzazione dei piatti del menù nella modalità normale&Passato \\
+        T6&ROF8&Il componente gestione tavolo viene creato &Passato \\
+        T7&ROF9&La sessione viene generata&Passato\\
+        T8&ROF10&L'utente viene unito ad una sessione&Passato \\
+        T9&ROF11&L'utente esce dalla sessione&Passato\\
+        T10&ROF12&Il QR-code del tavolo viene generato&Passato\\
+        T11&ROF13&Il componente gestione lista ordini viene creato&Passato\\
+        % T1&ROF14&All'utetne viene mostrato la lista ordini del tavolo&Passato\\
+        % T1&ROF15&All'utetne viene mostrato la lista ordini personali &Passato\\
+        % T1&ROF16&All'utetne viene mostrato la lista ordini in arrivo&Passato\\
+        T12&ROF17&La lista ordini del tavolo viene spostato in arrivo&Passato\\
+        T13&ROF18&Il QR-code della lista ordini viene generato &Passato\\
+        % T1&ROF19&L'utente può impostare la visualizzazione dei piatti della lista ordini personali in modalità dettaglio&Passato\\
+        T14&ROF20&Il piatto delle lista ordini in arrivo viene marcato come arrivato&Passato\\
+        T15&ROF21&Il componente area personale viene creato&Passato\\
+        T16&ROF22&Il componente register viene creato&Passato\\
+        T17&ROF22&I campi sbagliati del form di registrazione vengono evidenziati&Passato\\
+        T18&ROF22&Il submit del form deve registrare l'utente&Passato\\
+        T19&ROF23&Il componente login viene creato&Passato\\
+        T20&ROF23&I campi sbagliati del form di login vengono evidenziati &Passato\\
+        T21&ROF23&Il submit del form deve effettuare il login dell'utente &Passato\\
+        T22&ROF24&Il componente forgot viene creato  &Passato\\
+        T23&ROF24&I campi sbagliati del form di password dimenticata vengono evidenziati &Passato\\
+        T24&ROF24&Il submit del form deve reimpostare la password&Passato\\
+        T25&ROF25&Il componente logout viene creato&Passato\\
+        T26&ROF25&Il click sul componente logout deve effetture il logout dell'utente&Passato\\
+        T27&ROF26&Il componente blacklist viene creato&Passato\\
+        T28&ROF26&L'ingrediente viene inserito nella blacklist&Passato\\
+        T29&ROF27&L'ingrediente viene rimosso dalla blacklist&Passato\\
+        T30&ROF28&Il piatto viene aggiunto nella lista dei preferiti&Passato\\
+        T31&ROF29&Il piatto viene rimosso dalla lista dei preferiti&Passato\\
+        T32&ROF30&Il componente star viene creato&Passato\\
+        T34&ROF30&La recensione viene impostato correttamente&Passato\\
+        T35&ROF31&Il componente lista preferiti viene creato&Passato\\
+\hline
+\end{longtable}
+\end{center}
+\section{Validazione e collaudo}
+Nell'ultima settimana dello stage ho controllato tutte le funzionalità implementate durante intero progetto, dove ho testato tutte le attività che sono svolgibili da un untente generale. Infine è stato mostrato il prodotto finale del progetto sushiLab al tutor, in cui viene fatto il demo completo.
