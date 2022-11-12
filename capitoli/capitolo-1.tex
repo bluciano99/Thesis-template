@@ -9,18 +9,19 @@
 
 
 % \noindent Esempio di utilizzo di un termine nel glossario \\
-% \gls{api}. \\
-
+\gls{apig}. \\
+\gls{umlg}
+\gls{VoiPg}
 % \noindent Esempio di citazione in linea \\
 % \cite{site:agile-manifesto}. \\
 
 % \noindent Esempio di citazione nel pie' di pagina \\
 % citazione\footcite{womak:lean-thinking} \\
-
+\intro{In questo capitolo viene descitta l'azienda dove in cui è stato svolto lo stage e viene spiegato  il progetto di stage.}\\
 %**************************************************************
 \section{SyncLab }
 SyncLab è una Innovative Company collocata in tutta italia, è nata nel 2002 con sede principale a Napoli ed è cresciuta velocemente. Attualmente, SyncLab ha 6 sedi in tutta italia, più di 300 dipendenti e più di 150 clienti diretti e finali.\\
-SyncLab propone servizi Innovativi che aiutano i clienti nella realizzazione, progettazione e manutenzioni di soluzioni IT.
+SyncLab propone servizi innovativi che aiutano i clienti nella realizzazione, progettazione e manutenzioni di soluzioni IT.
 L'azienda ha collobarobato con vari compagnie tra questi i più importanti sono: Tim, Trenitalia, HM, Grimaldi Lines, notartel, sky, eni, enel, vodafone, RayWay, Poste Italiane, Intesa Sanpaolo, Ministero dell'economia delle finanze, fastweb e UniCredit.
 \begin{figure}[H]
     \centering
@@ -44,6 +45,25 @@ Come accenato, SyncLab opera nel settore IT e i suoi prodotti nascono dalle comp
     \item \textbf{StreamCrusher:} tecnologia che serve per aiutare a prendere decisioni di business, indentificando velocemente i punti critici e riformando i processi in base alle nuove esigenze.
     \item \textbf{Wave:} software nato per i sistemi di vidersorverglianza, con l'obiettivo di avere una maggiore copertura territoriale col minor numero di telecamere installate e possibilmente utilizzare il minor numero possibile di risorse.
 \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{prodotti.png}
+    \caption{I vari prodotti di SyncLab}
+\end{figure}
+
+\subsection{Introduzione al progetto}
+Lo scopo dello stage quello di realizzare una web-app per la gestione delle ordinazione dei piatti di un ristorante sushi "all you can eat", con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso, oltre a questo il menù contiene una centinaia di piatti diversi. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, di seguito comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato il specifico piatto nel momento della consegna.
+
+\section{La soluzione individuata}
+SyncLab ha deciso di risolvere questo problema tramite una web-app, che è composta da due parti la parte front-end e la parte back-end. La parte di back-end deve essere implementata tramite java utilizzando il framework spring e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
+La parte di front-end è invece realizzato in Javascript, utilizzando il framework Angular. La comunicazione tra le due parti della web-app avviene tramite le chiamate REST fornite dal back-end.
+Si è deciso di realizzare una web-app perché non c'è la necessità di scaricare ed installare applicativo, così riduce il tempo delle ordinazioni dei clienti. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.27]{diagramma.png}
+    \caption{Diagramma dei componenti per la web-app}
+\end{figure}
 %**************************************************************
 
 

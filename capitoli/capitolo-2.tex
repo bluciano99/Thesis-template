@@ -7,21 +7,10 @@
 \label{cap:il progetto di stage}
 %**************************************************************
 
-\intro{In questo capitolo, vengono esaminati il problema reale incontrato nei ristoranti sushi e la soluzione individuata dall'azienda. Poi viene descitta il progetto di stage e infine la modalità di lavoro.}\\
+\intro{In questo capitolo, viene descitta la pianificazione e gli obiettivi dello stage. Infine vengono elencati i strumenti utilizzati durante lo svolgimento dello stage.}\\
 
 %**************************************************************
-\section{L'idea}
 
-Nei ristoranti sushi moderni quasi tutti applicano la formula "all-you-can-eat", con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso. I consumi dei clienti in questi locali è maggiore rispetto ai ristoranti à la carte, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, quindi comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato i piatti singoli nel momento della consegna. L'idea dunque è stata quella di creare una web-app per la gestione delle ordinazione dei piatti.
-
-\section{La soluzione individuata}
-SyncLab ha deciso di risolvere questo problema tramite una web-app, essa è composta da due componenti la parte front-end e la parte back-end. La parte di back-end dovrà essere implementata tramite spring e ha il ruolo pricipale di un web server, il quale ha il compito di comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e degli eventuali ordini dei ristoranti. Il web server deve offrire delle API, con le quali la parte front-end, che utilizza Angular, comunicherà con il server.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=0.27]{diagramma.png}
-    \caption{Diagramma dei componenti per la web-app}
-\end{figure}
-Angular è un framework open source gratuita per lo sviluppo di applicazione web. Il linguaggio di programmazione utilizzato è TypeScript, TypeScript estende la sintassi di JavaScript, quindi qualsiasi codice scritto in JavaScript è eseguibile anche tramite TypeScript senza nessuna modifica o aggiunta di codice. Grazie a TypeScript il codice generato da Angular gira su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri. La web-app, per ciascuna parte dell'applicazione è stata affidata a più persone. Discutendo con il tutor aziendale, Fabio Pallaro, abbiamo individuato i principali obiettivi per realizzare la web-app ed a me è stato assegnato il compito di sviluppare la visuale dell'applicazione. 
 
 \subsection{Pianificazione del lavoro}
 \subsubsection*{Pianificazione settimanale}
@@ -106,7 +95,9 @@ Si prevede lo svolgimento dei seguenti obiettivi:
 
 \section{Modalità di lavoro}
 L'azienda utilizza lo sviluppo agile del software. La modalità agile aiuta a ridurre il rischio di fallimento sviluppando il software in finestre di tempo limitate chiamate iterazioni che, in genere, durano qualche settimana. Ogni iterazione è un piccolo progetto a sé stante e deve contenere tutto ciò che è necessario per rilasciare un piccolo incremento nelle funzionalità del software: pianificazione, analisi dei requisiti, progettazione, implementazione, test e documentazione. Ogni settimana viene effettuato un incontro con il tutor aziendale per discutere dei problemi trovati durante lo sviluppo e il punto di situazione del progetto.
-\section{Strumenti di comunicazione}
+
+\section{Strumenti utilizzati}
+\subsection{Comunicazione:}
 Per avere una buona comunicazione con l'azienda si è deciso di utilizzare:
 \subsubsection{Discord:}
 una piattaforma di VoiP, messaggistica istantanea e distribuzione deigitale. Su discord gli utenti comunicano con chiamate vocali, video chiamate ed è anche possibile condividere lo schermo.
@@ -129,8 +120,10 @@ una web-app che fornisce tutte le funzionalità di un foglio elettronico, lo abb
     \includegraphics[scale=0.45]{googlesheet.png}
     \caption{Calendario personale per il progetto sushi-lab}
 \end{figure}
-\subsection{Google Meet:}
+\subsubsection{Google Meet:}
 un software nata per le videochiamate sviluppato da Goolge, in cui è possibile mandare messaggi e condividere lo schermo e video contemporaneamente, lo abbiamo utilizzato per alcuni incontri con alcuni collabolatori esterni per analisi dei requisiti.
+\subsection{Sviluppo:}
+Per avere una buona efficieza per lo sviluppo della web-app vengono utilizzati i strumenti più popolari per lo svippo di una WebApplication, che sono:
 \subsubsection{GitHub:}
 servizio di hosting per il sviluppo software, è implementato insieme con lo strumetento di cotrollo versione distribuito Git, nel mio caso è utilizzato per condividere e tracciare i file con gli altri collabolatori del progetto.
 \begin{figure}[H]
@@ -138,17 +131,24 @@ servizio di hosting per il sviluppo software, è implementato insieme con lo str
     \includegraphics[scale=0.45]{github.png}
     \caption{Repo su GitHub per il progetto sushi-lab}
 \end{figure}
-\subsubsection{Visual Studio Code}
+\subsubsection{Visual Studio Code:}
 un editor di codice sorgente sviluppato da Microsoft. Contiene tutte le funzionalità di un editor ed completamente gratuita. Le maggiori funzionalità utilizzate per il progetto sono:
 \begin{itemize}
     \item Le estensioni di VS CODE per il codice html, css e TypeScript;
-    \item Il source control di Git;
-    \item La serach dove è possibile ricercare il termine dentro tutti i file e fare la sostituzione velocemente;
+    \item Il source control di Git integrato con VS CODE;
+    \item La funzione search con la quale è possibile ricercare un termine dentro tutti i file e fare la sostituzione velocemente;
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=0.4]{vscode.png}
+    \includegraphics[scale=0.35]{vscode.png}
     \caption{Interfaccia di Visual Studio Code}
+\end{figure}
+\subsubsection{Google Chrome:}
+è un browser web sviluppato da Google. Nel 2019 diventa il browser più popolare nel mondo grazie alla sua buona stabilità ed elevata velocità. La maggiore funzionalità  utilizzata di Chrome durante lo sviluppo è  lo strumento ispeziona, che permette di vedere tutti i dati di uno specifico elemento HTML presente nella pagina, in più è anche possibile vedere tutti i dati salvati in locale della pagina.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{chrome.png}
+    \caption{Interfaccia con lo strumento ispeziona di Goolge Chrome}
 \end{figure}
 % \begin{center}
     

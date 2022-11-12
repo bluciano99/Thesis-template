@@ -11,9 +11,9 @@
 
 \section{Progettazione}
 \subsection{Architettura Angular}
-Un'applicazione Angular è formato da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che devinisce la vista dell'utente.\\
-% La vista viene modificata da Angular in base alla logica del codice.
-Ogni componente possiede un template di HTML, dove viene definita il modello di vista, combinata con le direttive di Angular consente di motificare il codice HTML, una volta cambiata la struttura della pagina viene fatto il rendering e infine viene cambiata la vista.\\ 
+Un'applicazione Angular è formato da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che definisce la vista dell'utente.\\
+Ogni componente possiede un template di HTML, dove viene definita il modello di vista, quando un utente effettua un click su un bottone, questo elemento HTML emette un evento di click al componente in cui si trova, questo componente esegue il metodo specifico al evento ricevuto, di seuito viene cambiato il metadata e modifica il codice HTML, una volta cambiata la struttura della pagina viene fatto il rendering e infine viene cambiata la vista.\\
+% Quindi un click su un bottone questo elemento HTML emette un evento di click al componente in cui si trova, questo componente esegue il metodo specifico al evento ricevuto, di seuito viene cambiato il metadata e viene aggiornato il template di HTML.\\
 I componenti utilizzano dei servizi che forniscono funzionalità specifiche come la login, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze e grazie a questo rende il codice efficiente. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, quindi un componente può contenere più componenti così rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
 \begin{figure}[H]
     \centering
@@ -23,8 +23,8 @@ I componenti utilizzano dei servizi che forniscono funzionalità specifiche come
 \subsection{Architettura SushiLab}
 La web-app segue l'architettura spiegata precedentemente che è anche quello consigliato dal sito ufficiale di Angular.\\
 La cartella principale della web-app è app che contiene tutti i componenti, i servizi e il root.\\ 
-Per ogni componente si è creato una cartella per essa, in cui contiene il suoi file .ts per la logica, .html per la struttura, .scss per il layout di grafica e infine i suoi componenti figli. Per i componenti condivisi si è creato una cartella shared dove vengono salvati i componenti che sono utilizzati in più parti dell'applicazione\\
-Nella cartella rest vengono salvati tutti i file service, in cui ci sono dei metodi che sono chiamati in più parti dell'applicazione al fine di massimizzare il riuso del codice.\\
+Per ogni componente si è creato una cartella per essa, in cui contiene il suoi file .ts per la logica, .html per la struttura, .scss per il layout di grafica e infine i suoi componenti figli. Per i componenti condivisi si è creato una cartella shared dove vengono salvati i componenti che sono utilizzati in più parti dell'applicazione.\\
+Nella cartella rest vengono salvati tutti i file service, in cui ci sono dei metodi che vengono chiamati in più componenti dell'applicazione al fine di massimizzare il riuso del codice.\\
 Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo da fare utilizzare da tutti i componenti.\\
 \begin{figure}[H]
     \centering
@@ -34,9 +34,9 @@ Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo
     \caption{Struttura file SushiLab}
 \end{figure}
 \subsection{Progettazione API}
-La API sono implementate tramite la piattaforma Stoplight che è uno dei requisiti obbligatori richiesti dall'azienda.\\
+Durante il periodo di stage non era ancora presente il backend per l'applicativo, quindi si è deciso con l'azienda di progettare dei mock per il testing utilizzando la piattaforma Stoplight.\\
 La progettazione delle API sono molto semplici grazie all'interfaccia semplice di Stoplight, che permette di definire i path e i rispettivi metodi facilmente.\\
-Per ogni chiamata bisogna avere:
+Per ogni chiamata REST bisogna definire:
 \begin{itemize}
     \item \textbf{Nome:} individua le API;
     \item \textbf{Descrizione:} spiega in dettaglio la funzione della API;
@@ -64,9 +64,9 @@ Per ogni chiamata bisogna avere:
     \caption{Stoplight SushiLab}
 \end{figure}
 \subsection{Progettazione delle viste}
-All'inizio si è fatto un meeting con il tutur aziendale per chiarire le funzionalità che deve avere la web-app, dopo di che si è iniziato la progettazione delle viste tramite la editor di grafica online Figma.\\
+All'inizio si è fatto un meeting con il tutur aziendale per chiarire le funzionalità e i requisiti che la web-app deve avere, dopo di che si è iniziato la progettazione dei mock-up delle viste tramite la editor di grafica online Figma.\\
 Tramite il sistema di progettazione di Figma sono stati creati le bozze delle viste per chiarire i collegamenti tra di loro e i posizionamenti dei compoenti. 
-Il posizionamento dei componenti sono scelti in base al loro numero di volte che viene premuto e si è anche basato alle web-app più popolari.
+Il posizionamento dei componenti sono scelti in base alla frequenza di click s di essa e si è anche basato sulle web-app più popolari.
 È stato deciso i seguenti aspetti:
 \begin{itemize}
     \item I colori principali e lo sfondo della applicazione;
@@ -81,6 +81,9 @@ Il posizionamento dei componenti sono scelti in base al loro numero di volte che
     \includegraphics[scale=1]{figma.png}
     \caption{Figma SushiLab}
 \end{figure}
+\subsection{Progettazione dei componenti}
+I componenti sono stati individuati tramite l'analisi dei requisiti e la progettazione delle viste. Ogni componente ha delle funzionalità specifiche e tutti assieme costruisce la web-app che copre tutti i requisiti richiesti.
+\\
 \pagebreak
 % {\hyperref[cap:menu.component]{Il secondo capitolo}}
 \section{Codifica}
@@ -94,13 +97,7 @@ Viene mostrata il menù del ristorante che comprende tutte le categorie e le lor
     \item L'utente può visualizzare il piatto in modalità dettaglio per dare una recensione al piatto o inserisce una nota per il piatto;
     \item L'utente può aggiungere il piatto nella lista dei preferiti o rimuoverlo dalla lista.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{menu.png}
-    \includegraphics[scale=.6]{menu2.png}
-    \caption{Menù e Menù con piatto in dettaglio di SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Gestione tavolo}
 Viene mostrata la maschera di gestione tavolo.\\
@@ -109,12 +106,7 @@ Viene mostrata la maschera di gestione tavolo.\\
     \item L'utente può creare una sessione di tavolo;
     \item L'utente può andare al form per unire ad una sessione.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{gestione tavolo.png}
-    \caption{Maschera gestione tavolo SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Unisci sessione}
 Interfaccia tramite la quale è possibile unire ad una sessione di tavolo.\\
@@ -123,12 +115,7 @@ Interfaccia tramite la quale è possibile unire ad una sessione di tavolo.\\
     \item L'utente può  unirsi ad una sessione inserendo il codice di sessione se il codice non rispetta la validazione del form non si abilita il bottone unisci;
     \item L'utente può tornare nella pagina gestione tavolo.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{unisci.png}
-    \caption{Maschera unisci sessione SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{QR-code tavolo}
 Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trovano sullo stesso tavolo dell'untente di unirsi.\\
@@ -136,12 +123,7 @@ Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trova
 \begin{itemize}
     \item L'utente può uscire dalla sessione premendo il bottone esci dalla sessione.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{gestionetavolo2.png}
-    \caption{Maschera QR-code tavolo SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Lista ordini del tavolo}
 Viene mostrato la lista degli ordini della sessione del tavolo in cui si trova l'utente.\\
@@ -168,13 +150,7 @@ Viene mostrata la lista degli ordini personali.\\
     \item L'utente può aggiungere un piatto nella lista dei preferiti o rimuoverlo dalla lista;
     \item L'utente può dare una recensione ad un piatto.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{ordinipersonali.png}
-    \includegraphics[scale=.6]{ordinipersonali2.png}
-    \caption{Maschera ordini personali e ordini personali con piatti in dettaglio SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Lista ordini in arrivo}
 Viene mostrata la lista degli ordini in arrivo.\\
@@ -186,12 +162,7 @@ Viene mostrata la lista degli ordini in arrivo.\\
     \item L'utente può aggiungere un piatto nella lista dei preferiti o rimuoverlo dalla lista;
     \item L'utente può dare una recensione ad un piatto.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{ordiniinarrivo.png}
-    \caption{Maschera ordini in arrivo SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Login}
 Viene mostrato il form per effetture il login dove è possibile effettuare la login nella piattaforma.\\
@@ -201,13 +172,6 @@ Viene mostrato il form per effetture il login dove è possibile effettuare la lo
     \item L'utente può andare al form di registrazione;
     \item L'utente può andare al form di password dimenticata.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{login.png}
-    \includegraphics[scale=.6]{login2.png}
-    \caption{Maschera login e login con campi errati SushiLab}
-\end{figure}
-\pagebreak
 
 \subsubsection{Registrazione}
 Viene mostrato il form di registrazione dove è possibile registrare nella piattaforma.\\
@@ -216,13 +180,7 @@ Viene mostrato il form di registrazione dove è possibile registrare nella piatt
     \item L'utente può effettuare la registrazione inserendo i campi correttamente altrimenti viene evidenziato in rosso i campi sbagliati;
     \item L'utente può andare al form di login.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{registrati.png}
-    \includegraphics[scale=.6]{registrati2.png}
-    \caption{Maschera registrazione e registrazione con campi errati SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Password Dimenticata}
 Viene mostrato il form di cambia password dove è possibile reimpostare la password.\\
@@ -233,15 +191,7 @@ Viene mostrato il form di cambia password dove è possibile reimpostare la passw
     \item L'utente può andare al form di registrazione;
     \item L'utente può andare al form di Login.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.5]{cambiapass.png}
-    \includegraphics[scale=.5]{cambiapass2.png}
-    \includegraphics[scale=.5]{cambiapass3.png}
-    \includegraphics[scale=.5]{cambiapass4.png}
-    \caption{Maschere cambia password e cambia password con i campi errati  SushiLab}
-\end{figure}
-\pagebreak
+
 
 \subsubsection{Area Personale}
 Viene mostrata l'area personale dell'utente dove si può vedere i dati dell'utente.
@@ -250,12 +200,7 @@ Viene mostrata l'area personale dell'utente dove si può vedere i dati dell'uten
     \item L'utente può effettuare il logout;
     \item L'utente può andare nella sezione di blacklist ingredienti per inserire o rimuovere delle allergeni o preferenze.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale=.6]{personale.png}
-    \includegraphics[scale=.6]{blacklist.png}
-    \caption{Maschera area personae e blacklist SushiLab}
-\end{figure}
+
 \label{cap:menu.component}
 
 \subsubsection{Menu component}
@@ -463,7 +408,7 @@ Componente usato per creare la maschera gestione tavolo, dove si può creare una
 \end{itemize}
 
 \subsubsection{auth.service}
-Servizio utilizzato per gestire le autenticazioni.
+Servizio utilizzato per gestire le autenticazioni.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item login(email: string, password: string): metodo chiamato per effettuare la login dell'utente;
@@ -474,7 +419,7 @@ Servizio utilizzato per gestire le autenticazioni.
 \end{itemize}
 
 \subsubsection{menu.service}
-Servizio utilizzato per gestire tutte le funzionalità del menù.
+Servizio utilizzato per gestire tutte le funzionalità del menù.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item title(): ritorna il nome del menù;
@@ -488,7 +433,7 @@ Servizio utilizzato per gestire tutte le funzionalità del menù.
 \end{itemize}
 
 \subsubsection{ordini.service}
-Servizio utilizzato per gestire le ordinazioni.
+Servizio utilizzato per gestire le ordinazioni.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item updateRemoteOrder(): aggiorna gli ordini del server mandandogli la lista degli ordini ogni lasso di tempo;
@@ -505,7 +450,7 @@ Servizio utilizzato per gestire le ordinazioni.
 \end{itemize}
 
 \subsubsection{tavolo.service}
-Servizio utilizzato per gestire le sessioni di tavolo.
+Servizio utilizzato per gestire le sessioni di tavolo.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item createSession(): chiama il server per creare una sessione di tavolo;
@@ -519,7 +464,7 @@ Servizio utilizzato per gestire le sessioni di tavolo.
 
 
 \subsubsection{user.service}
-Servizio utilizzato per gestire le funzionalità dell'area personale.
+Servizio utilizzato per gestire le funzionalità dell'area personale.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item pushBlacklist(): chiama il server aggiornare la blacklist degli ingredienti;

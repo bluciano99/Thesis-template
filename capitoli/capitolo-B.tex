@@ -1,0 +1,68 @@
+\chapter{Requisiti}
+In questa sezione vengono elencati tutti i requisiti tramite una tabella. Ogni riga della tabella, che rappresenta un requisito, ha un codice identificativo, una descrizione del requisito e il fonte.
+Il codice dei requisiti è così strutturato R(F/Q/V)(N/D/O) dove:
+\begin{enumerate}
+	\item[R =] requisito
+    \item[F =] funzionale
+    \item[Q =] qualitativo
+    \item[V =] di vincolo
+    \item[N =] obbligatorio (necessario)
+    \item[D =] desiderabile
+    \item[Z =] opzionale
+\end{enumerate}
+\textbf{Lista dei requisiti}
+\begin{center}
+    \rowcolors{2}{Cyan!10}{GreenYellow!10}
+    \renewcommand{\arraystretch}{1.5}
+    \begin{longtable}{ |p{1.5cm}|p{9cm}|p{1.5cm}|  }
+        \hline
+        \multicolumn{3}{|c|}{Tabella dei requisiti} \\
+        \hline
+        Codice&Requisito &Fonte \\
+        \hline
+        \endhead
+        ROF1&L'utente può accedere al menù del ristorante&UC1 \\
+        ROF2&All'utetne viene mostrato il menù del ristorante con tutte le categorie&UC1.1 \\
+        ROF3&All'utetne viene mostrato il menù del ristorante con tutti piatti delle rispettive categorie di appartenenza&UC1.2 \\
+        ROF4&L'utente può aumentare la quantità di un piatto nel menù&UC1.3 \\
+        ROF5&L'utente può diminuire la quantità di un piatto nel menù&UC1.4 \\
+        ROF6&L'utente può impostare la visualizzazione dei piatti del menù nella modalità dettaglio&UC1.5 \\
+        ROF7&L'utente può impostare la visualizzazione dei piatti del menù nella modalità normale&UC1.6 \\
+        ROF8&L'utente può accedere alla maschera per la gestione tavolo &UC2 \\
+        ROF9&L'utente può generare la sessione del tavolo in cui si trova&UC2.1\\
+        ROF10&L'utente può unirsi alla sessione di un tavolo&UC2.2 \\
+        ROF11&L'utente può uscire dalla sessione di un tavolo&UC2.3\\
+        ROF12&L'utente può generare il QR-code della sessione del tavolo in cui si trova&UC2.4\\
+        ROF13&L'utente può accedere alla maschera per la gestione della lista ordini&UC3 \\
+        ROF14&All'utetne viene mostrato la lista ordini del tavolo&UC3.1 \\
+        ROF15&All'utetne viene mostrato la lista ordini personali &UC3.2 \\
+        ROF16&All'utetne viene mostrato la lista ordini in arrivo&UC3.3 \\
+        ROF17&L'utente può spostare la lista ordini del tavolo in arrivo &UC3.3.1 \\
+        ROF18&L'utente può generare il QR-code della lista ordini del tavolo in cui si trova &UC3.1.2 \\
+        ROF19&L'utente può impostare la visualizzazione dei piatti della lista ordini personali in modalità dettaglio&UC3.2.1 \\
+        ROF20&L'utente può marcare un piatto della lista ordini in arrivo come ricevuto&UC3.3.1 \\
+        ROF21&L'utente non autenticato può accedere all'area personale&UC4\\
+        ROF22&L'utente non autenticato deve riuscire ad inserire email, password e conferma password nel form di registrazione per effettuare la registrazione &UC4.1\\
+        ROF23&L'utente non autenticato deve riuscire ad inserire email e password nel form di login per effettuare la login &UC4.2\\
+        ROF24&L'utente non autenticato deve riuscire ad inserire la email e la nuova password nel form del password dimenticata&UC4.3\\
+        ROF25&L'utente autenticato deve riuscire ad effettuare la logout nell'area personale&UC4.4\\
+        ROF26&L'utente autenticato può aggiungere ingredienti non voluti nell'area personale&UC4.4\\
+        ROF27&L'utente autenticato può rimuovere ingredienti non voluti nell'area personale&UC4.4\\
+        ROF28&L'utente autenticato può aggiungere un piatto nella lista dei preferiti&UC4.4\\
+        ROF29&L'utente autenticato può rimuovere un piatto dalla lista dei preferiti&UC4.4\\
+        ROF30&L'utente autenticato può aggiungere una recensione per un piatto&UC1.7\\
+        ROF31&L'utente autenticato può visualizzare la propria lista dei preferiti&UC5\\
+        ROV1&L'interfaccia utente del sistema dovrà essere sviluppato sfruttando il framework Angular&SyncLab\\
+        ROV2&Lo stile dell'interfaccia utente del sistema dovrà essere sviluppato sfruttando CSS-3&SyncLab\\
+        ROV3&Le chiamate API devono essere implementate tramite Stoplight&SyncLab\\
+        ROV4&È necessario dividire le varie maschere in componenti diversi di Angular&SyncLab\\
+        ROV5&La web-app dovrà funzionare sul browser Microsoft Edge dalla versione più recente&SyncLab\\
+        ROV6&La web-app dovrà funzionare sul browser Google Chrome dalla versione più recente&SyncLab\\
+        ROV7&La web-app dovrà funzionare sul browser Firefox dalla versione più recente&SyncLab\\
+        ROV8&La web-app dovrà funzionare sul browser Safari dalla versione più recente&SyncLab\\
+        RDV9&Il codice sorgente dovrà essere commentata&SyncLab\\
+        ROQ1&Il codice sorgente della piattaforma sarà reperibile su GitHub&SyncLab\\
+        ROQ2&Fornire una sezione tutorial che spieghi come si utilizza la web-app&SyncLab\\
+\hline
+\end{longtable}
+\end{center}
