@@ -6,43 +6,77 @@
 
 \newacronym[description={\glslink{apig}{Application Program Interface}}]
     {api}{API}{Application Program Interface}
+\newacronym[description={\glslink{urlg}{Uniform Resource Locator}}]
+    {url}{URL}{Uniform Resource Locator}
+\newacronym[description={\glslink{VoiPg}{Voice over Internet Protocol}}]
+    {VoiP}{Voice over Internet Protocol}
+% \newacronym[description={\glslink{restg}{Representational state transfer}}]
+%     {restg}{Representational state transfer}
 
-\newacronym[description={\glslink{umlg}{Unified Modeling Language}}]
-    {uml}{UML}{Unified Modeling Language}
+
 
 %**************************************************************
 % Glossario
 %**************************************************************
 %\renewcommand{\glossaryname}{Glossario}
 
+\newglossaryentry{restg}
+{
+    name=\glslink{restg},
+    text=REST,
+    sort=REST,
+    description={è uno stile architetturale per sistemi distribuiti. L'espressione "representational state transfer" e il suo acronimo, REST, fu introdotto nel 2000 nella tesi di dottorato di Roy Fielding e vennero rapidamente adottati dalla comunità di sviluppatori Internet. I metodi più utilizzati sono: GET, POST, PUT, PATCH e DELETE.}
+}
 \newglossaryentry{apig}
 {
     name=\glslink{apig}{API},
-    text=Application Program Interface,
+    text=API,
     sort=api,
     description={in informatica con il termine \emph{Application Programming Interface API} (ing. interfaccia di programmazione di un'applicazione) si indica ogni insieme di procedure disponibili al programmatore, di solito raggruppate a formare un set di strumenti specifici per l'espletamento di un determinato compito all'interno di un certo programma. La finalità è ottenere un'astrazione, di solito tra l'hardware e il programmatore o tra software a basso e quello ad alto livello semplificando così il lavoro di programmazione}
 }
 
-\newglossaryentry{umlg}
+\newglossaryentry{urlg}
 {
-    name=\glslink{uml}{UML},
-    text=UML,
-    sort=uml,
-    description={in ingegneria del software \emph{UML, Unified Modeling Language} (ing. linguaggio di modellazione unificato) è un linguaggio di modellazione e specifica basato sul paradigma object-oriented. L'\emph{UML} svolge un'importantissima funzione di ``lingua franca'' nella comunità della progettazione e programmazione a oggetti. Gran parte della letteratura di settore usa tale linguaggio per descrivere soluzioni analitiche e progettuali in modo sintetico e comprensibile a un vasto pubblico}
+    name=\glslink{urlg},
+    text=URL,
+    sort=URL,
+    description={è una sequenza di caratteri che identifica univocamente l'indirizzo di una risorsa su una rete di computer, come ad esempio una pagina web, tipicamente presente su un host server e resa accessibile a un client. Un esempio di URL famoso può essere 'www.google.com'.
+    }
 }
+\newglossaryentry{responsiveg}
+{
+    name=\glslink{responsive},
+    text=responsive,
+    sort=responsive,
+    description={indica una tecnica di web design per la realizzazione di siti in grado di adattarsi graficamente in modo automatico al dispositivo coi quali vengono visualizzati, come computer, cellulare, monitor e TV, riducendo al minimo la necessità dell'utente di ridimensionare e scorrere i contenuti.
+    }
+}
+\newglossaryentry{backendg}
+{
+    name=\glslink{backendg},
+    text=back-end,
+    sort=back-end,
+    description={parte del software che elabora i dati generati dal front-end e comunica con il data-base per scrive e leggere dati.}
+}
+\newglossaryentry{frontendg}
+{
+    name=\glslink{frontendg},
+    text=front-end,
+    sort=front-end,
+    description={è la parte di un sistema software che gestisce l'interazione con l'utente o con sistemi esterni che producono dati di ingresso, comuni con il back-end tramite le chiamate REST}
+}
+% \newglossaryentry{asd}
+% {
+%     name=\glslink{asd},
+%     text=asd,
+%     sort=asd,
+%     description={}
+% }
 
-\newglossaryentry{VoiPg}{name={VoiP},text=voice over Internet Protocol,description={in telecomunicazioni e informatica, indica una tecnologia che rende possibile effettuare una conversazione, analoga a quella che si potrebbe ottenere con una rete telefonica, sfruttando una connessione Internet o una qualsiasi altra rete di telecomunicazioni dedicata a commutazione di pacchetto, che utilizzi il protocollo IP senza connessione per il trasporto Dati.}}
+\newglossaryentry{VoiPg}{name=\glslink{VoiPg},text=VoiP,description={in telecomunicazioni e informatica, indica una tecnologia che rende possibile effettuare una conversazione, analoga a quella che si potrebbe ottenere con una rete telefonica, sfruttando una connessione Internet o una qualsiasi altra rete di telecomunicazioni dedicata a commutazione di pacchetto, che utilizzi il protocollo IP senza connessione per il trasporto Dati.}}
 
-\newglossaryentry{Kanbang}{name={Kanban},description={termine giapponese che letteralmente significa "insegna", indica un elemento del sistema Just in time di reintegrazione delle scorte a mano a mano che vengono consumate.}}
 
-\newglossaryentry{Gitg}{name={Git},description={un software per il controllo di versionamento per lo sviluppo delle applicazioni, nato nel 2005. Permette di creare rami e unire i rami, per un grande progetto che deve iniziare un implementazione di una nuova funzione si può creare un ramo feature e lavorare su questo ramo per mantenere il corretto funzionamento del programma nel ramo main, una volta che la feature è tutta finita lo si può fare il merge nel main del progetto.}}
+\newglossaryentry{Gitg}{name=\glslink{Gitg},description={un software per il controllo di versionamento per lo sviluppo delle applicazioni, nato nel 2005. Permette di creare rami e unire i rami, per un grande progetto che deve iniziare un implementazione di una nuova funzione si può creare un ramo feature e lavorare su questo ramo per mantenere il corretto funzionamento del programma nel ramo main, una volta che la feature è tutta finita lo si può fare il merge nel main del progetto.}}
 
-\newglossaryentry{Springg}{name={spring},description={un framework open source per lo svipullo di applicazioni su piattaforma java, nato nel 2002. Le sue pricipali punti di forza sono: flessibilità ,modularità, elevata testabilità e una grande community. Per fare questo spring si basa sui seguenti principi: dependency injection, }}
+\newglossaryentry{Springg}{name=\glslink{Springg},description={un framework open source per lo svipullo di applicazioni su piattaforma java, nato nel 2002. Le sue pricipali punti di forza sono: flessibilità ,modularità, elevata testabilità e una grande community. Per fare questo spring si basa sui seguenti principi: dependency injection.}}
 
-% \newglossaryentry{software}{name={software},description={}}
-
-% \newglossaryentry{}{name={spring},description={}}
-% \newglossaryentry{}{name={spring},description={}}
-% \newglossaryentry{}{name={spring},description={}}
-% \newglossaryentry{}{name={spring},description={}}
-% \newglossaryentry{}{name={spring},description={}}

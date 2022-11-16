@@ -7,19 +7,19 @@
 \label{cap:analisi dei requisiti}
 %**************************************************************
 
-\intro{In questo capitolo vengono trattati le analisi dei requisiti del modulo di front-end della web-app, con i vari casi d'uso ed elenco dei requisiti. Infine vengono elencati i requisiti richiesti dall'azienda.}\\
+\intro{In questo capitolo vengono trattati le analisi dei requisiti del modulo di front-end della web-app, con i vari casi d'uso ed un elenco dei requisiti.}\\
 
 %**************************************************************
 \section{Descrizione generale}
-\subsection{interfacce della web-app}
+\subsection{Interfacce della web-app}
 \subsubsection{Interfaccia menù}
-L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sul tavolo. Il menù è composto da un insieme di categorie, in cui ci sono tutti i piatti appartenenti a quella categoria. I piatti sono ordinati in base al suo id che è un numero univoco dentro ogni menù.
+L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sui tavoli. Il menù è composto da un insieme di categorie, in ognuna di esse sono presenti dei piatti. I piatti sono ordinati in base al suo id che è un numero univoco dentro ogni menù.
 \subsubsection{Interfaccia lista ordini}
-L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone del tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
+L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone dello stesso tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
 \subsubsection{Interfaccia gestione tavolo}
-In questa maschera utente può creare una sessione di tavolo se non appartiene ad nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione in modo da fare entrare gli altri nella sua sessione di tavolo.
+In questa maschera utente può creare una sessione di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per fare entrare gli altri nella sua sessione di tavolo scansionando il codice.
 \subsubsection{Interfaccia area personale}
-Qui l'utente può effetture la login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist in modo tale di non visualizzare i piatti contenenti quegli ingredienti nella sezione menù.
+Qui l'utente può effetture la login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti contenenti quegli ingredienti nella sezione menù.
 \subsection{Caratteristiche degli Utenti}
 In questa sezione vengono descritti tutte le Caratteristiche degli utenti che possono utilizzare la web-app.
 \subsubsection{Utente non autenticato}
@@ -50,24 +50,24 @@ Invece, con il termine “utente autenticato” ci si riferisce ad una persona r
 \end{itemize}
 %**************************************************************
 \subsection{Tecnologie utilizzate}
-Per sviluppare la piattaforma verranno utilizzare le seguenti tecnologie:
+Per sviluppare la piattaforma vengono utilizzate le seguenti tecnologie:
 \begin{itemize}
     \item Angular: per la creazione dell'interfaccia utente;
     \item HTML5: per creare la struttura dell'interfaccia untente;
     \item CSS3: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
-    \item Stoplight: per simulare le chiamate Rest API;
+    \item Stoplight: per simulare le chiamate \gls{restg} \gls{apig};
     \item Angular Material: per la creazione dei componenti.
 \end{itemize}
 \subsection{Descrizione delle tecnologie}
 \subsubsection{Angular}
-Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app, oltre a questo garantisce una maggiore manutenibilità e espandibilità.Il linguaggio di programmazione utilizzato è TypeScript, TypeScript estende la sintassi di JavaScript, quindi qualsiasi codice scritto in JavaScript è eseguibile anche tramite TypeScript senza nessuna modifica o aggiunta di codice. Grazie a TypeScript il codice generato da Angular gira su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri. La web-app, per ciascuna parte dell'applicazione è stata affidata a più persone. Discutendo con il tutor aziendale, Fabio Pallaro, abbiamo individuato i principali obiettivi per realizzare la web-app ed a me è stato assegnato il compito di sviluppare la visuale dell'applicazione. 
+Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app, oltre a questo garantisce una maggiore manutenibilità e espandibilità.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.1]{angular.png}
     \caption{Logo di Angular}
 \end{figure}
 \subsubsection{HTML5}
-L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più popolare, utilizzato per progettare le strutture dei siti web. Viene utilizzato da Angular per creare la struttura iniziale per le varie interfacce, poi queste strutture vengono modificate da Angular per generare la pagina dinamicamente. 
+L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più popolare, utilizzato per progettare le strutture dei siti web. Viene utilizzato da Angular per creare la struttura iniziale per le varie interfacce, poi queste strutture vengono modificate da Angular per generare la pagina dinamicamente.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{html css.png}
@@ -76,7 +76,7 @@ L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più pop
 \subsubsection{CSS3}
 Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nel ordine in cui vengono scritte. Per il progetto è stato utilizzato una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite la SCSS è possibile dichiarare le regole CSS in blocchi quindi ci aiuta a scrivere regole CSS in più velocemente e comprensibile.
 \subsubsection{TypeScript}
-TypeScript è un linguaggio di programmazione open source sviluppato da Microsoft, che estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile e flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, grazie a queste caratteristiche utilizzando TypeScript ci ganrantisce controlli automatici, rilevando in automatico i bug prima della compilazione.
+Il linguaggio di programmazione utilizzato da Angular è TypeScript che è un linguaggio di programmazione open source sviluppato da Microsoft, TypeScript estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile e flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, grazie a queste caratteristiche utilizzando TypeScript ci ganrantisce controlli automatici, rilevando in automatico i bug prima della compilazione. Grazie a TypeScript il codice generato da Angular è eseguibile su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri.
 \subsubsection{Stoplight}
 Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua interfaccia user friendly. Offre un buon spazio per collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
 \begin{figure}[H]
@@ -85,15 +85,15 @@ Stoplight è una piattaforma che offre la possibilità di progettare le API velo
     \caption{Logo di Stoplight}
 \end{figure}
 \subsubsection{Angular Material}
-Angular Material è un insieme di componenti UI già implementati, questi componenti possono essere direttamente utilizzati in Angular. Tutti i componenti offerti sono già responsive e sono facili da customizzare con le proprie preferenze, come il colore dei bottoni.
+Angular Material è un insieme di componenti UI già implementati, questi componenti possono essere direttamente utilizzati in Angular. Tutti i componenti offerti sono già \gls{responsiveg} e sono facili da customizzare con le proprie preferenze, come il colore dei bottoni.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{angular material.png}
     \caption{Logo di Angular Material}
 \end{figure}
 \section{Casi D'uso}
-\subsection{Introduzione }
-In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa. verranno presenti i casire successivamente elencati tutti i casi d'uso con la propria descrizione, mentre le descrizioni schematiche potranno essere reperiti nell'appendice A.
+\subsection{Introduzione}
+In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa. Verranno elencati tutti i casi d'uso con la propria descrizione, mentre le descrizioni schematiche potranno essere reperiti nell'appendice {\hyperref[cap:appendice a]{A}}.
 \subsection{Attori primari}
 \begin{itemize}
     \item Utente non Autenticato: utente che non ha ancora effettuato la fase di autenticazione sulla piattaforma. Può essere in possesso o meno delle credenziali per l'autenticazione. Avrà funzionalità limitate rispetto ad un utente autenticato;
@@ -102,72 +102,71 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
 \end{itemize}
 \section{Utente generico}
 In questa sezione vengono elencati tutte le funzionalità della web-app che un untente generico può usufruire.
-\subsection{UC1 - Visualizza menù}
-Un utente deve poter visualizzare il menù del ristorante.
-\subsection{UC1.1 - Visualizza categorie}
-Un utente deve poter visualizzare le categorie dei piatti del ristorante.
-\subsection{UC1.2 - Visualizza piatto}
+\subsubsection{UC1 - Visualizza menù}
+Un utente deve poter accedere alla sezione menù ed visualizzarlo correttamente.
+\subsubsection{UC1.1 - Visualizza categorie}
+Un utente deve poter visualizzare le categorie dei piatti del ristorante nella sezione menù.
+\subsubsection{UC1.2 - Visualizza piatto}
 Un utente deve poter visualizzare il piatto con il nome, il numero, il prezzo, gli ingredienti, la descrizione e la quantità.
-\subsection{UC1.3 - Aumenta quantità}
+\subsubsection{UC1.3 - Aumenta quantità}
 Un utente deve poter aumentare la quantità di un piatto fino ad un limite se il piatto è limitato.
-\subsection{UC1.4 - Diminuisci quantità}
+\subsubsection{UC1.4 - Diminuisci quantità}
 Un utente deve poter diminuire la quantità di un piatto con quantità maggiore di 1.
-\subsection{UC1.5 - Visualizza dettaglio piatto}
+\subsubsection{UC1.5 - Visualizza dettaglio piatto}
 Un utente deve poter visualizzare i dettagli del piatto con la propria valutazione, la valutazione media e le note del piatto.
-\subsection{UC1.6 - Nascondi dettaglio piatto}
+\subsubsection{UC1.6 - Nascondi dettaglio piatto}
 Un utente deve poter nascondere i dettagli di un piatto che è in modalità dettaglio.
-\subsection{UC2 - Gestione tavolo}
-Un utente deve poter entrare nel modulo di gestione tavolo tramite la navbar della web-app o inserendo direttamente URL.
-\subsection{UC2.1 - Generazione sessione tavolo}
-Un utente deve poter generare una sessione di tavolo quando non si trova in neussuna sessione.
-\subsection{UC2.2 - Unione sessione tavolo}
-Un utente deve poter unirsi ad una sessione di tavolo utilizzando il codice sessione o tramite la scansione del QR-code.
-\subsection{UC2.3 - Uscita sessione tavolo}
+\subsubsection{UC2 - Gestione tavolo}
+Un utente deve poter entrare nel modulo di gestione tavolo tramite la navbar della web-app o inserendo direttamente \gls{urlg}.
+\subsubsection{UC2.1 - Generazione sessione tavolo}
+Un utente deve poter generare una sessione di tavolo quando non si trova in nessuna sessione.
+\subsubsection{UC2.2 - Unione sessione tavolo}
+Un utente deve poter unirsi ad una sessione di tavolo utilizzando il codice sessione o tramite la scansione del QR-code quando non si trova in nessuna sessione.
+\subsubsection{UC2.3 - Uscita sessione tavolo}
 Un utente deve poter uscire da una sessione di tavolo.
-\subsection{UC2.4 - Generazione QR-code sessione tavolo}
+\subsubsection{UC2.4 - Generazione QR-code sessione tavolo}
 Un utente presente in una sessione di tavolo deve poter generare il QR-code del tavolo.
-\subsection{UC3 - Lista ordini}
-Un utente deve poter entrare nel modulo di gestione degli ordini tramite la navbar della web-app o inserendo direttamente URL.
-\subsection{UC3.1 - Visualizza lista ordini del tavolo}
-Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini del tavolo. Composto dai nomi dei piatti e le loro quantità.
-\subsection{UC3.2 - Visualizza lista ordini personali}
-Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini personali, che contiene solamente gli ordini che utente ha ordinato.
-\subsection{UC3.3 - Visualizza lista ordini in arrivo}
-Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini in arrivo, che contiene tutti i piatti in arrivo e ognuna di essi ha un bottone che permette di marcare il piatto come ricevuto.
-\subsection{UC3.1.1 - Sposta la lista in arrivo}
+\subsubsection{UC3 - Lista ordini}
+Un utente deve poter entrare nel modulo di gestione degli ordini tramite la navbar della web-app o inserendo direttamente \gls{urlg}.
+\subsubsection{UC3.1 - Visualizza lista ordini del tavolo}
+Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini del tavolo. Composto da una lista di piatti che contiene i loro nomi e le loro quantità.
+\subsubsection{UC3.2 - Visualizza lista ordini personali}
+Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini personali, che contiene solamente gli ordini che l'utente ha ordinato.
+\subsubsection{UC3.3 - Visualizza lista ordini in arrivo}
+Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini in arrivo, che contiene tutti i piatti in arrivo e ognuna di essi è presente un bottone che permette di marcare il piatto come ricevuto.
+\subsubsection{UC3.1.1 - Sposta la lista in arrivo}
 Un untente che si trova nella sezione di lista degli ordini del tavolo deve poter spostare gli ordini del tavolo nella lista degli ordini in arrivo.
-\subsection{UC3.1.2 - Mostra QR-code ordini}
+\subsubsection{UC3.1.2 - Mostra QR-code ordini}
 Un utente che si trova nella sezione di lista ordini del tavolo deve poter generare il QR-code degli ordini per poi fare scansionare dai camerieri.
-\subsection{UC3.2.1 - Visualizza in dettaglio lista ordini personali}
+\subsubsection{UC3.2.1 - Visualizza in dettaglio lista ordini personali}
 Un utente che si trova nella sezione di lista ordini personali deve poter visualizzare la lista degli ordini personali in modalità dettaglio per poi vedere tutti i dati del piatto al fine di riconescere il proprio piatto al momento di ricezione.
-\subsection{UC3.3.1 - Ricezione piatto}
+\subsubsection{UC3.3.1 - Ricezione piatto}
 Un utente che si trova nella sezione di lista degli ordini in arrivo deve poter marcare un piatto come ricevuto.
 \section{Utente Non Autenticato}
 In questa sezione vengono elencati tutte le funzionalità della web-app che un untente non autenticato può usufruire.
-\subsection{UC4 - Area personale}
-Un utente deve poter accedere all'area personale tramite la navbar della web-app o inserendo direttamente URL.
-\subsection{UC4.1 - Registrazione}
-Un utente non autenticato deve poter registrarsi alla piattaforma inserendo una email ed una password.
-\subsection{UC4.2 - Login}
+\subsubsection{UC4 - Area personale}
+Un utente deve poter accedere all'area personale tramite la navbar della web-app o inserendo direttamente \gls{urlg}.
+\subsubsection{UC4.1 - Registrazione}
+Un utente non autenticato deve poter registrarsi alla piattaforma inserendo un'email ed una password.
+\subsubsection{UC4.2 - Login}
 Un untente già registrato deve poter effettuare la login tramite i credenziali inseriti durante la fase di registrazione.
-\subsection{UC4.3 - Password dimenticata}
+\subsubsection{UC4.3 - Password dimenticata}
 Un untente già registrato deve poter recuperare la password inserendo l'email utilizzato per la registrazione e inserendo il codice di sicurezza.
 \section{Utente Autenticato}
 In questa sezione vengono elencati tutte le funzionalità della web-app che un untente autenticato può usufruire.
-\subsection{UC4.4 - Logout}
+\subsubsection{UC4.4 - Logout}
 Un untente che ha già effettuato la login deve poter effettuare la logout.
-\subsection{UC4.5 - Aggiungi ingredienti non voluti}
+\subsubsection{UC4.5 - Aggiungi ingredienti non voluti}
 Un utente che ha già effettuato la login deve poter aggiungere nuovi ingredienti non voluti nella propria blacklist.
-\subsection{UC4.6 - Rimuovi ingredienti non voluti}
+\subsubsection{UC4.6 - Rimuovi ingredienti non voluti}
 Un utente che ha già effettuato la login deve poter rimuovere un ingrediente dalla blacklist.
-\subsection{UC1.7 - Aggiungi preferiti}
+\subsubsection{UC1.7 - Aggiungi preferiti}
 Un utente che ha già effettuato la login deve poter inserire un piatto nella lista dei piatti preferiti.
-\subsection{UC1.8 - Rimuovi preferiti}
+\subsubsection{UC1.8 - Rimuovi preferiti}
 Un utente che ha già effettuato la login deve poter rimuovere un piatto dalla lista dei preferiti.
-\subsection{UC1.9 - Aggiungi recensione}
-Un utente che ha già effettuato la login deve poter inserire una rencensione per un piatto.
-\subsection{UC5 - Visualizza lista preferiti}
+\subsubsection{UC1.9 - Aggiungi recensione}
+Un utente che ha già effettuato la login deve poter inserire una rencensione ad un piatto.
+\subsubsection{UC5 - Visualizza lista preferiti}
 Un utente che ha già effettuato la login deve poter visualizzare la propria lista dei preferiti.
 \section{Requisiti}
-\subsection{Introduzione}
-In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. I requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice B.
+In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. I requisiti sono individuati tramite i casi d'uso precedentemente descritte. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.

@@ -9,9 +9,7 @@
 
 
 % \noindent Esempio di utilizzo di un termine nel glossario \\
-\gls{apig}. \\
-\gls{umlg}
-\gls{VoiPg}
+
 % \noindent Esempio di citazione in linea \\
 % \cite{site:agile-manifesto}. \\
 
@@ -32,7 +30,7 @@ L'azienda ha collobarobato con vari compagnie tra questi i più importanti sono:
 Come accenato, SyncLab opera nel settore IT e i suoi prodotti nascono dalle competenze acquisite e maturate durante le loro 20 anni di collaborazioni. I prodotti coprono vari ambiti come quelli delle telecomunicazioni, utilities, finanza e salute.
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\textwidth]{prodotti.png}
+    \includegraphics[width=0.55\textwidth]{prodotti.png}
     \caption{I vari prodotti di SyncLab}
 \end{figure}
 \begin{itemize}
@@ -45,19 +43,15 @@ Come accenato, SyncLab opera nel settore IT e i suoi prodotti nascono dalle comp
     \item \textbf{StreamCrusher:} tecnologia che serve per aiutare a prendere decisioni di business, indentificando velocemente i punti critici e riformando i processi in base alle nuove esigenze.
     \item \textbf{Wave:} software nato per i sistemi di vidersorverglianza, con l'obiettivo di avere una maggiore copertura territoriale col minor numero di telecamere installate e possibilmente utilizzare il minor numero possibile di risorse.
 \end{itemize}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{prodotti.png}
-    \caption{I vari prodotti di SyncLab}
-\end{figure}
 
-\subsection{Introduzione al progetto}
-Lo scopo dello stage quello di realizzare una web-app per la gestione delle ordinazione dei piatti di un ristorante sushi "all you can eat", con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso, oltre a questo il menù contiene una centinaia di piatti diversi. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, di seguito comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato il specifico piatto nel momento della consegna.
+\section{Introduzione al progetto}
+Lo scopo dello stage quello di realizzare una web-app per la gestione delle ordinazioni dei piatti di un ristorante sushi "all you can eat" con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, oltre a questo il menù contiene una centinaia di piatti diversi, di seguito comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato il specifico piatto nel momento della consegna.
 
 \section{La soluzione individuata}
-SyncLab ha deciso di risolvere questo problema tramite una web-app, che è composta da due parti la parte front-end e la parte back-end. La parte di back-end deve essere implementata tramite java utilizzando il framework spring e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
-La parte di front-end è invece realizzato in Javascript, utilizzando il framework Angular. La comunicazione tra le due parti della web-app avviene tramite le chiamate REST fornite dal back-end.
-Si è deciso di realizzare una web-app perché non c'è la necessità di scaricare ed installare applicativo, così riduce il tempo delle ordinazioni dei clienti. 
+SyncLab ha deciso di risolvere questo problema tramite una web-app, che è composta da due parti, la parte \gls{frontendg} e la parte \gls{backendg}. Il \gls{backendg} deve essere implementata tramite java utilizzando il framework \gls{Springg} e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
+La parte di front-end è invece realizzato in Javascript, utilizzando il framework Angular. La comunicazione tra le due parti della web-app avviene tramite le chiamate \gls{restg} fornite dal \gls{backendg}.
+Per ciascuna parte dell'applicazione è stata affidata a più persone. Discutendo con il tutor aziendale, Fabio Pallaro, abbiamo individuato i principali obiettivi per realizzare la web-app ed a me è stato assegnato il compito di sviluppare la visuale dell'applicazione. 
+Si è deciso di realizzare una web-app perché non c'è la necessità di scaricare ed installare applicativo, così riducendo il tempo delle ordinazioni dei clienti.
 
 \begin{figure}[H]
     \centering
@@ -71,7 +65,7 @@ Si è deciso di realizzare una web-app perché non c'è la necessità di scarica
 \section{Organizzazione del testo}
 
 \begin{description}
-    \item[{\hyperref[cap:il progetto di stage]{Il secondo capitolo}}] descrive in dettaglio il progetto di stage, il problema individuato e una sua soluzione.
+    \item[{\hyperref[cap:il progetto di stage]{Il secondo capitolo}}] descrive in dettaglio la pianificazione e gli obiettivi dello stage.
     
     \item[{\hyperref[cap:analisi dei requisiti]{Il terzo capitolo}}] descrive l'analisi dei requisiti della web-app, vengono discussi tutti i casi d'uso e i requisiti da rispettare.
     
@@ -81,7 +75,7 @@ Si è deciso di realizzare una web-app perché non c'è la necessità di scarica
     
     \item[{\hyperref[cap:verifica]{Il quinto capitolo}}] approfondisce la fase di verifica e validazione della web-app.
     
-    \item[{\hyperref[cap:conclusioni]{Nel sesto capitolo}}] vengono trattate le conclusioni dell'intero progetto, parlando del prodotto finale e le competenze acquisite durante lo stage.
+    \item[{\hyperref[cap:conclusioni]{Il sesto capitolo}}] descrive le conclusioni dell'intero progetto, parlando del prodotto finale e le competenze acquisite durante lo stage.
 \end{description}
 Riguardo la stesura del testo, relativamente al documento sono state adottate le seguenti convenzioni tipografiche:
 \begin{itemize}
