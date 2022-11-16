@@ -17,11 +17,11 @@ L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR
 \subsubsection{Interfaccia lista ordini}
 L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone dello stesso tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
 \subsubsection{Interfaccia gestione tavolo}
-In questa maschera utente può creare una sessione di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per fare entrare gli altri nella sua sessione di tavolo scansionando il codice.
+In questa \gls{mascherag} utente può creare una sessione di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per fare entrare gli altri nella sua sessione di tavolo scansionando il codice.
 \subsubsection{Interfaccia area personale}
-Qui l'utente può effetture la login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti contenenti quegli ingredienti nella sezione menù.
-\subsection{Caratteristiche degli Utenti}
-In questa sezione vengono descritti tutte le Caratteristiche degli utenti che possono utilizzare la web-app.
+Qui l'utente può effetture il login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti contenenti quegli ingredienti nella sezione menù.
+\subsection{Caratteristiche degli utenti}
+In questa sezione vengono descritti tutte le caratteristiche degli utenti che possono utilizzare la web-app.
 \subsubsection{Utente non autenticato}
 Con il termine utente non autenticato ci si riferisce ad una qualsiasi persona non autenticata nel sistema, che può sfruttare le funzionalità di base offerte dalla piattaforma, ossia:
 \begin{itemize}
@@ -35,7 +35,7 @@ Con il termine utente non autenticato ci si riferisce ad una qualsiasi persona n
     \item Spostare ordini in arrivo;
     \item Marcare i piatti in arrivo come arrivato;
     \item Registrare nella piattaforma;
-    \item Effettuare la login.
+    \item Effettuare il login.
 \end{itemize}
 \subsubsection{Utente autenticato}
 Invece, con il termine “utente autenticato” ci si riferisce ad una persona registrata nel database e che ha effettuato l'accesso nella piattaforma, la quale, oltre a sfruttare le funzionalità dell'utente non autenticato, può anche:
@@ -53,7 +53,7 @@ Invece, con il termine “utente autenticato” ci si riferisce ad una persona r
 Per sviluppare la piattaforma vengono utilizzate le seguenti tecnologie:
 \begin{itemize}
     \item Angular: per la creazione dell'interfaccia utente;
-    \item HTML5: per creare la struttura dell'interfaccia untente;
+    \item HTML5: per creare la struttura dell'interfaccia utente;
     \item CSS3: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
     \item Stoplight: per simulare le chiamate \gls{restg} \gls{apig};
     \item Angular Material: per la creazione dei componenti.
@@ -78,7 +78,7 @@ Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modific
 \subsubsection{TypeScript}
 Il linguaggio di programmazione utilizzato da Angular è TypeScript che è un linguaggio di programmazione open source sviluppato da Microsoft, TypeScript estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile e flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, grazie a queste caratteristiche utilizzando TypeScript ci ganrantisce controlli automatici, rilevando in automatico i bug prima della compilazione. Grazie a TypeScript il codice generato da Angular è eseguibile su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri.
 \subsubsection{Stoplight}
-Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua interfaccia user friendly. Offre un buon spazio per collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
+Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua semplice interfaccia utente. Permette di collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{stoplight logo.png}
@@ -91,7 +91,7 @@ Angular Material è un insieme di componenti UI già implementati, questi compon
     \includegraphics[scale=0.3]{angular material.png}
     \caption{Logo di Angular Material}
 \end{figure}
-\section{Casi D'uso}
+\section{Casi d'uso}
 \subsection{Introduzione}
 In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa. Verranno elencati tutti i casi d'uso con la propria descrizione, mentre le descrizioni schematiche potranno essere reperiti nell'appendice {\hyperref[cap:appendice a]{A}}.
 \subsection{Attori primari}
@@ -101,7 +101,7 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item  Utente Generico: può essere sia un utente autenticato che un utente non autenticato.
 \end{itemize}
 \section{Utente generico}
-In questa sezione vengono elencati tutte le funzionalità della web-app che un untente generico può usufruire.
+In questa sezione vengono elencati tutte le funzionalità della web-app che un utente generico può usufruire.
 \subsubsection{UC1 - Visualizza menù}
 Un utente deve poter accedere alla sezione menù ed visualizzarlo correttamente.
 \subsubsection{UC1.1 - Visualizza categorie}
@@ -135,7 +135,7 @@ Un utente che si trova nella sezione di lista degli ordini deve poter visualizza
 \subsubsection{UC3.3 - Visualizza lista ordini in arrivo}
 Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini in arrivo, che contiene tutti i piatti in arrivo e ognuna di essi è presente un bottone che permette di marcare il piatto come ricevuto.
 \subsubsection{UC3.1.1 - Sposta la lista in arrivo}
-Un untente che si trova nella sezione di lista degli ordini del tavolo deve poter spostare gli ordini del tavolo nella lista degli ordini in arrivo.
+Un utente che si trova nella sezione di lista degli ordini del tavolo deve poter spostare gli ordini del tavolo nella lista degli ordini in arrivo.
 \subsubsection{UC3.1.2 - Mostra QR-code ordini}
 Un utente che si trova nella sezione di lista ordini del tavolo deve poter generare il QR-code degli ordini per poi fare scansionare dai camerieri.
 \subsubsection{UC3.2.1 - Visualizza in dettaglio lista ordini personali}
@@ -143,30 +143,30 @@ Un utente che si trova nella sezione di lista ordini personali deve poter visual
 \subsubsection{UC3.3.1 - Ricezione piatto}
 Un utente che si trova nella sezione di lista degli ordini in arrivo deve poter marcare un piatto come ricevuto.
 \section{Utente Non Autenticato}
-In questa sezione vengono elencati tutte le funzionalità della web-app che un untente non autenticato può usufruire.
+In questa sezione vengono elencati tutte le funzionalità della web-app che un utente non autenticato può usufruire.
 \subsubsection{UC4 - Area personale}
 Un utente deve poter accedere all'area personale tramite la navbar della web-app o inserendo direttamente \gls{urlg}.
 \subsubsection{UC4.1 - Registrazione}
 Un utente non autenticato deve poter registrarsi alla piattaforma inserendo un'email ed una password.
 \subsubsection{UC4.2 - Login}
-Un untente già registrato deve poter effettuare la login tramite i credenziali inseriti durante la fase di registrazione.
+Un utente già registrato deve poter effettuare il login tramite i credenziali inseriti durante la fase di registrazione.
 \subsubsection{UC4.3 - Password dimenticata}
-Un untente già registrato deve poter recuperare la password inserendo l'email utilizzato per la registrazione e inserendo il codice di sicurezza.
+Un utente già registrato deve poter recuperare la password inserendo l'email utilizzato per la registrazione e inserendo il codice di sicurezza.
 \section{Utente Autenticato}
-In questa sezione vengono elencati tutte le funzionalità della web-app che un untente autenticato può usufruire.
+In questa sezione vengono elencati tutte le funzionalità della web-app che un utente autenticato può usufruire.
 \subsubsection{UC4.4 - Logout}
-Un untente che ha già effettuato la login deve poter effettuare la logout.
+Un utente che ha già effettuato il login deve poter effettuare il logout.
 \subsubsection{UC4.5 - Aggiungi ingredienti non voluti}
-Un utente che ha già effettuato la login deve poter aggiungere nuovi ingredienti non voluti nella propria blacklist.
+Un utente che ha già effettuato il login deve poter aggiungere nuovi ingredienti non voluti nella propria blacklist.
 \subsubsection{UC4.6 - Rimuovi ingredienti non voluti}
-Un utente che ha già effettuato la login deve poter rimuovere un ingrediente dalla blacklist.
+Un utente che ha già effettuato il login deve poter rimuovere un ingrediente dalla blacklist.
 \subsubsection{UC1.7 - Aggiungi preferiti}
-Un utente che ha già effettuato la login deve poter inserire un piatto nella lista dei piatti preferiti.
+Un utente che ha già effettuato il login deve poter inserire un piatto nella lista dei piatti preferiti.
 \subsubsection{UC1.8 - Rimuovi preferiti}
-Un utente che ha già effettuato la login deve poter rimuovere un piatto dalla lista dei preferiti.
+Un utente che ha già effettuato il login deve poter rimuovere un piatto dalla lista dei preferiti.
 \subsubsection{UC1.9 - Aggiungi recensione}
-Un utente che ha già effettuato la login deve poter inserire una rencensione ad un piatto.
+Un utente che ha già effettuato il login deve poter inserire una rencensione ad un piatto.
 \subsubsection{UC5 - Visualizza lista preferiti}
-Un utente che ha già effettuato la login deve poter visualizzare la propria lista dei preferiti.
+Un utente che ha già effettuato il login deve poter visualizzare la propria lista dei preferiti.
 \section{Requisiti}
-In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. I requisiti sono individuati tramite i casi d'uso precedentemente descritte. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.
+In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. I requisiti sono individuati tramite i casi d'uso precedentemente descritti. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.

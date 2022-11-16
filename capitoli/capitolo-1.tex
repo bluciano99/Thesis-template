@@ -15,7 +15,7 @@
 
 % \noindent Esempio di citazione nel pie' di pagina \\
 % citazione\footcite{womak:lean-thinking} \\
-\intro{In questo capitolo viene descitta l'azienda dove in cui è stato svolto lo stage e viene spiegato  il progetto di stage.}\\
+\intro{In questo capitolo viene descitta l'azienda nella quale è stato svolto lo stage e viene spiegato  il progetto di tirocinio.}\\
 %**************************************************************
 \section{SyncLab }
 SyncLab è una Innovative Company collocata in tutta italia, è nata nel 2002 con sede principale a Napoli ed è cresciuta velocemente. Attualmente, SyncLab ha 6 sedi in tutta italia, più di 300 dipendenti e più di 150 clienti diretti e finali.\\
@@ -36,19 +36,21 @@ Come accenato, SyncLab opera nel settore IT e i suoi prodotti nascono dalle comp
 \begin{itemize}
     \item \textbf{SynClinic:} software integrato per la gestione delle strutture sanitarie, come il sistema di cartella clinica digitale, il servizio di fatturazione, la gestione informatizzata dei farmaci, i strumenti nativi di gestione amministrativa e tanto altro.
     \item \textbf{SEASTREAM:} una piattaforma nata per migliorare e potenziare le attività di business nel settore armatoriali e di altri operatori del mercato marittimo
-    \item \textbf{FastReservation:} applicazione realizzato per rendere il sistema di prenotazione più facile e affidabile per gli utenti.
+    \item \textbf{FastReservation:} applicazione realizzata per rendere il sistema di prenotazione più facile e affidabile per gli utenti.
     \item \textbf{Sobereye:} soluzione per la sicurezza proattiva per la prevenzione degli incidenti nei settori di trasporti, estrazione, costruzioni e industrale.
-    \item \textbf{DPS 4.0:} applicativo che permette di gestire la GDPR Privacy Policy. L'applicativo, tramite una guida semplice sviluppata dagli ingegneri esperti nell'ambito dei user experience, offre la possibilità di modificare e aggiornare i documenti sulla privacy con il minimo sforzo.
-    \item \textbf{StreamLog:} soluzione per la protezione dei dati personali relativo agli Amministratori di Sistema, dà possibilità di effettuare il controllo degli accessi degli utenti ai sistemi in modo semplice ed efficace.
+    \item \textbf{DPS 4.0:} applicativo che permette di gestire la GDPR Privacy Policy. L'applicativo, tramite una guida semplice sviluppata dagli ingegneri esperti nell'ambito dell'user experience, offre la possibilità di modificare e aggiornare i documenti sulla privacy con il minimo sforzo.
+    \item \textbf{StreamLog:} soluzione per la protezione dei dati personali relativo agli Amministratori di Sistema, offre la possibilità di effettuare il controllo degli accessi degli utenti ai sistemi in modo semplice ed efficace.
     \item \textbf{StreamCrusher:} tecnologia che serve per aiutare a prendere decisioni di business, indentificando velocemente i punti critici e riformando i processi in base alle nuove esigenze.
-    \item \textbf{Wave:} software nato per i sistemi di vidersorverglianza, con l'obiettivo di avere una maggiore copertura territoriale col minor numero di telecamere installate e possibilmente utilizzare il minor numero possibile di risorse.
+    \item \textbf{Wave:} software nato per i sistemi di videosorverglianza, con l'obiettivo di avere una maggiore copertura territoriale col minor numero di telecamere installate e possibilmente utilizzare il minor numero possibile di risorse.
 \end{itemize}
 
 \section{Introduzione al progetto}
-Lo scopo dello stage quello di realizzare una web-app per la gestione delle ordinazioni dei piatti di un ristorante sushi "all you can eat" con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, oltre a questo il menù contiene una centinaia di piatti diversi, di seguito comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato il specifico piatto nel momento della consegna.
+Lo scopo dello stage quello di realizzare una web-app per la gestione delle ordinazioni dei piatti di un ristorante sushi "all you can eat" con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, oltre a questo il menù contiene centinaia di piatti diversi, di seguito comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato il specifico piatto nel momento della consegna.
 
 \section{La soluzione individuata}
-SyncLab ha deciso di risolvere questo problema tramite una web-app, che è composta da due parti, la parte \gls{frontendg} e la parte \gls{backendg}. Il \gls{backendg} deve essere implementata tramite java utilizzando il framework \gls{Springg} e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
+SyncLab ha deciso di risolvere questo problema tramite SushiLab, una web-app che offre la possibilità agli utenti di ordinare i piatti e tracciare tutte le ordinazioni.\\ 
+Un'utente può inoltre registrarsi alla piattaforma per salvare dei piatti nella propria lista dei preferiti, aggiungere ingredienti alla propria blacklist e recensire un piatto.\\
+SushiLab è composta da due parti, la parte \gls{frontendg} e la parte \gls{backendg}. Il \gls{backendg} deve essere implementato tramite Java utilizzando il framework \gls{Springg} e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
 La parte di front-end è invece realizzato in Javascript, utilizzando il framework Angular. La comunicazione tra le due parti della web-app avviene tramite le chiamate \gls{restg} fornite dal \gls{backendg}.
 Per ciascuna parte dell'applicazione è stata affidata a più persone. Discutendo con il tutor aziendale, Fabio Pallaro, abbiamo individuato i principali obiettivi per realizzare la web-app ed a me è stato assegnato il compito di sviluppare la visuale dell'applicazione. 
 Si è deciso di realizzare una web-app perché non c'è la necessità di scaricare ed installare applicativo, così riducendo il tempo delle ordinazioni dei clienti.

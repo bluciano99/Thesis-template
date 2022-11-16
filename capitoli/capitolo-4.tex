@@ -11,10 +11,10 @@
 
 \section{Progettazione}
 \subsection{Architettura Angular}
-Un'applicazione Angular è formato da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che definisce la vista dell'utente.\\
+Un'applicazione Angular è formata da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che definisce la vista dell'utente.\\
 Ogni componente possiede un template di HTML, dove viene definita il modello di vista, quando un utente effettua un click su un bottone, questo elemento HTML emette un evento di click al componente in cui si trova, questo componente esegue il metodo specifico al evento ricevuto, di seuito viene cambiato il metadata e modificato il codice HTML, una volta cambiata la struttura della pagina viene fatto il rendering della pagina e viene cambiata la vista dell'utente.\\
 % Quindi un click su un bottone questo elemento HTML emette un evento di click al componente in cui si trova, questo componente esegue il metodo specifico al evento ricevuto, di seuito viene cambiato il metadata e viene aggiornato il template di HTML.\\
-I componenti utilizzano dei servizi che forniscono funzionalità specifiche come la login di Auth.Service, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze e grazie a questo rende il codice efficiente. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, dunque rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
+I componenti utilizzano dei servizi che forniscono funzionalità specifiche come il login di Auth.Service, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze e grazie a questo rende il codice efficiente. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, dunque rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{angularArc.png}
@@ -34,7 +34,7 @@ Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo
     \caption{Struttura file SushiLab}
 \end{figure}
 \subsection{Progettazione delle viste}
-All'inizio si è fatto un meeting con il tutur aziendale per chiarire le funzionalità e i requisiti che la web-app deve avere, dopo di che si è iniziato la progettazione dei mock-up delle viste tramite la editor di grafica online Figma.\\
+All'inizio si è fatto un meeting con il tutor aziendale per chiarire le funzionalità e i requisiti che la web-app deve avere, dopo di che si è iniziato la progettazione dei mock-up delle viste tramite la editor di grafica online Figma.\\
 Tramite il sistema di progettazione di Figma sono stati creati le bozze delle viste per chiarire i collegamenti tra di loro e i posizionamenti dei compoenti. 
 Il posizionamento è scelto in base alla frequenza di click su di essa e si basa anche sulle viste dei web-app più popolari.
 È stato deciso i seguenti aspetti:
@@ -118,7 +118,7 @@ Interfaccia tramite la quale è possibile unire ad una sessione di tavolo.\\
 
 
 \subsubsection{QR-code tavolo}
-Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trovano sullo stesso tavolo dell'untente di unirsi.\\
+Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trovano sullo stesso tavolo dell'utente di unirsi.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può mostrare il QR-code del tavolo premendo il bottone QR-code.
@@ -158,7 +158,7 @@ Viene mostrata la lista degli ordini in arrivo.\\
 
 
 \subsubsection{Login}
-Viene mostrato il form per effetture il login dove è possibile effettuare la login nella piattaforma.\\
+Viene mostrato il form per effetture il login dove è possibile effettuare il login nella piattaforma.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può effettuare il login inserendo i campi correttamente altrimenti vengono evidenziati in rosso i campi sbagliati;
@@ -293,7 +293,7 @@ Componente usato per creare la maschera dell'area personale, dove si può vedere
 \end{itemize}
 
 \subsubsection{Blacklist component}
-Componente usato per creare gestire la sezione blacklist degli ingredienti, viene mostrato la blacklist ed è possibile rimuovere o aggiungere un ingrediente nella lista.\\
+Componente usato per creare gestire la sezione blacklist degli ingredienti, viene mostrata la blacklist ed è possibile rimuovere o aggiungere un ingrediente nella lista.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item onAdd(): metodo chiamato quando si aggiunge un ingrediente nella blacklist;
@@ -318,10 +318,10 @@ Componente usato per creare la maschera per reimpostare la password.\\
 \end{itemize}
 
 \subsubsection{Login component}
-Componente usato per creare il form per effetture la login.\\
+Componente usato per creare il form per effetture il login.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item login(): metodo chiamato quando l'utente conferma il form, viene controllato vari campi e infine viene chiamato API per effetture la login.
+    \item login(): metodo chiamato quando l'utente conferma il form, viene controllato vari campi e infine viene chiamato API per effetture il login.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
@@ -404,8 +404,8 @@ Componente usato per creare la maschera gestione tavolo, dove si può creare una
 Servizio utilizzato per gestire le autenticazioni.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item login(email: string, password: string): metodo chiamato per effettuare la login dell'utente;
-    \item setSession(): salva i dati dell'utente dopo la login nel local storage per mantenere la sessione di login;
+    \item login(email: string, password: string): metodo chiamato per effettuare il login dell'utente;
+    \item setSession(): salva i dati dell'utente dopo il login nel local storage per mantenere la sessione di login;
     \item logout(): metodo chiamato per effetture il logout dell'utente;
     \item isLoggedIn(): ritorna true se è presente nel local storage la sessione dell'utente, false altrimenti;
     \item getExpirations(): ritorna true se la sessione dell'utente non è ancora scaduto, false altrimenti.
