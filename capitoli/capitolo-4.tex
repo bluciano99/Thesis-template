@@ -87,17 +87,18 @@ I componenti sono stati individuati tramite l'analisi dei requisiti e la progett
 \\
 % {\hyperref[cap:menu.component]{Il secondo capitolo}}
 \section{Codifica}
-\subsection{Interfaccie}
-Dopo aver progettato i mock della visuale tramite figma e le API tramite stoplight si è iniziato la fase di codifica delle interfacce. La creazione dei template di default dei componenti è stato molto rapido grazie al command-line interface di Angular, utilizzando il comando 'ng generate component "nome del componente"' viene creato una cartella in cui contiene tutti i file che servono per il rendering del componente. Dopo la creazione dei file principali si parte a modificare il component.ts, che rapprensenta la logica del componente, vengono inseriti tutte le funzionalità che il componente deve avere. Una volta definito le funzionalità si inizia a modificare la struttura quindi il component.html. Infine si cambia lo stile del componente tramite il component.css.
-Tutte le interfacce, con le loro funzionalità, descrizione dettagliata e visualizzazione grafica potranno essere reperiti nell'appendice {\hyperref[cap:appendice c]{C}}.
+\subsection{Interfacce}
+Dopo aver progettato i mock della visuale tramite figma e le API tramite stoplight ho iniziato la fase di codifica delle interfacce. La creazione dei template di default dei componenti è stato molto rapido grazie al command-line interface di Angular, utilizzando il comando 'ng generate component "nome del componente"' che crea una cartella contenente tutti i file necessari per il rendering del componente. Dopo la creazione dei file principali ho proceduto a modificare il component.ts, che rapprensenta la logica del componente, inserendo tutte le funzionalità che il componente deve avere. Una volta definito questo sono passato alla struttura e lo stile quindi a modificare il component.html e il component.css.
+Tutte le interfacce, con le loro funzionalità e una descrizione dettagliata possono essere reperite nell'appendice {\hyperref[cap:appendice c]{C}}.
 \subsubsection{Componenti service}
-Per comunicare tra i vari componenti viene utilizzati i file service, per ogni tipologia di servizio si crea un file.service, sempre utilizzando il command-line di Angular. I servizi utilizzati sono:
+Per la comunicazione e gestione dei vari componenti vengono adoperati i file service. Per ogni servizio viene creato un file.service utilizzabile da uno o più component.\\
+I servizi utilizzati sono:
 \begin{itemize}
-    \item auth.service: utilizzato per gestire le autenticazioni;
-    \item menu.service: utilizzato per gestire tutte le funzionalità del menù;
-    \item ordini.service: utilizzato per gestire le ordinazioni;
-    \item tavolo.service: utilizzato per gestire le sessioni di tavolo;
-    \item user.service: utilizzato per gestire le funzionalità dell'area personale.
+    \item auth.service: per gestire le autenticazioni;
+    \item menu.service: per gestire tutte le funzionalità del menù;
+    \item ordini.service: per gestire le ordinazioni;
+    \item tavolo.service: per gestire le sessioni di tavolo;
+    \item user.service: per gestire le funzionalità dell'area personale.
 \end{itemize}
 \subsubsection{Componenti guard}
-Arrivato alla fine della codifica si definiscono i componenti guard, che permettono d'intercettare la navigazione su un determinato componente e consertirne o meno l'accesso. Le regole di guard vengono definite dentro al metodo canActivate che ritorna un valore booleano, in base a questo valore garantisce l'accesso all'utente.
+Arrivato alla fine della codifica si definiscono i componenti guard, che permettono di imporre delle regole di accesso per la navigazione in un determinato componente. La verifica delle regole di guard avviene all'interno del metodo canActivate, appogiandosi ai diversi service e ai dati locali di sessione.

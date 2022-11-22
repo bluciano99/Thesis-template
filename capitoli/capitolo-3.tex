@@ -101,81 +101,66 @@ In questa sezione verranno presentati i casi d'uso individuati durante la fase d
     \item  Utente Generico: può essere sia un utente autenticato che un utente non autenticato.
 \end{itemize}
 \subsubsection{UC1 - Visualizza menù}
-Nella schermata di visualizzazione menù consente di effettuare operazioni relativi all'acquisto dei piatti in base alla tipologia di utente che interagisce con la piattaforma.
+La schermata di visualizzazione menù consente di effettuare operazioni relative all'acquisto dei piatti in base alla tipologia di utente che interagisce con la piattaforma.
 Un utente generico può visualizzare un piatto in due modalità quella normale e quella in dettaglio.\\
-In quella normale vengono visualizzati il nome, la descrizione, gli ingredienti e il prezzo ed è possibile modificare la quantità dei piatti contenuti negli ordini.
-Nella modalità in dettaglio l'utente può visualizzare la valutazione media e opzionalmente può aggiungere una nota al piatto.\\
+In quella normale vengono visualizzati il nome, la descrizione, gli ingredienti e il prezzo, ed è possibile modificare la quantità dei piatti ordinati.
+Nella modalità in dettaglio l'utente può visualizzare la valutazione media e, opzionalmente, può aggiungere una nota al piatto.\\
 L'autenticazione dell'utente nel sistema permette svolgere ulteriori azioni, quali:\\
 \begin{itemize}
-    \item L'aggiunta di un piatto alla lista dei preferiti per tenere traccia dei piaciuti per riordinarlo in futuro;
-    \item La rimozione dei piatti del menù che contengono ingredienti presenti nella propria blacklist;
-    \item L'aggiunta di una recensione ad un piatto per dare consigli agli altri utenti.
-\end{itemize} 
-
-% \subsubsection{UC1.1 - Visualizza categorie}
-% Un utente deve poter visualizzare le categorie dei piatti del ristorante nella sezione menù.
-% \subsubsection{UC1.2 - Visualizza piatto}
-% Un utente deve poter visualizzare il piatto con il nome, il numero, il prezzo, gli ingredienti, la descrizione e la quantità.
-% \subsubsection{UC1.3 - Aumenta quantità}
-% Un utente deve poter aumentare la quantità di un piatto fino ad un limite se il piatto è limitato.
-% \subsubsection{UC1.4 - Diminuisci quantità}
-% Un utente deve poter diminuire la quantità di un piatto con quantità maggiore di 1.
-% \subsubsection{UC1.5 - Visualizza dettaglio piatto}
-% Un utente deve poter visualizzare i dettagli del piatto con la propria valutazione, la valutazione media e le note del piatto.
-% \subsubsection{UC1.6 - Nascondi dettaglio piatto}
-% Un utente deve poter nascondere i dettagli di un piatto che è in modalità dettaglio.
+    \item L'aggiunta di un piatto alla lista dei preferiti per tenere traccia dei migliori piatti ordinati;
+    \item La visualizzazione del menù calibrato sulla blacklist dell'utente;
+    \item Recensire publicamente un piatto del menù con una valutazione da una a cinque stelle.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc1.drawio.png}
+    \caption{Use Case - UC 1}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc11.drawio.png}
+    \caption{Use Case - UC 1.1, UC 1.2, UC 1.3, UC 1.4, UC 1.5, UC 1.6}
+\end{figure}
 \subsubsection{UC2 - Gestione del tavolo}
-Nella schermata di gestione del tavolo consente di effettuare operazioni relativi alla sessione del tavolo. Un utente già presente in una sessione può visualizzare il codice della propria sessione e tramite questo codice è possibile generare un QR-code per fare scansionare agli altri utenti allo scopo di fare unire tutti gli utenti dello stesso tavolo nella stessa sessione. Gli utenti senza una sessione possono entrare in una sessione del tavolo tramite due creazione o unione. La creazione consente all'utente di entrare in una nuova sessione, l'unione invece permette di inserire l'utente in una sessione già presente per fare questo l'utente può digitare manualmente il codice del tavolo o scansionando direttamente il QR-code. 
-% \subsubsection{UC2.1 - Generazione sessione tavolo}
-% Un utente deve poter generare una sessione di tavolo quando non si trova in nessuna sessione.
-% \subsubsection{UC2.2 - Unione sessione tavolo}
-% Un utente deve poter unirsi ad una sessione di tavolo utilizzando il codice sessione o tramite la scansione del QR-code quando non si trova in nessuna sessione.
-% \subsubsection{UC2.3 - Uscita sessione tavolo}
-% Un utente deve poter uscire da una sessione di tavolo.
-% \subsubsection{UC2.4 - Generazione QR-code sessione tavolo}
-% Un utente presente in una sessione di tavolo deve poter generare il QR-code del tavolo.
+La schermata di gestione del tavolo consente di effettuare operazioni relative alla sessione del tavolo. La creazione di una sessione avviene scansionando il QR-code presente sul tavolo, che permette all'utente di creare la sessione all'interno della web-app. Dopo aver creato la sessione l'utente può generare un relativo QR-code o un codice alfanumerico per permettere ad altre persone di unirsi al tavolo. In ogni momento un utente può abbandonare la sessione in cui partecipa.
+\textbf{UC2 - Gestione tavolo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc2.drawio.png}
+    \caption{Use Case - UC 2}
+\end{figure}
+\textbf{UC2.1 - Generazione sessione tavolo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc21.drawio.png}
+    \caption{Use Case - UC 2.1, UC 2.2, UC 2.3, UC 2.4}
+\end{figure}
 \subsubsection{UC3 - Lista degli ordini}
-La maschera della lista degli ordini può visualizzare tre sezioni, quali: ordini del tavolo, ordini personali e ordini in arrivo.
-La sezione del tavolo permette di visualizzare gli ordini di tutti gli utenti della stessa sessione, questi ordini non sono ancora mandati al ristorante quindi gli utenti possono controllare tutti i piatti al fine di ordinare le portate desiderate. L'invio dell'ordine al ristorante avviene tramite la scansione del QR-code degli ordini, questo è stato implementato per evitare agli utenti malevoli di effettuare ordini anche se non sono in locale. Il ristorante una volta preso gli ordini, l'utente può spostare gli ordini in arrivo. Nella sezione degli ordini personali è possibile vedere tutti gli ordini effettuati dal l'utente stesso, includendo anche gli ordini già marcati come arrivato. Gli ordini in arrivo mostra tutte le preparazioni non ancora arrivate, un piatto una volta arrivato l'utente può marcarlo come arrivato al fine di capire quante portate mancano da arrivare e quindi ordinare altri piatti in base al proprio tempo o (pieno). I piatti nella sezione degli ordini in arrivo sono visualizzati con l'immagine e la descrizione favorendo il riconoscimento del piatto nel momento dell'arrivo.
-% \subsubsection{UC3.1 - Visualizza lista ordini del tavolo}
-% Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini del tavolo. Composto da una lista di piatti che contiene i loro nomi e le loro quantità.
-% \subsubsection{UC3.2 - Visualizza lista ordini personali}
-% Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini personali, che contiene solamente gli ordini che l'utente ha ordinato.
-% \subsubsection{UC3.3 - Visualizza lista ordini in arrivo}
-% Un utente che si trova nella sezione di lista degli ordini deve poter visualizzare la lista degli ordini in arrivo, che contiene tutti i piatti in arrivo e ognuna di essi è presente un bottone che permette di marcare il piatto come ricevuto.
-% \subsubsection{UC3.1.1 - Sposta la lista degli ordini in arrivo}
-% Un utente che si trova nella sezione di lista degli ordini del tavolo deve poter spostare gli ordini del tavolo nella lista degli ordini in arrivo.
-% \subsubsection{UC3.1.2 - Mostra QR-code ordini}
-% Un utente che si trova nella sezione di lista ordini del tavolo deve poter generare il QR-code degli ordini per poi fare scansionare dai camerieri.
-% \subsubsection{UC3.2.1 - Visualizza in dettaglio lista ordini personali}
-% Un utente che si trova nella sezione di lista ordini personali deve poter visualizzare la lista degli ordini personali in modalità dettaglio per poi vedere tutti i dati del piatto al fine di riconescere il proprio piatto al momento di ricezione.
-% \subsubsection{UC3.3.1 - Ricezione piatto}
-% Un utente che si trova nella sezione di lista degli ordini in arrivo deve poter marcare un piatto come ricevuto.
-% \section{Utente Non Autenticato}
-% In questa sezione vengono elencati le principali funzionalità della web-app che un utente non autenticato può usufruire.
+La maschera della lista degli ordini si compone di tre sezioni, quali: ordini del tavolo, ordini in arrivo e ordini personali.
+La sezione degli ordini del tavolo permette di visualizzare gli ordini di tutti gli utenti partecipanti alla stessa sessione, questi reppresentano gli ordini non ancora inviati al ristorante e possono quindi essere modificati. L'invio dell'ordine al ristorante avviene tramite la scansione del QR-code degli ordini da parte di un cameriere. 
+La lista degli ordini permette di visualizzare la sezione degli ordini in arrivo che definisce la quantità dei piatti in arrivo o in preparazione.
+Infine la sezione degli ordini personali contiene lo storico dei piatti ordinati durante la sessione in cui si trova l'utente, permettengogli di visualizzare tutte le informazione di un piatto e la quantità ordinata.
+\textbf{UC3 - Lista ordini}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc3.drawio.png}
+    \caption{Use Case - UC 3}
+\end{figure}
+\textbf{UC3.1 - Visualizza lista ordini del tavolo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc311.drawio.png}
+    \caption{Use Case - UC 3.1, UC 3.2, UC 3.3}
+\end{figure}
+\textbf{UC3.3.1 - Ricezione piatto}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{usecase/tesi-uc333.drawio.png}
+    \caption{Use Case - UC 3.3.1}
+\end{figure}
 \subsubsection{UC4 - Area personale}
-La visuale dell'area personale permette all'utente di effettuare il login nella piattaforma per usufruire di ulteriori funzionalità. Gli utenti che non hanno l'account possono registrarsi su sushiLab, inoltre l'utente può recuperare la propria password inserendo la propria email utilizzata durante la registrazione. Un utente autenticato tramite il login può accedere alla propria blacklist degli ingredienti per inserire o rimuovere un ingrediente.
-% \subsubsection{UC4.1 - Registrazione}
-% Un utente non autenticato deve poter registrarsi alla piattaforma inserendo un'email ed una password.
-% \subsubsection{UC4.2 - Login}
-% Un utente già registrato deve poter effettuare il login tramite i credenziali inseriti durante la fase di registrazione.
-% \subsubsection{UC4.3 - Password dimenticata}
-% Un utente già registrato deve poter recuperare la password inserendo l'email utilizzato per la registrazione e inserendo il codice di sicurezza.
-% \section{Utente Autenticato}
-% In questa sezione vengono elencati le principali funzionalità della web-app che un utente autenticato può usufruire.
-% \subsubsection{UC4.4 - Logout}
-% Un utente che ha già effettuato il login deve poter effettuare il logout.
-% \subsubsection{UC4.5 - Aggiungi ingredienti non voluti}
-% Un utente che ha già effettuato il login deve poter aggiungere nuovi ingredienti non voluti nella propria blacklist.
-% \subsubsection{UC4.6 - Rimuovi ingredienti non voluti}
-% Un utente che ha già effettuato il login deve poter rimuovere un ingrediente dalla blacklist.
-% \subsubsection{UC1.7 - Aggiungi preferiti}
-% Un utente che ha già effettuato il login deve poter inserire un piatto nella lista dei piatti preferiti.
-% \subsubsection{UC1.8 - Rimuovi preferiti}
-% Un utente che ha già effettuato il login deve poter rimuovere un piatto dalla lista dei preferiti.
-% \subsubsection{UC1.9 - Aggiungi recensione}
-% Un utente che ha già effettuato il login deve poter inserire una rencensione ad un piatto.
-% \subsubsection{UC5 - Visualizza lista preferiti}
-% Un utente che ha già effettuato il login deve poter visualizzare la propria lista dei preferiti.
+La visuale dell'area personale permette all'utente non autenticato di effettuare il login nella piattaforma tramite l'email e la password per accedere alle funzionalità complete dell'applicazione, oppure di registrarsi su sushiLab. L'area personale permette di effettuare il recupero delle credenziali. In seguito all'autenticazione l'utente può accedere e modificare la propria blacklist degli ingredienti.
 \section{Requisiti}
-In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. I requisiti sono individuati tramite i casi d'uso precedentemente descritti. Per ogni requisito individuato è stato assegnato un codice univoco, la descrizione del requisito e il caso d'uso riferito. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.
+In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. Per ogni requisito individuato è stato assegnato un codice univoco, la descrizione del requisito e il caso d'uso riferito. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.
+\subsection{Riepilogo dei requisiti}
+L'utente deve poter accedere nella sezione del menù visualizzando tutti i piatti oppure quelli filtrati. I piatti del menù possono essere visualizzati in modalità normale e dettagliata, gli utenti possono aggiungerli negli ordini. L'utente per inserire le portate negli ordini deve poter entrare in un sessione di tavolo creando o unendo, in ogni momento può uscire dalla sessione. Gli ordini devono essere visualizzati correttamente nella maschera degli ordini del tavolo, l'utente deve poter generare il QR-code a essi associati e spostarli nella lista degli ordini in arrivo, questa lista deve visualizzare tutti i piatti ordinati con la rispettiva descrizione e l'immagine. I piatti contenuti nella lista degli ordini in arrivo possono essere marcati come arrivato. L'utente deve poter registrarsi alla piattaforma , di seguito eseguire il login per accedere alla propria blacklist e modificarla. Nel caso di password dimenticata l'utente deve poter recuperare la password tramite l'email. 
