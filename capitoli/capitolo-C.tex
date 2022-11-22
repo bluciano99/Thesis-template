@@ -18,8 +18,8 @@ Viene mostrata il menù del ristorante che comprende tutte le categorie e le lor
 \end{figure}
 \pagebreak
 
-\subsubsection{Gestione tavolo}
-Viene mostrata la maschera di gestione tavolo.\\
+\subsubsection{gestione del tavolo}
+Viene mostrata la maschera di gestione del tavolo.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può creare una sessione di tavolo;
@@ -27,8 +27,8 @@ Viene mostrata la maschera di gestione tavolo.\\
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale=.6]{gestione tavolo.png}
-    \caption{Maschera gestione tavolo SushiLab}
+    \includegraphics[scale=.6]{gestione del tavolo.png}
+    \caption{Maschera gestione del tavolo SushiLab}
 \end{figure}
 \pagebreak
 
@@ -37,7 +37,7 @@ Interfaccia tramite la quale è possibile unire ad una sessione di tavolo.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può  unirsi ad una sessione inserendo il codice di sessione se il codice non rispetta la validazione del form non si abilita il bottone unisci;
-    \item L'utente può tornare nella pagina gestione tavolo.
+    \item L'utente può tornare nella pagina gestione del tavolo.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -59,23 +59,23 @@ Viene mostrata il QR-code del tavolo che permette agli altri utenti che si trova
 \end{figure}
 \pagebreak
 
-\subsubsection{Lista ordini del tavolo}
+\subsubsection{lista degli ordini del tavolo}
 Viene mostrato la lista degli ordini della sessione del tavolo in cui si trova l'utente.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può spostare la lista in arrivo;
     \item L'utente può generare il QR-code premendo sul bottone QR-code;
-    \item L'utente può andare in altri sezioni della lista ordini utilizzando la navbar interna.
+    \item L'utente può andare in altri sezioni della lista degli ordini utilizzando la navbar interna.
 \end{itemize}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.6]{ordinitavolo.png}
     \includegraphics[scale=.6]{ordinitavolo2.png}
-    \caption{Maschera lista ordini del tavolo e QR-code ordini SushiLab}
+    \caption{Maschera lista degli ordini del tavolo e QR-code ordini SushiLab}
 \end{figure}
 \pagebreak
 
-\subsubsection{Lista ordini personali}
+\subsubsection{lista degli ordini personali}
 Viene mostrata la lista degli ordini personali.\\
 \textbf{Funzionalità:}
 \begin{itemize}
@@ -92,7 +92,7 @@ Viene mostrata la lista degli ordini personali.\\
 \end{figure}
 \pagebreak
 
-\subsubsection{Lista ordini in arrivo}
+\subsubsection{lista degli ordini in arrivo}
 Viene mostrata la lista degli ordini in arrivo.\\
 \textbf{Funzionalità:}
 \begin{itemize}
@@ -110,7 +110,7 @@ Viene mostrata la lista degli ordini in arrivo.\\
 \pagebreak
 
 \subsubsection{Login}
-Viene mostrato il form per effetture il login dove è possibile effettuare la login nella piattaforma.\\
+Viene mostrato il form per effettuare il login dove è possibile effettuare la login nella piattaforma.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può effettuare il login inserendo i campi correttamente altrimenti viene evidenziato in rosso i campi sbagliati;
@@ -164,7 +164,7 @@ Viene mostrata l'area personale dell'utente dove si può vedere i dati dell'uten
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può effettuare il logout;
-    \item L'utente può andare nella sezione di blacklist ingredienti per inserire o rimuovere delle allergeni o preferenze.
+    \item L'utente può andare nella sezione di blacklist degli ingredienti per inserire o rimuovere delle allergeni o preferenze.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -296,10 +296,10 @@ Componente usato per creare la maschera per reimpostare la password.\\
 \end{itemize}
 
 \subsubsection{Login component}
-Componente usato per creare la il form per effetture la login.\\
+Componente usato per creare la il form per effettuare la login.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item login(): metodo chiamato quando l'utente conferma il form, viene controllato vari campi e infine viene chiamato API per effetture la login.
+    \item login(): metodo chiamato quando l'utente conferma il form, viene controllato vari campi e infine viene chiamato API per effettuare la login.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
@@ -363,10 +363,10 @@ Componente usato per creare la maschera dei preferiti dove si può visualizzare 
 \end{itemize}
 
 \subsubsection{Tavolo component}
-Componente usato per creare la maschera gestione tavolo, dove si può creare una sessione di tavolo, unire ad una sessione o uscire da una sessione.\\
+Componente usato per creare la maschera gestione del tavolo, dove si può creare una sessione di tavolo, unire ad una sessione o uscire da una sessione.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item changeState(): cambia lo stato di visualizzazione della sezione gestione tavolo in base al table.service se è presente o no una sessione;
+    \item changeState(): cambia lo stato di visualizzazione della sezione gestione del tavolo in base al table.service se è presente o no una sessione;
     \item removeSession(): rimuove la sessione del tavolo;
     \item setSession(): imposta la sessione del tavolo chiamando il server e infine imposta il numero di tavolo;
     \item updateURL(): aggiorna il percorso del link per generare il QR-code del tavolo;
@@ -384,7 +384,7 @@ Servizio utilizzato per gestire le autenticazioni.
 \begin{itemize}
     \item login(email: string, password: string): metodo chiamato per effettuare la login dell'utente;
     \item setSession(): salva i dati dell'utente dopo la login nel local storage per mantenere la sessione di login;
-    \item logout(): metodo chiamato per effetture il logout dell'utente;
+    \item logout(): metodo chiamato per effettuare il logout dell'utente;
     \item isLoggedIn(): ritorna true se è presente nel local storage la sessione dell'utente, false altrimenti;
     \item getExpirations(): ritorna true se la sessione dell'utente non è ancora scaduto, false altrimenti.
 \end{itemize}

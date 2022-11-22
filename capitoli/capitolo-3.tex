@@ -14,12 +14,12 @@
 \subsection{Interfacce della web-app}
 \subsubsection{Interfaccia menù}
 L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sui tavoli. Il menù è composto da un insieme di categorie, in ognuna di esse sono presenti dei piatti. I piatti sono ordinati in base al suo id che è un numero univoco dentro ogni menù.
-\subsubsection{Interfaccia lista ordini}
+\subsubsection{Interfaccia lista degli ordini}
 L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone dello stesso tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
-\subsubsection{Interfaccia gestione tavolo}
-In questa \gls{mascherag} utente può creare una sessione di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per fare entrare gli altri nella sua sessione di tavolo scansionando il codice.
+\subsubsection{Interfaccia gestione del tavolo}
+In questa \gls{mascherag} utente può creare una \gls{sessioneg} di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per fare entrare gli altri nella sua sessione di tavolo scansionando il codice.
 \subsubsection{Interfaccia area personale}
-Qui l'utente può effetture il login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti dal menù che contengono quegli elementi.
+Qui l'utente può effettuare il login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti dal menù che contengono quegli elementi.
 \subsection{Caratteristiche degli utenti}
 In questa sezione vengono descritti tutte le caratteristiche degli utenti che possono utilizzare la web-app.
 \subsubsection{Utente non autenticato}
@@ -46,7 +46,7 @@ Invece, con il termine “utente autenticato” ci si riferisce ad una persona r
     \item Aggiungere ingredienti non voluti;
     \item Rimuovere gli ingredienti non voluti;
     \item Visualizzare la lista dei preferiti;
-    \item Effettuare logout.
+    \item Effettuare il logout.
 \end{itemize}
 %**************************************************************
 \subsection{Tecnologie utilizzate}
@@ -55,7 +55,7 @@ Per sviluppare la piattaforma vengono utilizzate le seguenti tecnologie:
     \item Angular: per la creazione dell'interfaccia utente;
     \item HTML5: per creare la struttura dell'interfaccia utente;
     \item CSS3: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
-    \item Stoplight: per simulare le chiamate \gls{restg} \gls{apig};
+    \item Stoplight: per simulare le chiamate REST \gls{apig};
     \item Angular Material: per la creazione dei componenti.
 \end{itemize}
 \subsection{Descrizione delle tecnologie}
@@ -123,7 +123,7 @@ L'autenticazione dell'utente nel sistema permette svolgere ulteriori azioni, qua
 \end{figure}
 \subsubsection{UC2 - Gestione del tavolo}
 La schermata di gestione del tavolo consente di effettuare operazioni relative alla sessione del tavolo. La creazione di una sessione avviene scansionando il QR-code presente sul tavolo, che permette all'utente di creare la sessione all'interno della web-app. Dopo aver creato la sessione l'utente può generare un relativo QR-code o un codice alfanumerico per permettere ad altre persone di unirsi al tavolo. In ogni momento un utente può abbandonare la sessione in cui partecipa.
-\textbf{UC2 - Gestione tavolo}
+\textbf{UC2 - gestione del tavolo}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc2.drawio.png}
@@ -140,13 +140,13 @@ La maschera della lista degli ordini si compone di tre sezioni, quali: ordini de
 La sezione degli ordini del tavolo permette di visualizzare gli ordini di tutti gli utenti partecipanti alla stessa sessione, questi reppresentano gli ordini non ancora inviati al ristorante e possono quindi essere modificati. L'invio dell'ordine al ristorante avviene tramite la scansione del QR-code degli ordini da parte di un cameriere. 
 La lista degli ordini permette di visualizzare la sezione degli ordini in arrivo che definisce la quantità dei piatti in arrivo o in preparazione.
 Infine la sezione degli ordini personali contiene lo storico dei piatti ordinati durante la sessione in cui si trova l'utente, permettengogli di visualizzare tutte le informazione di un piatto e la quantità ordinata.
-\textbf{UC3 - Lista ordini}
+\textbf{UC3 - lista degli ordini}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc3.drawio.png}
     \caption{Use Case - UC 3}
 \end{figure}
-\textbf{UC3.1 - Visualizza lista ordini del tavolo}
+\textbf{UC3.1 - Visualizza lista degli ordini del tavolo}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc311.drawio.png}

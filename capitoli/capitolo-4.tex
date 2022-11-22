@@ -24,7 +24,7 @@ I componenti utilizzano dei servizi che forniscono funzionalità specifiche come
 La web-app segue l'architettura spiegata precedentemente che è anche quello consigliato dal sito ufficiale di Angular.\\
 La cartella principale della web-app è app che contiene tutti i componenti, i servizi e il root.\\ 
 Per ogni componente si è creato una cartella per essa, in cui contiene il suoi file .ts per la logica, .html per la struttura, .scss per il layout di grafica e infine i suoi componenti figli. Per i componenti condivisi si è creato una cartella shared dove vengono salvati i componenti che sono utilizzati in più parti dell'applicazione.\\
-Nella cartella \gls{restg} vengono salvati tutti i file service, in cui ci sono dei metodi che vengono chiamati in più componenti dell'applicazione al fine di massimizzare il riuso del codice.\\
+Nella cartella REST vengono salvati tutti i file service, in cui ci sono dei metodi che vengono chiamati in più componenti dell'applicazione al fine di massimizzare il riuso del codice.\\
 Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo da fare utilizzare da tutti i componenti.\\
 \begin{figure}[H]
     \centering
@@ -34,7 +34,7 @@ Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo
     \caption{Struttura file SushiLab}
 \end{figure}
 \subsection{Progettazione delle viste}
-All'inizio si è fatto un meeting con il tutor aziendale per chiarire le funzionalità e i requisiti che la web-app deve avere, dopo di che si è iniziato la progettazione dei mock-up delle viste tramite la editor di grafica online Figma.\\
+All'inizio si è fatto un meeting con il tutor aziendale per chiarire le funzionalità e i requisiti che la web-app deve avere, dopo di che si è iniziato la progettazione dei \gls{mockg} delle viste tramite la editor di grafica online Figma.\\
 Tramite il sistema di progettazione di Figma sono stati creati le bozze delle viste per chiarire i collegamenti tra di loro e i posizionamenti dei compoenti. 
 Il posizionamento è scelto in base alla frequenza di click su di essa e si basa anche sulle viste dei web-app più popolari.
 È stato deciso i seguenti aspetti:
@@ -52,9 +52,9 @@ Il posizionamento è scelto in base alla frequenza di click su di essa e si basa
     \caption{Figma SushiLab}
 \end{figure}
 \subsection{Progettazione API}
-Durante il periodo di stage non era ancora presente il \gls{backendg} per l'applicativo, quindi si è deciso con l'azienda di progettare dei mock API per il testing utilizzando la piattaforma Stoplight.\\
+Durante il periodo di stage non era ancora presente il back-end per l'applicativo, quindi si è deciso con l'azienda di progettare dei mock API per il testing utilizzando la piattaforma Stoplight.\\
 La progettazione delle API sono molto semplici grazie all'interfaccia semplice di Stoplight, che permette di definire i path e i rispettivi metodi facilmente, e ai mock-up delle viste prima definite.\\
-Per ogni chiamata \gls{restg} bisogna definire:
+Per ogni chiamata REST bisogna definire:
 \begin{itemize}
     \item \textbf{Nome:} individua API;
     \item \textbf{Descrizione:} spiega in dettaglio la funzione della API;
