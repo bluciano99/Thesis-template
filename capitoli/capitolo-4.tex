@@ -7,23 +7,23 @@
 \label{cap:progettazione e codifica}
 %**************************************************************
 
-\intro{In questo capitolo vengono trattati la progettazione e codifica della parte front-end della web-app. Vengono elencati e descritti tutti i componenti della web-app e la loro funzionalità.}\\
+\intro{In questo capitolo vengono approfondite approfondite la progettazione e la codifica. La progettazione entra nel dettaglio dell'architettura, delle viste progettate e delle API, mentre la codifica descrive il processo di sviluppo dei principali componenti e service dell'applicazione.}\\
 
 \section{Progettazione}
 \subsection{Architettura Angular}
 Un'applicazione Angular è formata da un insieme di moduli, dove il modulo pricinpale è il modulo root, chiamato AppModule, che contiene più moduli di funzionalità. Un modulo di funzionalità è composto da un componente, che definisce la vista dell'utente.\\
-Ogni componente possiede un template di HTML, dove viene definita il modello di vista, quando un utente effettua un click su un bottone, questo elemento HTML emette un evento di click al componente in cui si trova, questo componente esegue il metodo specifico al evento ricevuto, di seuito viene cambiato il metadata e modificato il codice HTML, una volta cambiata la struttura della pagina viene fatto il rendering della pagina e viene cambiata la vista dell'utente.\\
+Ogni componente possiede un template HTML, che definisce la struttura della vista e i vari eventi che può emettere. Ogni evento emesso, se gestito, può modificare lo stato interno del componente, che si riflette nella struttura HTML e in fine scatena l'aggiornamento della vista.\\
 % Quindi un click su un bottone questo elemento HTML emette un evento di click al componente in cui si trova, questo componente esegue il metodo specifico al evento ricevuto, di seuito viene cambiato il metadata e viene aggiornato il template di HTML.\\
-I componenti utilizzano dei servizi che forniscono funzionalità specifiche come il login di Auth.Service, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze e grazie a questo rende il codice efficiente. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, dunque rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
+I componenti utilizzano dei servizi che forniscono funzionalità specifiche come il login di Auth.Service, ma non sono correlate direttamente alla vista, essi sono inseriti come delle dipendenze, potenzialmente in più componenti e questo rende tali servizi modulari. Non solo i servizi sono riutilizzabili ma anche i componenti lo sono, dunque rende l'applicazione Angular più semplice da comprendere e manutenibile in futuro.\\
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{angularArc.png}
     \caption{Architettura Angular}
 \end{figure}
 \subsection{Architettura SushiLab}
-La web-app segue l'architettura spiegata precedentemente che è anche quello consigliato dal sito ufficiale di Angular.\\
-La cartella principale della web-app è app che contiene tutti i componenti, i servizi e il root.\\ 
-Per ogni componente si è creato una cartella per essa, in cui contiene il suoi file .ts per la logica, .html per la struttura, .scss per il layout di grafica e infine i suoi componenti figli. Per i componenti condivisi si è creato una cartella shared dove vengono salvati i componenti che sono utilizzati in più parti dell'applicazione.\\
+La web-app segue l'architettura spiegata precedentemente che è anche quella consigliata dal sito ufficiale di Angular.\\
+La cartella principale della del progetto è "app/" che contiene tutti i componenti, i servizi e il root.\\ 
+Per ogni componente è stata creata una cartella apposita, che contiene i file .ts per la logica, .html per la struttura, .scss per lo stile e infine i suoi componenti figli. Per i componenti condivisi si è creato una cartella shared dove vengono salvati i componenti che sono utilizzati in più parti dell'applicazione.\\
 Nella cartella REST vengono salvati tutti i file service, in cui ci sono dei metodi che vengono chiamati in più componenti dell'applicazione al fine di massimizzare il riuso del codice.\\
 Nella cartella assets vengono salvati le immagini e le icone utilizzate, in modo da fare utilizzare da tutti i componenti.\\
 \begin{figure}[H]
@@ -43,8 +43,7 @@ Il posizionamento è scelto in base alla frequenza di click su di essa e si basa
     \item Il bottone per la navbar è in alto a destra;
     \item Il logo della piattaforma in alto a sinistra;
     \item I bottoni, testi e form devono avere lo stesso stile e colore in base alla loro funzionalità;
-    \item Lo stile del piatto in modalità dettaglio in menù e nella lista degli ordini personali è la stessa;
-    \item Tutti le maschere hanno una visuale che utilizza la card.
+    \item Lo stile del piatto in modalità dettaglio in menù e nella lista degli ordini personali è la stessa.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -83,13 +82,13 @@ Per ogni chiamata REST bisogna definire:
 \end{figure}
 
 \subsection{Progettazione dei componenti}
-I componenti sono stati individuati tramite l'analisi dei requisiti e la progettazione delle viste. Ogni componente ha delle funzionalità specifiche e tutti assieme costruisce la web-app che copre tutti i requisiti richiesti.
+I componenti sono stati individuati tramite l'analisi dei requisiti e la progettazione delle viste. Ogni componente ha delle funzionalità specifiche e tutti assieme costruiscono la web-app, coprendo tutti i requisiti richiesti.
 \\
 % {\hyperref[cap:menu.component]{Il secondo capitolo}}
 \section{Codifica}
 \subsection{Interfacce}
-Dopo aver progettato i mock della visuale tramite figma e le API tramite stoplight ho iniziato la fase di codifica delle interfacce. La creazione dei template di default dei componenti è stato molto rapido grazie al command-line interface di Angular, utilizzando il comando 'ng generate component "nome del componente"' che crea una cartella contenente tutti i file necessari per il rendering del componente. Dopo la creazione dei file principali ho proceduto a modificare il component.ts, che rapprensenta la logica del componente, inserendo tutte le funzionalità che il componente deve avere. Una volta definito questo sono passato alla struttura e lo stile quindi a modificare il component.html e il component.css.
-Tutte le interfacce, con le loro funzionalità e una descrizione dettagliata possono essere reperite nell'appendice {\hyperref[cap:appendice c]{C}}.
+Dopo aver progettato i mock della visuale tramite figma e le API tramite stoplight ho iniziato la fase di codifica delle interfacce. La creazione dei template di default dei componenti è stata molto rapida grazie al command-line interface di Angular, utilizzando il comando 'ng generate component "nome del componente"' che crea una cartella contenente tutti i file necessari per il rendering del componente. Dopo la creazione dei file principali ho proceduto a modificare il component.ts, che rapprensenta la logica del componente, inserendo tutte le funzionalità che il componente deve avere. Una volta definito questo sono passato alla struttura e allo stile, quindi a modificare il component.html e il component.css.
+Tutte le interfacce, con le loro funzionalità e una descrizione dettagliata, possono essere reperite nell'appendice {\hyperref[cap:appendice c]{C}}.
 \subsubsection{Componenti service}
 Per la comunicazione e gestione dei vari componenti vengono adoperati i file service. Per ogni servizio viene creato un file.service utilizzabile da uno o più component.\\
 I servizi utilizzati sono:

@@ -7,17 +7,17 @@
 \label{cap:analisi dei requisiti}
 %**************************************************************
 
-\intro{In questo capitolo vengono trattati le analisi dei requisiti del modulo di front-end della web-app, con i vari casi d'uso ed un elenco dei requisiti.}\\
+\intro{In questo capitolo viene trattata l'analisi dei requisiti del modulo di front-end della web-app, con i casi d'uso e requisiti fondamentali individuati.}\\
 
 %**************************************************************
 \section{Descrizione generale}
 \subsection{Interfacce della web-app}
 \subsubsection{Interfaccia menù}
-L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sui tavoli. Il menù è composto da un insieme di categorie, in ognuna di esse sono presenti dei piatti. I piatti sono ordinati in base al suo id che è un numero univoco dentro ogni menù.
+L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sui tavoli. Il menù è composto da un insieme di categorie, in ognuna di esse sono presenti dei piatti. I piatti sono ordinati in base al loro id, che è un numero univoco dentro ogni menù.
 \subsubsection{Interfaccia lista degli ordini}
 L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone dello stesso tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
 \subsubsection{Interfaccia gestione del tavolo}
-In questa \gls{mascherag} utente può creare una \gls{sessioneg} di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per fare entrare gli altri nella sua sessione di tavolo scansionando il codice.
+In questa \gls{mascherag} un utente può creare una \gls{sessioneg} di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per permettere ad altri utenti di partecipare.
 \subsubsection{Interfaccia area personale}
 Qui l'utente può effettuare il login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti dal menù che contengono quegli elementi.
 \subsection{Caratteristiche degli utenti}
@@ -74,9 +74,9 @@ L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più pop
     \caption{Logo di HTML e CSS}
 \end{figure}
 \subsubsection{CSS3}
-Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nel ordine in cui vengono scritte. Per il progetto è stato utilizzato una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite la SCSS è possibile dichiarare le regole CSS in blocchi quindi ci aiuta a scrivere regole CSS in più velocemente e comprensibile.
+Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nel ordine in cui vengono scritte. Per il progetto è stato utilizzato una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite la SCSS è possibile dichiarare le regole CSS in blocchi, che aiuta a scrivere regole CSS in modo più veloce e comprensibile.
 \subsubsection{TypeScript}
-Il linguaggio di programmazione utilizzato da Angular è TypeScript che è un linguaggio di programmazione open source sviluppato da Microsoft, TypeScript estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile e flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, grazie a queste caratteristiche utilizzando TypeScript ci ganrantisce controlli automatici, rilevando in automatico i bug prima della compilazione. Grazie a TypeScript il codice generato da Angular è eseguibile su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri.
+Il linguaggio di programmazione utilizzato da Angular è TypeScript, un linguaggio di programmazione open source sviluppato da Microsoft, TypeScript estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, questo permette di effettuare controlli automatici e rilevare i bug in fase di compilazione. Grazie a TypeScript il codice generato da Angular è eseguibile su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri.
 \subsubsection{Stoplight}
 Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua semplice interfaccia utente. Permette di collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
 \begin{figure}[H]
@@ -85,7 +85,7 @@ Stoplight è una piattaforma che offre la possibilità di progettare le API velo
     \caption{Logo di Stoplight}
 \end{figure}
 \subsubsection{Angular Material}
-Angular Material è un insieme di componenti UI già implementati, questi componenti possono essere direttamente utilizzati in Angular. Tutti i componenti offerti sono già \gls{responsiveg} e sono facili da customizzare con le proprie preferenze, come il colore dei bottoni.
+Angular Material è un insieme di componenti grafici web già implementati, questi componenti possono essere direttamente utilizzati in Angular. Tutti i componenti offerti sono \gls{responsiveg} e liberamente modificabili.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.3]{angular material.png}
@@ -96,7 +96,7 @@ Angular Material è un insieme di componenti UI già implementati, questi compon
 In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa. Verranno elencati i casi d'uso principali con la propria descrizione, mentre i casi d'uso secondarie e le descrizioni schematiche potranno essere reperiti nell'appendice {\hyperref[cap:appendice a]{A}}.
 \subsection{Attori primari}
 \begin{itemize}
-    \item Utente non Autenticato: utente che non ha ancora effettuato la fase di autenticazione sulla piattaforma. Può essere in possesso o meno delle credenziali per l'autenticazione. Avrà funzionalità limitate rispetto ad un utente autenticato;
+    \item Utente non Autenticato: utente che non ha ancora effettuato l'autenticazione sulla piattaforma. Può essere in possesso o meno delle credenziali per l'autenticazione. Ha funzionalità limitate rispetto ad un utente autenticato;
     \item Utente Autenticato: utente che ha effettuato l'autenticazione alla piattaforma tramite le proprie credenziali. Ha accesso ad ogni funzionalità messa a disposizione dalla piattaforma;
     \item  Utente Generico: può essere sia un utente autenticato che un utente non autenticato.
 \end{itemize}
@@ -136,7 +136,7 @@ La schermata di gestione del tavolo consente di effettuare operazioni relative a
     \caption{Use Case - UC 2.1, UC 2.2, UC 2.3, UC 2.4}
 \end{figure}
 \subsubsection{UC3 - Lista degli ordini}
-La maschera della lista degli ordini si compone di tre sezioni, quali: ordini del tavolo, ordini in arrivo e ordini personali.
+La maschera della lista degli ordini si compone di tre sezioni, quali: \gls{ordinitavolog}, \gls{ordiniinarrivog} e \gls{ordinipersonalig}.
 La sezione degli ordini del tavolo permette di visualizzare gli ordini di tutti gli utenti partecipanti alla stessa sessione, questi reppresentano gli ordini non ancora inviati al ristorante e possono quindi essere modificati. L'invio dell'ordine al ristorante avviene tramite la scansione del QR-code degli ordini da parte di un cameriere. 
 La lista degli ordini permette di visualizzare la sezione degli ordini in arrivo che definisce la quantità dei piatti in arrivo o in preparazione.
 Infine la sezione degli ordini personali contiene lo storico dei piatti ordinati durante la sessione in cui si trova l'utente, permettengogli di visualizzare tutte le informazione di un piatto e la quantità ordinata.

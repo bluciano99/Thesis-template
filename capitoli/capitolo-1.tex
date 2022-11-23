@@ -20,7 +20,7 @@
 \section{SyncLab }
 SyncLab è una Innovative Company collocata in tutta Italia, è nata nel 2002 con sede principale a Napoli ed è cresciuta velocemente. Attualmente, SyncLab ha 6 sedi in tutta italia, più di 300 dipendenti e più di 150 clienti diretti e finali.\\
 SyncLab propone servizi innovativi che aiutano i clienti nella realizzazione, progettazione e manutenzioni di soluzioni IT.
-L'azienda ha collobarobato con vari compagnie tra questi i più importanti sono: Tim, Trenitalia, HM, Grimaldi Lines, notartel, sky, eni, enel, vodafone, RayWay, Poste Italiane, Intesa Sanpaolo, Ministero dell'economia delle finanze, fastweb e UniCredit.
+L'azienda ha collaborato con vari compagnie tra questi i più importanti sono: Tim, Trenitalia, HM, Grimaldi Lines, notartel, sky, eni, enel, vodafone, RayWay, Poste Italiane, Intesa Sanpaolo, Ministero dell'economia delle finanze, fastweb e UniCredit.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.50]{azienda.png}
@@ -45,15 +45,15 @@ Come accennato, SyncLab opera nel settore IT e i suoi prodotti nascono dalle com
 \end{itemize}
 
 \section{Introduzione al progetto}
-Lo scopo dello stage quello di realizzare una \gls{webappg} per la gestione delle ordinazioni dei piatti di un ristorante sushi "all you can eat" con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, oltre a questo il menù contiene centinaia di piatti diversi, di seguito comporterà un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato un specifico piatto nel momento della consegna.
+Lo scopo dello stage quello di realizzare una \gls{webappg} per la gestione delle ordinazioni dei piatti di un ristorante sushi "all you can eat" con tale formula i ristoranti offrono la possibilità di ordinare senza limiti ad un prezzo fisso. Quindi i consumi dei clienti in questi locali è maggiore rispetto ai ristoranti tradizionali, perché con la formula "all-you-can-eat" spesso i clienti mangiano oltre il loro livello di sazietà, in aggiunta a questo il menù contiene centinaia di piatti diversi, il che comporta un elevato numero di ordinazioni da gestire creando così il problema di capire poi chi ha ordinato un specifico piatto nel momento della consegna.
 
 \section{La soluzione individuata}
-SyncLab ha deciso di risolvere questo problema tramite SushiLab, una web-app che offre la possibilità agli utenti di ordinare i piatti e tracciare tutte le ordinazioni. Per semplificare il riconoscimento del piatto nel momento dell'arrivo abbiamo deciso di inserire un immagine a tutti i piatti.\\ 
+SyncLab ha deciso di risolvere questo problema tramite SushiLab, una web-app che offre la possibilità agli utenti di ordinare i piatti e tracciare tutte le ordinazioni. Per semplificare il riconoscimento del piatto nel momento dell'arrivo abbiamo deciso di inserire un'immagine a tutti i piatti.\\ 
 Un'utente può inoltre registrarsi alla piattaforma per salvare dei piatti nella propria lista dei preferiti, aggiungere ingredienti alla propria blacklist e recensire un piatto.\\
-SushiLab è composta da due parti, la parte \gls{frontendg} e la parte \gls{backendg}. Il back-end deve essere implementato tramite Java utilizzando il framework \gls{Springg} e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvati tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
-La parte di front-end è invece realizzato in Javascript, utilizzando il framework Angular. La comunicazione tra le due parti della web-app avviene tramite le chiamate \gls{restg} fornite dal back-end.
-Per ciascuna parte dell'applicazione è stata affidata a più persone. Discutendo con il tutor aziendale, Fabio Pallaro, abbiamo individuato i principali obiettivi per realizzare la web-app ed a me è stato assegnato il compito di sviluppare la visuale dell'applicazione. 
-Si è deciso di realizzare una web-app perché non c'è la necessità di scaricare ed installare applicativo, così riducendo il tempo delle ordinazioni dei clienti.
+SushiLab è composta da due parti, la parte \gls{frontendg} e la parte \gls{backendg}. Il back-end deve essere implementato tramite Java utilizzando il framework \gls{Springg} e ha il ruolo pricipale di un web server, che deve comunicare con il data-base, dove vengono salvate tutte le informazioni dei piatti e tutti gli ordini effettuati dai clienti.
+La parte di front-end è invece realizzata in Javascript, utilizzando il framework Angular. La comunicazione tra le due parti della web-app avviene tramite le chiamate \gls{restg} fornite dal back-end.
+Ciascuna parte dell'applicazione è stata affidata a più persone. Discutendo con il tutor aziendale, Fabio Pallaro, abbiamo individuato i principali obiettivi per realizzare la web-app ed a me è stato assegnato il compito di sviluppare la visuale dell'applicazione. 
+Si è deciso di realizzare una web-app in quanto essa non richiede di scaricare ed installare un'applicativo, così riducendo il tempo delle ordinazioni dei clienti.
 
 \begin{figure}[H]
     \centering
@@ -69,15 +69,16 @@ Si è deciso di realizzare una web-app perché non c'è la necessità di scarica
 \begin{description}
     \item[{\hyperref[cap:il progetto di stage]{Il secondo capitolo}}] descrive in dettaglio la pianificazione e gli obiettivi dello stage.
     
-    \item[{\hyperref[cap:analisi dei requisiti]{Il terzo capitolo}}] descrive l'analisi dei requisiti della web-app, vengono discussi tutti i casi d'uso e i requisiti da rispettare.
+    \item[{\hyperref[cap:analisi dei requisiti]{Il terzo capitolo}}] descrive i principali casi d'uso e requisiti fondamentali individuati.
     
-    \item[{\hyperref[cap:progettazione e codifica]{Il quarto capitolo}}] approfondisce la progettazione e codifica, elencando i vari componenti e descrivendo le loro funzionalità.
-    
-    % \item[{\hyperref[cap:progettazione-codifica]{Il quinto capitolo}}] approfondisce ...
+    \item[{\hyperref[cap:progettazione e codifica]{Il quarto capitolo}}] approfondisce la progettazione e la codifica. La progettazione entra nel dettaglio dell'architettura, delle viste progettate e delle API, mentre la codifica descrive il processo di sviluppo dei principali componenti e service dell'applicazione.
     
     \item[{\hyperref[cap:verifica]{Il quinto capitolo}}] approfondisce la fase di verifica e validazione della web-app.
     
     \item[{\hyperref[cap:conclusioni]{Il sesto capitolo}}] descrive le conclusioni dell'intero progetto, parlando del prodotto finale e le competenze acquisite durante lo stage.
+    \item[{\hyperref[cap:appendice a]{A}}] contiene l'elenco completo dei casi d'uso individuati, fornendo una rappresentazione in formato UML e una descrizione formale di essi.
+    \item[{\hyperref[cap:appendice b]{B}}] contiene la tabella completa dei requisiti individuati, tracciando ogni requisito alla relativa fonte.
+    \item[{\hyperref[cap:appendice c]{C}}] contiene l'elenco completo delle interfacce e dei componenti sviluppati.
 \end{description}
 Riguardo la stesura del testo, relativamente al documento sono state adottate le seguenti convenzioni tipografiche:
 \begin{itemize}
