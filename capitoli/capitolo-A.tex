@@ -6,7 +6,7 @@
 \chapter{Descrizione dettagliata dei casi d'uso}
 \label{cap:appendice a}
 %**************************************************************
-In questa sezione verranno descritte tutti i casi d'uso dettagliamente.
+In questa sezione verranno descritti tutti i casi d'uso dettagliamente.
 La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
 
 % \epigraph{Citazione}{Autore della citazione}
@@ -26,7 +26,7 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \begin{itemize}
         \item L'utente si trova dentro il sistema;
         \item L'utente clicca sul bottone menù;
-        \item Viene mostra il menù del ristorante.
+        \item Viene mostrato il menù del ristorante.
     \end{itemize}
 \end{itemize}
 \textbf{UC1.1 - Visualizza categorie}
@@ -39,59 +39,59 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente visualizza le categorie del menù.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
-    \item \textbf{Postcondizione:} Viene visualizzato i nomi delle categorie.
+    \item \textbf{Postcondizione:} Vengono visualizzati i nomi delle categorie.
     \item \textbf{Scenario principale:}
     \begin{itemize}
-        \item L'utente si trova sezione menù;
-        \item Viene mostrato le categorie del menù.
+        \item L'utente si trova nella sezione menù;
+        \item Vengono mostrate le categorie del menù.
     \end{itemize}
 \end{itemize}
 \textbf{UC1.2 - Visualizza piatto}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente visualizza i piatti del menù mostrando il numero, nome, prezzo, ingredienti, allergeni, limatazioni e la quantità. La quantità di default è 0 che indica che non è ancora stato ordinato.
-    \item \textbf{Attore Primario:}L'utente generico.
+    \item \textbf{Descrizione:} L'utente visualizza i piatti del menù mostrando il numero, nome, prezzo, ingredienti, allergeni, limitazioni e la quantità. La quantità di default è 0 ed indica che il piatto non è ancora stato ordinato.
+    \item \textbf{Attore Primario:} L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
-    \item \textbf{Postcondizione:} Viene visualizzato i piatti del menù.
+    \item \textbf{Postcondizione:} Vengono visualizzati i piatti del menù.
     \item \textbf{Scenario principale:}  
     \begin{itemize}
-        \item L'utente si trova sezione menù;
-        \item Viene mostrato i piatti del menù.
+        \item L'utente si trova nella sezione menù;
+        \item Vengono mostrati i piatti del menù.
     \end{itemize}
 \end{itemize}
 \textbf{UC1.3 - Aumenta quantità}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente aumenta la quantità di un piatto.
     \item \textbf{Attore Primario:}L'utente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù o lista degli ordini personali.
+    \item \textbf{Precondizione:} L'utente si trova nella sezione menù o lista degli ordini personali.
     \item \textbf{Postcondizione:} Viene aggiunto il piatto specifico con la quantità aggiornata negli ordini.
     \item \textbf{Scenario principale:}
     \begin{itemize}
-        \item L'utente si trova sezione menù;
+        \item L'utente si trova nella sezione menù;
         \item L'utente clicca sul bottone + di un piatto;
         \item Viene aggiunto il piatto negli ordini.
     \end{itemize}
     \item \textbf{Scenario alternativo:}
     \begin{itemize}
-        \item L'utente si trova sezione menù o lista degli ordini personali;
+        \item L'utente si trova nella sezione menù o nella lista degli ordini personali;
         \item L'utente clicca sul bottone + di un piatto che è già presente negli ordini;
-        \item Viene aumentato la quantità del piatto negli ordini.
+        \item Viene aumentata la quantità del piatto negli ordini.
     \end{itemize}
 \end{itemize}
 \textbf{UC1.4 - Diminuisci quantità}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente dimiuisce la quantità di un piatto.
     \item \textbf{Attore Primario:}L'utente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù o lista degli ordini personali.
-    \item \textbf{Postcondizione:} Viene dimiuito la quantità del piatto specifico negli ordini.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù o nella lista degli ordini personali.
+    \item \textbf{Postcondizione:} Viene dimiuita la quantità del piatto specifico negli ordini.
     \item \textbf{Scenario principale:}
     \begin{itemize}
-        \item L'utente si trova sezione menù o lista degli ordini personali;
+        \item L'utente si trova nella sezione menù o nella lista degli ordini personali;
         \item L'utente clicca sul bottone - di un piatto con quantità maggiore di 1;
-        \item Viene diminuito la quantità del piatto negli ordini.
+        \item Viene diminuita la quantità del piatto negli ordini.
     \end{itemize}
     \item \textbf{Scenario alternativo:}
     \begin{itemize}
-        \item L'utente si trova sezione menù o lista degli ordini personali;
+        \item L'utente si trova nella sezione menù o nella lista degli ordini personali;
         \item L'utente clicca sul bottone - di un piatto con quantità uguale a 1;
         \item Viene rimosso il piatto dagli ordini.
     \end{itemize}
@@ -101,12 +101,12 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente visualizza i dettagli di un piatto nel menù, mostrando la recensione del piatto e il text-box per inserire una nota.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù.
-    \item \textbf{Postcondizione:} Viene visualizzato i dettagli di un piatto specifico.
+    \item \textbf{Postcondizione:} Vengono visualizzati i dettagli di un piatto specifico.
     \item \textbf{Scenario principale:}  
     \begin{itemize}
-        \item L'utente si trova sezione menù;
+        \item L'utente si trova nella sezione menù;
         \item L'utente clicca sul bottom mostra dettagli;
-        \item Viene mostrato i dettagli di un piatto.
+        \item Vengono mostrati i dettagli di un piatto.
     \end{itemize}
 \end{itemize}
 \textbf{UC1.6 - Nascondi dettaglio piatto}
@@ -114,12 +114,12 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente nasconde i dettagli di un piatto specifico.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione menù con un piatto in modalità dettaglio.
-    \item \textbf{Postcondizione:} Viene nascosto i dettagli del piatto specifico.
+    \item \textbf{Postcondizione:} Vengono nascosti i dettagli del piatto specifico.
     \item \textbf{Scenario principale:}  
     \begin{itemize}
-        \item L'utente si trova sezione menù;
+        \item L'utente si trova nella sezione menù;
         \item L'utente clicca sul bottom nascondi dettagli;
-        \item Viene nascosto i dettagli del piatto.
+        \item Vengono nascosti i dettagli del piatto.
     \end{itemize}
 \end{itemize}
 \textbf{UC2 - gestione del tavolo}
@@ -132,12 +132,12 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente visualizza la maschera di gestione del tavolo.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la web-app.
-    \item \textbf{Postcondizione:} Viene visualizzato la maschera di gestione del tavolo.
+    \item \textbf{Postcondizione:} Viene visualizzata la maschera di gestione del tavolo.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro il sistema;
         \item L'utente clicca sul bottone gestione del tavolo nella navbar;
-        \item Viene mostrato la maschera di gestione del tavolo.
+        \item Viene mostrata la maschera di gestione del tavolo.
     \end{itemize}
 \end{itemize}
 \textbf{UC2.1 - Generazione sessione tavolo}
@@ -187,7 +187,7 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente esce dalla sessione del tavolo.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione del tavolo ed è dentro ad una sessione.
-    \item \textbf{Postcondizione:} L'utente esce dalla sessione generata del tavolo.
+    \item \textbf{Postcondizione:} L'utente esce dalla sessione del tavolo.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione del tavolo;
@@ -197,7 +197,7 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
 \end{itemize}
 \textbf{UC2.4 - Generazione QR-code sessione tavolo}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente genera il QR-code dalla sessione del tavolo per mostrarlo agli altri, che li permetterà di unire alla sessione direttamente scansionando il QR-code.
+    \item \textbf{Descrizione:} L'utente genera il QR-code dalla sessione del tavolo per mostrarlo agli altri al fine di farli unire scansionando il codice-QR.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione gestione del tavolo ed è dentro ad una sessione.
     \item \textbf{Postcondizione:} L'utente genera il QR-code dalla sessione del tavolo.
@@ -208,9 +208,6 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
         \item Viene mostrato il QR-code;
     \end{itemize}
 \end{itemize}
-
-
-
 \textbf{UC3 - lista degli ordini}
 % \begin{figure}[H]
 %     \centering
@@ -220,13 +217,13 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la maschera di gestione degli ordini.
     \item \textbf{Attore Primario:}L'utente generico.
-    \item \textbf{Precondizione:} L'utente si trova dentro ad una sessione di tavolo.
-    \item \textbf{Postcondizione:} Viene visualizzato la maschera di gestione degli ordini.
+    \item \textbf{Precondizione:} L'utente si trova dentro ad una sessione del tavolo.
+    \item \textbf{Postcondizione:} Viene visualizzata la maschera di gestione degli ordini.
     \item \textbf{Scenario principale:}
     \begin{itemize}
-        \item L'utente si trova dentro il sistema con una sessione di tavolo attiva;
+        \item L'utente si trova dentro il sistema con una sessione del tavolo attiva;
         \item L'utente clicca sul bottone lista degli ordini nella navbar;
-        \item Viene mostrato la maschera di gestione degli ordini.
+        \item Viene mostrata la maschera di gestione degli ordini.
     \end{itemize}
 \end{itemize}
 \textbf{UC3.1 - Visualizza lista degli ordini del tavolo}
@@ -236,41 +233,41 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
 %     \caption{Use Case - UC 3.1, UC 3.2, UC 3.3}
 % \end{figure}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini della sessione di tavolo in cui si trova. 
+    \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini della sessione del tavolo in cui si trova. 
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista degli ordini.
-    \item \textbf{Postcondizione:} Viene visualizzato la lista degli ordini del tavolo.
+    \item \textbf{Postcondizione:} Viene visualizzata la lista degli ordini del tavolo.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione degli ordini;
         \item L'utente clicca sul bottone "tavolo";
-        \item Viene mostrato la lista dei piatti ordinati del tavolo.
+        \item Viene mostrata la lista dei piatti ordinati del tavolo.
     \end{itemize}
 \end{itemize}
 \textbf{UC3.2 - Visualizza lista degli ordini personali}
 \begin{itemize}
-    \item \textbf{Descrizione:} L'utente visualizzato la lista degli ordini personali.
+    \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini personali.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista degli ordini.
-    \item \textbf{Postcondizione:} Viene visualizzato la lista degli ordini personali.
+    \item \textbf{Postcondizione:} Viene visualizzata la lista degli ordini personali.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione degli ordini;
         \item L'utente clicca sul bottone "personali";
-        \item Viene mostrato la lista dei piatti ordinati dall'utente stesso.
+        \item Viene mostrata la lista dei piatti ordinati dall'utente stesso.
     \end{itemize}
 \end{itemize}
 \textbf{UC3.3 - Visualizza lista degli ordini in arrivo}
 \begin{itemize}
     \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini in arrivo.
     \item \textbf{Attore Primario:}L'utente generico.
-    \item \textbf{Precondizione:} L'utente 
-    \item \textbf{Postcondizione:} Viene visualizzato la lista lista degli ordini in arrivo.
+    \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista degli ordini.
+    \item \textbf{Postcondizione:} Viene visualizzata la lista degli ordini in arrivo.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione degli ordini;
         \item L'utente clicca sul bottone "in arrivo";
-        \item Viene mostrato la lista dei piatti in arrivo.
+        \item Viene mostrata la lista dei piatti in arrivo.
     \end{itemize}
 \end{itemize}
 \textbf{UC3.1.1 - Sposta la lista in arrivo}
@@ -278,12 +275,12 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente sposta la lista degli ordini in arrivo.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista degli ordini del tavolo.
-    \item \textbf{Postcondizione:} Viene spostato la lista degli ordini del tavolo in arrivo.
+    \item \textbf{Postcondizione:} Viene spostata la lista degli ordini del tavolo in arrivo.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione degli ordini del tavolo;
         \item L'utente clicca sul bottone sposta la lista in arrivo;
-        \item Viene spostato la lista degli piatti ordinati personali in modalità dettaglio;
+        \item Viene spostata la lista dei piatti ordinati personali in modalità dettaglio;
         \item Viene mostrato all'utente il messaggio "ordini spostati correttamente".
     \end{itemize}
 \end{itemize}
@@ -311,12 +308,12 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente visualizza la lista degli ordini personali in modalità dettaglio.
     \item \textbf{Attore Primario:}L'utente generico.
     \item \textbf{Precondizione:} L'utente si trova dentro la sezione lista degli ordini personali.
-    \item \textbf{Postcondizione:} Viene visualizzato la lista degli ordini personali con i piatti in modalità dettaglio.
+    \item \textbf{Postcondizione:} Viene visualizzata la lista degli ordini personali con i piatti in modalità dettaglio.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione degli ordini personali;
         \item L'utente clicca sul bottone "lente" con il +;
-        \item Viene mostrato la lista dei piatti ordinati personali in modalità dettaglio.
+        \item Viene mostrata la lista dei piatti ordinati personali in modalità dettaglio.
     \end{itemize}
 \end{itemize}
 \textbf{UC3.3.1 - Ricezione piatto}
@@ -334,13 +331,13 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione lista degli ordini in arrivo;
         \item L'utente clicca sul bottone "v" di un piatto;
-        \item Viene diminuito di 1 la sua quantità.
+        \item Viene diminuita di 1 la sua quantità.
     \end{itemize}
     \item \textbf{Scenario alternativo:}
     \begin{itemize}
         \item L'utente si trova dentro la sezione gestione lista degli ordini in arrivo;
         \item L'utente clicca sul bottone "v" di un piatto con quantità uguale a 1;
-        \item Viene diminuito di 1 la quantità del piatto e viene disabilitato il bottone.
+        \item Viene diminuita di 1 la quantità del piatto e viene disabilitato il bottone.
     \end{itemize}
 \end{itemize}
 
@@ -355,11 +352,11 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente visualizza la maschera dell'area personale.
     \item \textbf{Attore Primario:}L'utente non autenticato.
     \item \textbf{Precondizione:} L'utente si trova dentro la web-app.
-    \item \textbf{Postcondizione:} Viene visualizzato la maschera dell'area personale.
+    \item \textbf{Postcondizione:} Viene visualizzata la maschera dell'area personale.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro il sistema;
-        \item Viene mostrato la mascheradell'area personale.
+        \item Viene mostrata la maschera dell'area personale.
     \end{itemize}
 \end{itemize}
 \textbf{UC4.1 - Registrazione}
@@ -427,7 +424,7 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
         \item L'utente inserisce la password;
         \item L'utente ripete la password;
         \item L'utente clicca sul bottone cambia password;
-        \item Viene cambiato correttamente la password.
+        \item Viene cambiata correttamente la password.
     \end{itemize}
     % \item \textbf{Estensioni:}
     % \begin{itemize}
@@ -486,7 +483,7 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
         \item L'utente clicca sul bottone blacklist degli ingredienti;
         \item L'utente inserisce il nome dell'ingrediente;
         \item L'utente clicca sul bottone +;
-        \item Viene inserito ingrediente nella blacklist.
+        \item Viene inserito l'ingrediente nella blacklist.
     \end{itemize}
 \end{itemize}
 \textbf{UC4.6 - Rimuovi ingredienti non voluti}
@@ -500,7 +497,7 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
         \item L'utente si trova dentro l'area personale;
         \item L'utente clicca sul bottone blacklist degli ingredienti;
         \item L'utente clicca sul bottone - di un ingrediente già esistente;
-        \item Viene rimosso ingrediente dalla blacklist.
+        \item Viene rimosso l'ingrediente dalla blacklist.
     \end{itemize}
 \end{itemize}
 \textbf{UC1.7 - Aggiungi preferiti}
@@ -539,12 +536,12 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente aggiunge una recensione per un piatto.
     \item \textbf{Attore Primario:}L'utente autenticato.
     \item \textbf{Precondizione:} L'utente ha selezionato un piatto in modalità dettaglio.
-    \item \textbf{Postcondizione:} Viene aggiornato la recensione del piatto.
+    \item \textbf{Postcondizione:} Viene aggiornata la recensione del piatto.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente ha selezionato un piatto in modalità dettaglio;
         \item L'utente clicca su una delle 5 stelle;
-        \item Viene inserito la recensione del piatto.
+        \item Viene inserita la recensione del piatto.
     \end{itemize}
 \end{itemize}
 \textbf{UC5 - Visualizza lista preferiti}
@@ -557,11 +554,11 @@ La descrizione generale dei casi d'uso è reperibile alla sezione 3.2.\\
     \item \textbf{Descrizione:} L'utente visualizza la lista dei preferiti.
     \item \textbf{Attore Primario:}L'utente autenticato.
     \item \textbf{Precondizione:} L'utente si trova dentro la web-app ed ha effettuato il login.
-    \item \textbf{Postcondizione:} Viene mostrato la lista dei preferiti.
+    \item \textbf{Postcondizione:} Viene mostrata la lista dei preferiti.
     \item \textbf{Scenario principale:}
     \begin{itemize}
         \item L'utente si trova dentro la web-app;
         \item L'utente entra nalla sezione lista preferiti;
-        \item Viene mostrato la lista dei preferiti.
+        \item Viene mostrata la lista dei preferiti.
     \end{itemize}
 \end{itemize}
