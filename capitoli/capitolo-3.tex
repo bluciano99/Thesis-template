@@ -13,13 +13,13 @@
 \section{Descrizione generale}
 \subsection{Interfacce della web-app}
 \subsubsection{Interfaccia menù}
-L'utente può visualizzare il menù di un ristorante dopo aver scansionato il QR-code di un ristorante presente sui tavoli. Il menù è composto da un insieme di categorie, in ognuna di esse sono presenti dei piatti. I piatti sono ordinati in base al loro id, che è un numero univoco dentro ogni menù.
+L'utente può visualizzare il menù del ristorante dopo aver scansionato il QR-code presente sui tavoli. Il menù è composto da un insieme di categorie, in ognuna di esse sono presenti dei piatti. I piatti sono ordinati in base al loro id, che è un numero univoco dentro ogni menù.
 \subsubsection{Interfaccia lista degli ordini}
-L'utente può vedere i piatti ordinati del suo tavolo di appartenenza, dove ci sono anche i piatti ordinati dalle altre persone dello stesso tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
+L'utente può vedere i piatti ordinati del suo tavolo, dove ci sono anche i piatti ordinati dalle altre persone dello stesso tavolo, inoltre può vedere i suoi piatti personali e i piatti in arrivo.
 \subsubsection{Interfaccia gestione del tavolo}
-In questa \gls{mascherag} un utente può creare una \gls{sessioneg} di tavolo se non appartiene a nessuna sessione, altrimenti può visualizzare il QR-code della sua sessione per permettere ad altri utenti di partecipare.
+In questa \gls{mascherag} un utente può creare la \gls{sessioneg} del tavolo se non è stata già creata, altrimenti può visualizzare il QR-code della sua sessione per permettere ad altri utenti di partecipare.
 \subsubsection{Interfaccia area personale}
-Qui l'utente può effettuare il login, di seguito se ha degli allergeni potrà inserire degli ingredienti nella blacklist per nascondere i piatti dal menù che contengono quegli elementi.
+Qui l'utente può effettuare il login e successivamente se ha delle allergie potrà inserire degli ingredienti nella blacklist per nascondere i piatti dal menù che contengono quest'ultimi.
 \subsection{Caratteristiche degli utenti}
 In questa sezione vengono descritti tutte le caratteristiche degli utenti che possono utilizzare la web-app.
 \subsubsection{Utente non autenticato}
@@ -27,14 +27,14 @@ Con il termine utente non autenticato ci si riferisce ad una qualsiasi persona n
 \begin{itemize}
     \item Visualizzare il menù del ristorante;
     \item Visualizzare i singoli piatti in modalità dettaglio;
-    \item Creare una sessione di tavolo;
-    \item Unire ad una sessione di tavolo già esistente;
-    \item Uscire dalla sessione di tavolo;
+    \item Creare una sessione di un tavolo;
+    \item Partecipare ad una sessione già esistente di un tavolo;
+    \item Uscire dalla sessione di un tavolo;
     \item Aggiungere piatti negli ordini;
     \item Aggiungere note ai piatti ordinati;
     \item Spostare ordini in arrivo;
-    \item Marcare i piatti in arrivo come arrivato;
-    \item Registrare nella piattaforma;
+    \item Marcare un piatto in arrivo come arrivato;
+    \item Effettuare la registrazione nella piattaforma;
     \item Effettuare il login.
 \end{itemize}
 \subsubsection{Utente autenticato}
@@ -43,8 +43,8 @@ Invece, con il termine “utente autenticato” ci si riferisce ad una persona r
     \item Aggiungere piatti nei preferiti;
     \item Rimuovere piatti dai preferiti;
     \item Dare una recensione ad un piatto;
-    \item Aggiungere ingredienti non voluti;
-    \item Rimuovere gli ingredienti non voluti;
+    \item Aggiungere ingredienti alla blacklist;
+    \item Rimuovere gli ingredienti dalla blacklist;
     \item Visualizzare la lista dei preferiti;
     \item Effettuare il logout.
 \end{itemize}
@@ -54,31 +54,32 @@ Per sviluppare la piattaforma vengono utilizzate le seguenti tecnologie:
 \begin{itemize}
     \item Angular: per la creazione dell'interfaccia utente;
     \item HTML5: per creare la struttura dell'interfaccia utente;
-    \item CSS3: per lo stile dell'interfaccia, viene utilizzato la sintassi SCSS;
+    \item CSS3: per lo stile dell'interfaccia, viene utilizzata la sintassi SCSS;
     \item Stoplight: per simulare le chiamate REST \gls{apig};
     \item Angular Material: per la creazione dei componenti.
 \end{itemize}
 \subsection{Descrizione delle tecnologie}
 \subsubsection{Angular}
-Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app, oltre a questo garantisce una maggiore manutenibilità e espandibilità.
+Angular è un framework open source per sviluppare applicazioni web, permette di dividere l'applicazione in più componenti, grazie a questo è possibile riutilizzare lo stesso modulo in più parti della web-app ed inoltre garantisce una maggiore manutenibilità e espandibilità.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.1]{angular.png}
     \caption{Logo di Angular}
 \end{figure}
 \subsubsection{HTML5}
-L'HyperText Markup Language, noto come HTML, è un linguaggio di markup più popolare, utilizzato per progettare le strutture dei siti web. Viene utilizzato da Angular per creare la struttura iniziale per le varie interfacce, poi queste strutture vengono modificate da Angular per generare la pagina dinamicamente.
+L'HyperText Markup Language, noto come HTML, è il linguaggio di markup più popolare, utilizzato per progettare le strutture dei siti web. Viene utilizzato da Angular per creare la struttura iniziale delle varie interfacce che verranno a seguito modificate da Angular per generare la pagina dinamicamente.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{html css.png}
     \caption{Logo di HTML e CSS}
 \end{figure}
 \subsubsection{CSS3}
-Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nel ordine in cui vengono scritte. Per il progetto è stato utilizzato una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite la SCSS è possibile dichiarare le regole CSS in blocchi, che aiuta a scrivere regole CSS in modo più veloce e comprensibile.
+Il CSS, sigla di Cascading Style Sheets, è il linguaggio utilizzato per modificare il layout delle pagine web, le regole vengono applicate nell'ordine in cui vengono scritte. Per il progetto è stata utilizzata una sua estensione SCSS, la quale è compatibile con tutte le versioni di CSS. Tramite SCSS è possibile dichiarare le regole CSS in blocchi il che aiuta a scrivere regole CSS in modo più veloce e comprensibile.
 \subsubsection{TypeScript}
-Il linguaggio di programmazione utilizzato da Angular è TypeScript, un linguaggio di programmazione open source sviluppato da Microsoft, TypeScript estende il classico JavaScript quindi qualsiasi codice scritto in JavaScript è anche eseguibile con TypeScript direttamente senza nessuna modifica. TypeScript rende molto più flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, questo permette di effettuare controlli automatici e rilevare i bug in fase di compilazione. Grazie a TypeScript il codice generato da Angular è eseguibile su tutti i pricipali web browser comuni come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri.
+% Il linguaggio di programmazione utilizzato da Angular è TypeScript, un linguaggio di programmazione open source sviluppato da Microsoft,
+TypeScript è un linguaggio di programmazione open source sviluppato da Microsoft ed utilizzato da Angular, il quale estende il classico JavaScript perciò è in grado di eseguire qualsiasi programma scritto in JavaScript senza nessuna modifica. TypeScript rende molto più flessibile JavaScript aggiungendo la firma dei metodi, classi, tipi di dato e tanto altro, questo permette di effettuare controlli automatici e rilevare i bug in fase di compilazione. Grazie a TypeScript il codice generato da Angular è eseguibile su tutti i pricipali web browser come Google Chrome, Firefox, Safari, Opera, Microsoft Edge e tanti altri.
 \subsubsection{Stoplight}
-Stoplight è una piattaforma che offre la possibilità di progettare le API velocemente, grazie alla sua semplice interfaccia utente. Permette di collabolare con gli altri, condividendo tutte le API con le sue descrizioni e risposte in modo chiaro.
+Stoplight è una piattaforma che offre la possibilità di realizzare le API, grazie alla sua semplice interfaccia utente ne velocizza la progettazione. Permette di collaborare con gli altri, condividendo tutte le API e mostrando per ognuna di esse l'endpoint, la descrizione e la risposta.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.4]{stoplight logo.png}
@@ -93,7 +94,7 @@ Angular Material è un insieme di componenti grafici web già implementati, ques
 \end{figure}
 \section{Casi d'uso}
 \subsection{Introduzione}
-In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa. Verranno elencati i casi d'uso principali con la propria descrizione, mentre i casi d'uso secondarie e le descrizioni schematiche potranno essere reperiti nell'appendice {\hyperref[cap:appendice a]{A}}.
+In questa sezione verranno presentati i casi d'uso individuati durante la fase di analisi dei requisiti, i quali fanno riferimento a tutte le funzionalità che la web-app SushiLab dovrà offrire ad ogni utente che vorrà interfacciarsi con essa. Verranno elencati i casi d'uso principali con la propria descrizione, mentre i casi d'uso secondari e le descrizioni schematiche potranno essere reperiti nell'appendice {\hyperref[cap:appendice a]{A}}.
 \subsection{Attori primari}
 \begin{itemize}
     \item Utente non Autenticato: utente che non ha ancora effettuato l'autenticazione sulla piattaforma. Può essere in possesso o meno delle credenziali per l'autenticazione. Ha funzionalità limitate rispetto ad un utente autenticato;
@@ -109,7 +110,7 @@ L'autenticazione dell'utente nel sistema permette svolgere ulteriori azioni, qua
 \begin{itemize}
     \item L'aggiunta di un piatto alla lista dei preferiti per tenere traccia dei migliori piatti ordinati;
     \item La visualizzazione del menù calibrato sulla blacklist dell'utente;
-    \item Recensire publicamente un piatto del menù con una valutazione da una a cinque stelle.
+    \item Recensire pubblicamente un piatto del menù con una valutazione da una a cinque stelle.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -122,14 +123,12 @@ L'autenticazione dell'utente nel sistema permette svolgere ulteriori azioni, qua
     \caption{Use Case - UC 1.1, UC 1.2, UC 1.3, UC 1.4, UC 1.5, UC 1.6}
 \end{figure}
 \subsubsection{UC2 - Gestione del tavolo}
-La schermata di gestione del tavolo consente di effettuare operazioni relative alla sessione del tavolo. La creazione di una sessione avviene scansionando il QR-code presente sul tavolo, che permette all'utente di creare la sessione all'interno della web-app. Dopo aver creato la sessione l'utente può generare un relativo QR-code o un codice alfanumerico per permettere ad altre persone di unirsi al tavolo. In ogni momento un utente può abbandonare la sessione in cui partecipa.
-\textbf{UC2 - gestione del tavolo}
+La schermata di gestione del tavolo consente di effettuare operazioni relative alla sessione del tavolo. Scansionando il QR-code l'utente visualizza la pagina per la gestione del tavolo che permette di creare la sessione all'interno della web-app o di partecipare a quella già esistente. Dopo aver creato la sessione l'utente può generare il relativo QR-code o un codice alfanumerico per permettere ad altre persone di unirsi. In ogni momento un utente può abbandonare la sessione in cui partecipa.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc2.drawio.png}
     \caption{Use Case - UC 2}
 \end{figure}
-\textbf{UC2.1 - Generazione sessione tavolo}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc21.drawio.png}
@@ -137,31 +136,28 @@ La schermata di gestione del tavolo consente di effettuare operazioni relative a
 \end{figure}
 \subsubsection{UC3 - Lista degli ordini}
 La maschera della lista degli ordini si compone di tre sezioni, quali: \gls{ordinitavolog}, \gls{ordiniinarrivog} e \gls{ordinipersonalig}.
-La sezione degli ordini del tavolo permette di visualizzare gli ordini di tutti gli utenti partecipanti alla stessa sessione, questi reppresentano gli ordini non ancora inviati al ristorante e possono quindi essere modificati. L'invio dell'ordine al ristorante avviene tramite la scansione del QR-code degli ordini da parte di un cameriere. 
-La lista degli ordini permette di visualizzare la sezione degli ordini in arrivo che definisce la quantità dei piatti in arrivo o in preparazione.
-Infine la sezione degli ordini personali contiene lo storico dei piatti ordinati durante la sessione in cui si trova l'utente, permettengogli di visualizzare tutte le informazione di un piatto e la quantità ordinata.
-\textbf{UC3 - lista degli ordini}
+La sezione degli ordini del tavolo permette di visualizzare gli ordini di tutti gli utenti partecipanti alla stessa sessione, questi rappresentano gli ordini non ancora inviati al ristorante e possono quindi essere modificati. L'utente può generare tramite l'app il QR-code degli ordini da scannerizzare per inviare l'ordine alla cucina.
+La lista degli ordini in arrivo permette di visualizzare i piatti in preparazione.
+Infine la sezione degli ordini personali contiene lo storico dei piatti ordinati durante la sessione in cui si trova l'utente, permettendogli di visualizzare tutte le caratteristiche di un piatto, la nota e la quantità ordinata.
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc3.drawio.png}
     \caption{Use Case - UC 3}
 \end{figure}
-\textbf{UC3.1 - Visualizza lista degli ordini del tavolo}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc311.drawio.png}
     \caption{Use Case - UC 3.1, UC 3.2, UC 3.3}
 \end{figure}
-\textbf{UC3.3.1 - Ricezione piatto}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=0.5]{usecase/tesi-uc333.drawio.png}
     \caption{Use Case - UC 3.3.1}
 \end{figure}
 \subsubsection{UC4 - Area personale}
-La visuale dell'area personale permette all'utente non autenticato di effettuare il login nella piattaforma tramite l'email e la password per accedere alle funzionalità complete dell'applicazione, oppure di registrarsi su sushiLab. L'area personale permette di effettuare il recupero delle credenziali. In seguito all'autenticazione l'utente può accedere e modificare la propria blacklist degli ingredienti.
+La pagina dell'area personale permette all'utente non autenticato di effettuare il login nella piattaforma tramite l'email e la password per accedere alle funzionalità complete dell'applicazione, di registrarsi su sushiLab e di effettuare il recupero delle credenziali. In seguito all'autenticazione l'utente può accedere e modificare la propria blacklist degli ingredienti.
 \section{Requisiti}
-In base a quanto definito nell'analisi dei requisiti sono stati individuati una lista dei requisiti che deve essere soddisfatta durante tutto il progetto di stage. Per ogni requisito individuato è stato assegnato un codice univoco, la descrizione del requisito e il caso d'uso riferito. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.
+In base a quanto definito nell'analisi dei requisiti è stata individuata una lista di requisiti che deve essere soddisfatta al termine del progetto di stage. Per ogni requisito individuato è stato assegnato un codice univoco, la descrizione del requisito e il caso d'uso riferito. Tutti i requisiti sono mostrati dentro una tabella e può essere reperita nell'appendice {\hyperref[cap:appendice b]{B}}.
 \subsection{Panoramica}
 Un utente che accede al sistema deve potersi autenticare e registrare fornendo un'email e una password.
-L'utente deve poter accedere alla sezione del menù visualizzando tutti i piatti oppure quelli filtrati. I piatti del menù si possono visualizzare in modalità normale e dettagliata ed essere aggiunti agli ordini. L'utente deve essere in grado di creare, partecipare o uscire da una sessione di un tavolo. All'interno di una sessione l'utente deve poter visualizzare le liste degli ordini del tavolo, in arrivo e quelli personali, mostrando per ogni ordine il nome, la descrizione e l'immagine dei piatti contenuti. Per ogni ordine del tavolo l'utente deve poter generare un codice-QR per l'invio dell'ordine, dopo la quale deve essere possibile tenere traccia dell'ordine in corso. Un utente autenticato deve essere in grado di recensire un piatto, aggiungerlo alla propria lista dei preferiti e modificare la propria blacklist degli ingredienti. Infine in caso di smarrimento della password l'utente deve poter effettuare la richiesta di recupero fornendo l'email.
+L'utente deve poter accedere alla sezione del menù visualizzando tutti i piatti oppure quelli filtrati. I piatti del menù si possono visualizzare in modalità normale e dettagliata ed essere aggiunti agli ordini. L'utente deve essere in grado di creare, partecipare o uscire da una sessione di un tavolo. All'interno di una sessione l'utente deve poter visualizzare le liste degli ordini del tavolo, in arrivo e quelli personali mostrando per ogni ordine il nome, la descrizione e l'immagine dei piatti contenuti. Per ogni ordine del tavolo l'utente deve poter generare un codice-QR per l'invio di quest'ultimo. I piatti inviati vengono poi spostati nella lista degli ordini in arrivo. Un utente autenticato deve essere in grado di recensire un piatto, aggiungerlo alla propria lista dei preferiti e modificare la propria blacklist degli ingredienti. Infine in caso di smarrimento della password l'utente deve poter effettuare la richiesta di recupero fornendo l'email.
