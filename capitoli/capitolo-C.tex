@@ -60,7 +60,7 @@ Viene mostrato il QR-code del tavolo che permette agli altri utenti che si trova
 \pagebreak
 
 \subsubsection{lista degli ordini del tavolo}
-Viene mostrata la lista degli ordini della sessione del tavolo in cui si trova l'utente.\\
+Viene mostrata la lista degli ordini della sessione del tavolo.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \item L'utente può spostare la lista in arrivo;
@@ -96,8 +96,7 @@ Viene mostrata la lista degli ordini personali.\\
 Viene mostrata la lista degli ordini in arrivo.\\
 \textbf{Funzionalità:}
 \begin{itemize}
-    \item L'utente può visualizzare i piatti in modalità dettaglio;
-    \item L'utente può visualizzare i piatti in modalità normale;
+    \item L'utente può visualizzare i piatti in modalità normale o dettagliata;
     \item L'utente può marcare un piatto come arrivato;
     \item L'utente può aggiungere o rimuovere un piatto dalla lista dei preferiti;
     \item L'utente può dare una recensione ad un piatto.
@@ -145,9 +144,9 @@ Viene mostrato il form per il recupero password.\\
 \textbf{Funzionalità:}
 \begin{itemize}
     \setlength\itemsep{.1em}
-    \item L'utente può reimpostare la password inserendo i campi correttamente altrimenti vengono evidenziati in rosso i campi sbagliati;
+    \item L'utente può cambiare la password inserendo i campi correttamente altrimenti vengono evidenziati in rosso i campi sbagliati;
     \item L'utente può andare al form di registrazione;
-    \item L'utente può andare al form di Login.
+    \item L'utente può andare al form di login.
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -155,7 +154,7 @@ Viene mostrato il form per il recupero password.\\
     \includegraphics[scale=.5]{cambiapass2.png}
     \includegraphics[scale=.5]{cambiapass3.png}
     \includegraphics[scale=.5]{cambiapass4.png}
-    \caption{Maschere cambia password di SushiLab}
+    \caption{Maschera cambia password di SushiLab}
 \end{figure}
 \pagebreak
 
@@ -174,8 +173,8 @@ Viene mostrata l'area personale dell'utente dove può visualizzare i dati person
 \end{figure}
 \label{cap:menu.component}
 
-\subsubsection{Menu component}
-Componente usato per creare la maschera del menù. Composto da un insieme di piatti creati aumaticamenti in base al array menù di ritorno.\\
+\subsubsection{Menù component}
+Componente usato per creare la maschera del menù.\\
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
     \item piatto.component;
@@ -189,8 +188,7 @@ Componente usato per creare la maschera della navbar. Composto da un insieme di 
 \begin{itemize}
     \item isLoggedIn(): ritorna true se l'utente è autenticato;
     \item haveMenu(): ritorna true se è presente il menù nel local storage;
-    \item haveTable(): ritorna true se è presente la sessione del tavolo nel local storage;
-    \item close(): chiude il menù a tendina.
+    \item haveTable(): ritorna true se è presente la sessione del tavolo nel local storage.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}    
@@ -200,14 +198,14 @@ Componente usato per creare la maschera della navbar. Composto da un insieme di 
 \end{itemize}
 
 \subsubsection{Ordini component}
-Componente usato per creare la maschera della lista degli ordini. Composto da tre sezioni che sono ordini del tavolo, personali e quelli in arrivo.\\
+Componente usato per creare la maschera della lista degli ordini.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item moveOrders(): sposta la lista degli ordini del tavolo in arrivo;
     \item changeZoom(): cambia la modalità di presentazione dei piatti;
     \item showQrCode(): mostra il QR-code della lista degli ordini;
     \item closeQrCode(): chiude la maschera di QR-code;
-    \item getAllOrders(): inizializza tutti gli ordini predendo i piatti dal server.
+    \item getAllOrders(): prende tutti gli ordini dal server.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
@@ -225,7 +223,7 @@ Componente usato per creare i piatti della sezione lista degli ordini in arrivo.
 \begin{itemize}
     \item toogleFav(): cambia lo stato di preferito di un determinato piatto;
     \item updateStar(): aggiorna la recensione di un determinato piatto;
-    \item decreaseCount(): chiamato quando utente marca un piatto come arrivato, diminuisce la quantità di un piatto in arrivo.
+    \item decreaseCount(): chiamato quando utente marca un piatto come arrivato e diminuisce la quantità di un piatto in arrivo.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
@@ -251,10 +249,10 @@ Componente usato per creare i piatti della sezione lista degli ordini in arrivo.
 % \end{itemize}
 
 \subsubsection{Piatto-ordine component}
-Componente usato per creare il piatto in modalità normale per la sezione ordini.\\
+Componente usato per creare il piatto in modalità normale per la sezione degli ordini.\\
 
 \subsubsection{Personale component}
-Componente usato per creare la maschera dell'area personale, dove si può vedere email dell'utente e andare nella sezione blacklist.\\
+Componente usato per creare la maschera dell'area personale, dove si può vedere i credenziali dell'utente e la sezione blacklist.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item isLoggedOut(): ritorna true se l'utente non è autenticato.
@@ -274,8 +272,8 @@ Componente usato per creare la maschera dell'area personale, dove si può vedere
 Componente usato per creare la sezione blacklist degli ingredienti, viene mostrato la blacklist ed è possibile rimuovere o aggiungere un ingrediente.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item onAdd(): metodo chiamato quando si aggiunge un ingrediente nella blacklist;
-    \item onRemove(): metodo chiamato quando si rimuove un ingrediente dalla blacklist;
+    \item onAdd(): metodo chiamato per aggiungere un ingrediente nella blacklist;
+    \item onRemove(): metodo chiamato per rimuovere un ingrediente dalla blacklist;
     \item isValid(): ritorna true se l'ingrediente inserito è valido.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
@@ -287,7 +285,7 @@ Componente usato per creare la sezione blacklist degli ingredienti, viene mostra
 Componente usato per creare il form login.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item login(): metodo chiamato quando l'utente conferma il form, vengono controllati i campi e infine viene chiamato API per effettuare il login.
+    \item login(): metodo chiamato quando l'utente conferma il form, vengono controllati i campi e infine viene chiamato API per effettuare l'autenticazione.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
@@ -309,12 +307,12 @@ Componente usato per creare il form per la registrazione.\\
 Componente usato per creare la maschera dei preferiti.\\
 \textbf{Metodi:}
 \begin{itemize}
-    \item toggleExpand(): espande la visuale del piatto mostrando tutti i dettagli del piatto o nasconde i suoi dettagli;
+    \item toggleExpand(): cambia la modalità di visualizzazione dei piatti;
     \item toogleFav(): cambia lo stato di preferito di un determinato piatto;
     \item updateStar(): aggiorna la recensione di un determinato piatto;
-    \item increseCount(): aumenta la quantità di un determinato piatto presente negli ordini personali;
-    \item decreaseCount(): diminuisce la quantità di un determinato piatto presente negli ordini personali
-    \item noteChanged(): cambia la nota di un piatto presente negli ordini personali.
+    \item increseCount(): aumenta la quantità di un piatto negli ordini;
+    \item decreaseCount(): diminuisce la quantità di un piatto negli ordini;
+    \item noteChanged(): cambia la nota di un piatto negli ordini.
 \end{itemize}
 \textbf{Componenti e servizi usati:}
 \begin{itemize}
@@ -325,12 +323,12 @@ Componente usato per creare la maschera dei preferiti.\\
 \end{itemize}
 
 \subsubsection{Tavolo component}
-Componente usato per creare la maschera gestione del tavolo, dove si può creare una sessione del tavolo, unire ad una sessione o uscire da una sessione.\\
+Componente usato per creare la maschera gestione del tavolo.\\
 \textbf{Metodi:}
 \begin{itemize}
     \item changeState(): cambia lo stato di visualizzazione della sezione gestione del tavolo in base alla sessione;
     \item removeSession(): rimuove la sessione del tavolo;
-    \item setSession(): imposta la sessione del tavolo;
+    \item setSession(): modifica la sessione del tavolo;
     \item updateURL(): aggiorna il percorso del link per generare il QR-code del tavolo;
     \item createSession(): crea la sessione del tavolo.
 \end{itemize}
@@ -348,7 +346,7 @@ Servizio utilizzato per gestire le autenticazioni.
     \item setSession(): salva i dati dell'utente dopo il login nel local storage per mantenere la sessione;
     \item logout(): metodo chiamato per effettuare il logout dell'utente;
     \item isLoggedIn(): ritorna true se è presente nel local storage la sessione dell'utente;
-    \item getExpirations(): ritorna true se la sessione dell'utente non è ancora scaduto.
+    \item getExpirations(): ritorna la scadenza della sessione dell'autenticazione.
 \end{itemize}
 
 \subsubsection{menu.service}
@@ -360,7 +358,7 @@ Servizio utilizzato per gestire tutte le funzionalità del menù.\\
     \item get menuId(): ritorna l'id del menù;
     \item set menuId(id: number): salva l'id del menù nel local storage;
     \item applyBlacklist(menu: Menu): filtra il menù in base alla balcklist;
-    \item setFavorite(idPiatto:number, favorite:boolean): aggiunge o rimuove un piatto del menù dalla lista dei preferiti;
+    \item setFavorite(idPiatto:number, favorite:boolean): aggiunge o rimuove un piatto dalla lista dei preferiti;
     \item  setRating(idPiatto: number, rate: number): salva la recensione del piatto;
     \item getPreferiti(): richiede al server la lista dei preferiti dell'utente.
 \end{itemize}
@@ -387,7 +385,7 @@ Servizio utilizzato per gestire le sessioni del tavolo.\\
     \item createSession(): creare una sessione del tavolo;
     \item getSession(): ritorna il numero del tavolo;
     \item getCode(): ritorna il codice di sessione;
-    \item haveSession(): ritorna true se esiste un codice di sessione;
+    \item haveSession(): ritorna true se l'utente si trova in una sessione;
     \item setSession(code: string): imposta il codice di sessione con il codice passato;
     \item removeSession(): rimuove i dati della sessione del tavolo.
 \end{itemize}
